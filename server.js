@@ -1,15 +1,19 @@
+// Dependencies
 const express = require("express");
+const path = require("path");
 const mongoose = require("mongoose");
 const cors = require('cors');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 
-const items = require('./routes/api/index')
+// Initialize Express
+const app = express();
 
 const PORT = process.env.PORT || 5000;
 
-// Initialize Express
-const app = express();
+// Routes
+const apiRoutes = require('./routes/api/index')
+app.use('/api', apiRoutes);
 
 // Configure middleware
     // Use morgan
@@ -23,23 +27,23 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Make public a static folder
-// app.use(express.static('client/build'));
-
-// app.get("*", (req, res) => {
-//     res.sendFile(path.resolve( __dirname, 'client', 'build', 'index.html'));
-// })
-
 // Connect to the Mongo DB
 const db = require('./config/keys').mongoURI;
 mongoose.connect(db)
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 
-// Routes
-app.use('/api/items', items);
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
-// Start the server
+// Send every request to the React app
+// Define any API routes before this runs
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
 app.listen(PORT, function() {
-    console.log("App running on port " + PORT + "!");
+  console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
