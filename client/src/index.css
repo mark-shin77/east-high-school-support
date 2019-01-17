@@ -2,4 +2,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: url("../src/images/sjm-delasalle-0917-16.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+.App-logo {
+  background-color: transparent;
+}
+
+.App-header {
+  background-color: transparent!important;
 }
