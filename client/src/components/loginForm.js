@@ -46,7 +46,7 @@ const LoginForm = ({
 
     </div>
 )
-
+//Prop types schema for the form login 
 LoginForm.propTypes = {
     onSubmit: PropTypes.func.isRequired,
     onChange: PropTypes.func.isRequired,
