@@ -1,11 +1,10 @@
 {
-  "name": "east-high-school-support",
+  "name": "mern",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000/",
+  "proxy": "http://localhost:3001/",
   "dependencies": {
-    "@material-ui/core": "^3.9.0",
-    "axios": "^0.18.0",
+    "jquery": "^3.3.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "^2.1.1"

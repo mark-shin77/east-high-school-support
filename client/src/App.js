@@ -1,21 +1,26 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import AppBar from '@material-ui/core/AppBar';
 import "./App.css";
+import "./assets/css/main.css";
+import "./assets/css/font-awesome.min.css";
+import Nav from './Nav'
+import Home from './Home'
+import Work from './Work'
+import Portfolio from './Portfolio'
+import Contact from './Contact'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-      <AppBar>Hello</AppBar>
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <div>
+    <Nav />
+    <Home />
+    <Work />
+    <Portfolio />
+    <Contact />
+    </div>
+
+   
+
     );
   }
 }
