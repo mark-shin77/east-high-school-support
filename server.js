@@ -1,30 +1,12 @@
-// Dependencies
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
 const cors = require('cors');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-
 const passport = require('./client/server/passport')
-<<<<<<< HEAD
-<<<<<<< HEAD
-const User = require("./client/server/db/models/user")
-=======
-=======
->>>>>>> 9ae1b1c53744fbfe85a00f6e2ca229daa91f2bf7
-=======
-
->>>>>>> 9ae1b1c53744fbfe85a00f6e2ca229daa91f2bf7
 // Initialize Express
 const app = express();
-
-const PORT = process.env.PORT || 5000;
-
-
-// Routes
-const apiRoutes = require('./routes/api/index')
-app.use('/api', apiRoutes);
 
 const PORT = process.env.PORT || 5000;
 //Middleware
@@ -57,18 +39,10 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-
-
-
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
-
-app.listen(PORT, function() {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
-
 });
 //login check
 
