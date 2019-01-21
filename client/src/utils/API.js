@@ -8,9 +8,9 @@ export default {
         return axios.get("/api/signups/active");
     },
     getAllSignups: function() {
-        return axios.delete("/api/signups/all");
+        return axios.get("/api/signups/all");
     },
     getReport: function() {
-        return axios.post("/api/report");
+        return axios.get("/api/report");
     }
 };
