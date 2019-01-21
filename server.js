@@ -1,15 +1,19 @@
 const express = require("express");
+const path = require("path");
 const mongoose = require("mongoose");
 const cors = require('cors');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-const passport = require('passport')
-const items = require('./routes/api/index')
-
-const PORT = process.env.PORT || 5000;
+const passport = require('./client/server/passport')
 
 // Initialize Express
 const app = express();
+
+const PORT = process.env.PORT || 5000;
+//Middleware
+// Routes
+const apiRoutes = require('./routes/api/index')
+app.use('/api', apiRoutes);
 
 // Configure middleware
     // Use morgan
@@ -18,49 +22,12 @@ const app = express();
     app.use(bodyParser.json());
     // Use cors
     app.use(cors());
-    //use passport middleware
-    app.use(passport.initialize());
-    //Use passport login strategy
-    const localLoginStrategy = require("./client/server/passport/localStrategy")
-    passport.use("local-login", localLoginStrategy)
-    //authorization middleware
-    const authCheckMiddleware= require("'.server.middleware/auth-check")
-    app.use("/api", authCheckMiddleware)
+//Passport config
+app.use(passport.initialize())
+app.use(passport.session())//deserialize user
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-
-
-// Make public a static folder
-// app.use(express.static('client/build'));
-app.use(passport.initialize())
-app.use(passport.session()) // will call the deserializeUser
-
-// ===== testing middleware =====
-// app.use(function(req, res, next) {
-// 	console.log('===== passport user =======')
-// 	console.log(req.session)
-// 	console.log(req.user)
-// 	console.log('===== END =======')
-// 	next()
-// })
-// testing
-// app.get(
-// 	'/auth/google/callback',
-// 	(req, res, next) => {
-// 		console.log(`req.user: ${req.user}`)
-// 		console.log('======= /auth/google/callback was called! =====')
-// 		next()
-// 	},
-// 	passport.authenticate('google', { failureRedirect: '/login' }),
-// 	(req, res) => {
-// 		res.redirect('/')
-// 	}
-// )
-// app.get("*", (req, res) => {
-//     res.sendFile(path.resolve( __dirname, 'client', 'build', 'index.html'));
-// })
 
 // Connect to the Mongo DB
 const db = require('./config/keys').mongoURI;
@@ -68,10 +35,67 @@ mongoose.connect(db)
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 
-// Routes
-app.use('/api/items', items);
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
-// Start the server
+// Send every request to the React app
+// Define any API routes before this runs
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+//login check
+app.get("login/user", (req,res,next) =>{
+    console.log(req.user)
+    if(req.user){
+        return res.json({user: req.user})
+    }
+    else{
+        return res.json({user: null})
+    }
+})
+app.post("/login", (req,res,next)=>{
+    console.log(req.body)
+    next()
+},
+passport.authenticate('local'), (req, res)=>{
+    const user= JSON.parse(JSON.stringify(req.user))
+    const cleanUser = Object.assign({}, user)
+    if(cleanUser.local){
+        console.log(`Deleting ${cleanUser.local.password}`)
+        delete cleanUser.loca.password
+    }
+    res.json({user: cleanUser})
+})
+
+app.post("/logout", (req,res)=>{
+    if(req.user){
+        req.session.destroy()
+        res.clearCookie('connect.sid')
+        return res.json({msg: 'logging you out'})
+    } else{
+        return res.json({msg: 'no user to log out'})
+    }
+})
+app.post("/signup", (req,res)=>{
+    const {username, password} = req.body
+    User.findOne({'local.username': username},(err, userMatch)=>{
+        if(userMatch){
+            return res.json({
+                error: `Sorry, already a user with the same username ${username}`
+            })
+        }
+        const newUser = new User({
+            'local.username': username,
+            'local.password': password
+        })
+        newUser.save((err,savedUser)=>{
+            if (err) return res.json(err)
+            return res.json(savedUser)
+        })
+    })
+})
 app.listen(PORT, function() {
-    console.log("App running on port " + PORT + "!");
+  console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
