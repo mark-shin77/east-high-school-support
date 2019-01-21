@@ -1,5 +1,5 @@
-const express = require ('express');
-const router = express.Router();
+const axios = require("axios");
+const router = require("express").Router();
 
 // Example Item Model
 const Item = require ('../../models/exampleItem');
@@ -24,5 +24,15 @@ router.delete('/:id', (req, res) => {
         .then(item => item.remove().then(() => res.json({ success: true })))
         .catch(err => res.status(404).json({ success: false }));
     })
+
+router.get("/signupgenius", (req, res) => {
+    axios
+        .get("https://api.signupgenius.com/v2/k/signups/created/active/?user_key=V0FzMkxZcmVOZlVnclZMVEl6dGhWQT09", { params: req.query })
+        .then(results => {
+            console.log(results.data);
+            res.json(results.data);
+        })
+        .catch(err => res.status(422).json(err));
+});
 
 module.exports = router;
