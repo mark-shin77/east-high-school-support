@@ -8,8 +8,11 @@ const bodyParser = require('body-parser');
 
 const passport = require('./client/server/passport')
 <<<<<<< HEAD
+<<<<<<< HEAD
 const User = require("./client/server/db/models/user")
 =======
+=======
+>>>>>>> 9ae1b1c53744fbfe85a00f6e2ca229daa91f2bf7
 =======
 
 >>>>>>> 9ae1b1c53744fbfe85a00f6e2ca229daa91f2bf7
