@@ -7,7 +7,6 @@ class Contact extends Component {
   render() {
     return (
       
-   
         <article id="contact" className="wrapper style4">
         <div className="container medium">
           <header>
