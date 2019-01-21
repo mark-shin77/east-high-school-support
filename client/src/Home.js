@@ -8,8 +8,8 @@ class Home extends Component {
   render() {
     return (
       
-   
-     <article id="top" className="wrapper style1">
+
+      <article id="top" className="wrapper style1">
         <div className="container">
           <div className="row">
             <div className="col-4 col-5-large col-12-medium">
@@ -25,10 +25,6 @@ class Home extends Component {
           </div>
         </div>
       </article>
-
-
-   
-
     );
   }
 }
