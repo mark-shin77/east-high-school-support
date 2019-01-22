@@ -16,8 +16,10 @@ const PORT = process.env.PORT || 5000;
 
 // Routes
 const apiRoutes = require('./routes/api/index')
+const donationRoutes = require('./routes/front-end/paypal')
 // API
 app.use('/api', apiRoutes);
+app.use('/donations', donationRoutes);
 
 // Configure middleware
     // Use morgan
@@ -46,9 +48,9 @@ if (process.env.NODE_ENV === "production") {
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", function(req, res) {
+//     res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 
 //login check

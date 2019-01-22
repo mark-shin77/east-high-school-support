@@ -25,9 +25,7 @@ router.delete('/:id', (req, res) => {
         .catch(err => res.status(404).json({ success: false }));
     })
 
-var signup_api_key = "";
-
-console.log(process.env.SIGNUP_GENIUS_APIKEY)
+var signup_api_key = "MVJibmQyeXdhdHIvcStqQnN4TEpWUT09";
 
 router.get("/volunteers", (req, res) => {
     axios
