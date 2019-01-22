@@ -13,13 +13,13 @@ import NoSidebar from "./components/NoSidebar";
 
 class App extends Component {
   state = {
-      firstName : "",
-      lastName : "",
-      email : "",
-      activeSignUpResults : [],
-      availableTimeSlots : []
+    firstName: "",
+    lastName: "",
+    email: "",
+    activeSignUpResults: [],
+    availableTimeSlots: []
   }
-  
+
   componentDidMount() {
     // this.loadVolunteers();
     // this.loadActiveSignups();
@@ -28,30 +28,30 @@ class App extends Component {
 
   loadVolunteers = () => {
     API.getVolunteers()
-    .then(res => {
-      this.setState({ 
-        firstName : res.data.data.members[0].firstname , 
-        lastName : res.data.data.members[0].lastname , 
-        email : res.data.data.members[0].email
+      .then(res => {
+        this.setState({
+          firstName: res.data.data.members[0].firstname,
+          lastName: res.data.data.members[0].lastname,
+          email: res.data.data.members[0].email
+        })
       })
-    })
-    .catch(err => console.log(err))
+      .catch(err => console.log(err))
   }
 
   loadActiveSignups = () => {
     API.getActiveSignups()
       .then(res => {
-          this.setState({ activeSignUpResults : res.data.data });
-        })
+        this.setState({ activeSignUpResults: res.data.data });
+      })
       .catch(err => console.log(err))
   }
 
   loadAvailableTimeSlots = () => {
     API.getReport()
       .then(res => {
-        this.setState({ availableTimeSlots : res.data.data.signup });
+        this.setState({ availableTimeSlots: res.data.data.signup });
       })
-    .catch(err => console.log(err))
+      .catch(err => console.log(err))
   }
 
   render() {
@@ -59,6 +59,19 @@ class App extends Component {
       <div>
         <Header />
         <Banner />
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick" />
+          <input type="hidden" name="hosted_button_id" value="9UQFSERSR7YZE" />
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+          <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick" />
+          <input type="hidden" name="hosted_button_id" value="YN5WXSATP3XGG" />
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+          <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+        </form>
         <Main />
         <LeftSidebar />
         <RightSidebar />
