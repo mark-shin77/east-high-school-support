@@ -12,7 +12,9 @@ const PORT = process.env.PORT || 5000;
 //Middleware
 // Routes
 const apiRoutes = require('./routes/api/index')
+const authRoutes = require("./routes/auth")
 app.use('/api', apiRoutes);
+app.use("/auth", authRoutes);
 
 // Configure middleware
     // Use morgan
