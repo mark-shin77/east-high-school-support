@@ -10,11 +10,15 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 //Middleware
+
 // Routes
 const apiRoutes = require('./routes/api/index')
 const authRoutes = require("./routes/auth")
 app.use('/api', apiRoutes);
 app.use("/auth", authRoutes);
+const donationRoutes = require('./routes/front-end/paypal')
+// API
+app.use('/donations', donationRoutes);
 
 // Configure middleware
     // Use morgan
@@ -38,7 +42,7 @@ mongoose.connect(db)
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+    app.use(express.static("client/build"));
 }
 
 // Send every request to the React app
@@ -49,5 +53,5 @@ app.get("*", function(req, res) {
 //login check
 
 app.listen(PORT, function() {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
+    console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
