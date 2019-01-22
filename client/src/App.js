@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './assets/css/main.css'
 import "./assets/css/font-awesome.min.css";
+import API from './utils/API';
 import Header from './components/Header';
 import Banner from './components/Banner';
 import Main from './components/Main';
@@ -20,9 +21,9 @@ class App extends Component {
   }
   
   componentDidMount() {
-    this.loadVolunteers();
-    this.loadActiveSignups();
-    this.loadAvailableTimeSlots();
+    // this.loadVolunteers();
+    // this.loadActiveSignups();
+    // this.loadAvailableTimeSlots();
   }
 
   loadVolunteers = () => {
