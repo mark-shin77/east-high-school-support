@@ -1,15 +1,14 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './assets/css/main.css'
 import "./assets/css/font-awesome.min.css";
-import API from './utils/API';
-import Header from './components/Header';
-import Banner from './components/Banner';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import LeftSidebar from "./components/LeftSidebar";
-import RightSidebar from "./components/RightSidebar";
-import NoSidebar from "./components/NoSidebar";
+import Home from './components/pages/Home';
+import Admin from './components/pages/Admin';
+import Contact from './components/pages/Contact';
+import Donate from './components/pages/Donate';
+import Volunteer from './components/pages/Volunteer';
 
+<<<<<<< HEAD
 
 class App extends Component {
   state = {
@@ -55,8 +54,14 @@ class App extends Component {
   }
 
   render() {
+=======
+function App() {
+>>>>>>> master
     return (
+      
+      <Router>
       <div>
+<<<<<<< HEAD
         <Header />
         <Banner />
         <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -78,9 +83,17 @@ class App extends Component {
         <Footer />
         <NoSidebar />
 
+=======
+            <Route exact path="/" component={Home} />
+            <Route path="/admin" component={Admin} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/donate" component={Donate} />
+            <Route path="/volunteer" component={Volunteer} />
+>>>>>>> master
       </div>
+      </Router>
     );
   }
-}
+
 
 export default App;
