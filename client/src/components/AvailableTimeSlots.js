@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'react-moment';
 
 const AvailableTimeSlots = (props) => {
     return (
@@ -14,7 +15,9 @@ const AvailableTimeSlots = (props) => {
             {props.availableTimeSlots.map(item => {
                 return (
                         <tr>
-                            <td>{item.startdatestring} {item.enddatestring}</td>
+                            <td>
+                                {item.startdatestring}
+                               {item.enddatestring}</td>
                             <td>{item.item}</td>
                             <td>{item.status}</td>
                         </tr>
