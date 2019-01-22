@@ -1,30 +1,27 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './assets/css/main.css'
 import "./assets/css/font-awesome.min.css";
-import Header from './components/Header';
-import Banner from './components/Banner';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import LeftSidebar from "./components/LeftSidebar";
-import RightSidebar from "./components/RightSidebar";
-import NoSidebar from "./components/NoSidebar";
+import Home from './components/pages/Home';
+import Admin from './components/pages/Admin';
+import Contact from './components/pages/Contact';
+import Donate from './components/pages/Donate';
+import Volunteer from './components/pages/Volunteer';
 
-
-class App extends Component {
-  render() {
+function App() {
     return (
+      
+      <Router>
       <div>
-        <Header />
-        <Banner />
-        <Main />
-        <LeftSidebar />
-        <RightSidebar />
-        <Footer />
-        <NoSidebar />
-
+            <Route exact path="/" component={Home} />
+            <Route path="/admin" component={Admin} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/donate" component={Donate} />
+            <Route path="/volunteer" component={Volunteer} />
       </div>
+      </Router>
     );
   }
-}
+
 
 export default App;

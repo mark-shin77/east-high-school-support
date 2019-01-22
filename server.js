@@ -7,23 +7,19 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 
 const passport = require('./client/server/passport')
-=======
 
 // Initialize Express
 const app = express();
 
 const PORT = process.env.PORT || 5000;
-
-
-// Routes
-const apiRoutes = require('./routes/api/index')
-app.use('/api', apiRoutes);
-
-const PORT = process.env.PORT || 5000;
 //Middleware
+
 // Routes
 const apiRoutes = require('./routes/api/index')
+const donationRoutes = require('./routes/front-end/paypal')
+// API
 app.use('/api', apiRoutes);
+app.use('/donations', donationRoutes);
 
 // Configure middleware
     // Use morgan
@@ -47,24 +43,18 @@ mongoose.connect(db)
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+    app.use(express.static("client/build"));
 }
-
-
-
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", function(req, res) {
+//     res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
-app.listen(PORT, function() {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
 
-});
 //login check
-app.get("login/user", (req,res,next) =>{
+app.get("/login/user", (req,res,next) =>{
     console.log(req.user)
     if(req.user){
         return res.json({user: req.user})
@@ -115,5 +105,5 @@ app.post("/signup", (req,res)=>{
     })
 })
 app.listen(PORT, function() {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
+    console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
