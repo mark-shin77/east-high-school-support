@@ -1,10 +1,12 @@
 const axios = require("axios");
 const router = require("express").Router();
+const User = require("../../client/server/db/models/user")
+const passport = require("../../client/server/passport")
 
 // Example Item Model
 const Item = require ('../../models/exampleItem');
 
-// route to get all api/items
+// route to get all a pi/items
 router.get ("/", (req, res) => {
     Item.find()
         .sort({ date: -1 })
@@ -65,5 +67,6 @@ router.get("/report", (req, res) => {
         })
         .catch(err => res.status(422).json(err));
 });
+
 
 module.exports = router;

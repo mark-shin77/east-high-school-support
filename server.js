@@ -8,18 +8,22 @@ const bodyParser = require('body-parser');
 
 const passport = require('./client/server/passport')
 
+
 // Initialize Express
 const app = express();
 
 const PORT = process.env.PORT || 5000;
+
 //Middleware
 
 // Routes
+const authRoutes = require("./routes/auth")
 const apiRoutes = require('./routes/api/index')
-const donationRoutes = require('./routes/front-end/paypal')
+//const donationRoutes = require('./routes/front-end/paypal')
 // API
 app.use('/api', apiRoutes);
-app.use('/donations', donationRoutes);
+//app.use('/donations', donationRoutes);
+app.use("/auth", authRoutes)
 
 // Configure middleware
     // Use morgan
@@ -54,56 +58,7 @@ if (process.env.NODE_ENV === "production") {
 
 
 //login check
-app.get("/login/user", (req,res,next) =>{
-    console.log(req.user)
-    if(req.user){
-        return res.json({user: req.user})
-    }
-    else{
-        return res.json({user: null})
-    }
-})
-app.post("/login", (req,res,next)=>{
-    console.log(req.body)
-    next()
-},
-passport.authenticate('local'), (req, res)=>{
-    const user= JSON.parse(JSON.stringify(req.user))
-    const cleanUser = Object.assign({}, user)
-    if(cleanUser.local){
-        console.log(`Deleting ${cleanUser.local.password}`)
-        delete cleanUser.loca.password
-    }
-    res.json({user: cleanUser})
-})
 
-app.post("/logout", (req,res)=>{
-    if(req.user){
-        req.session.destroy()
-        res.clearCookie('connect.sid')
-        return res.json({msg: 'logging you out'})
-    } else{
-        return res.json({msg: 'no user to log out'})
-    }
-})
-app.post("/signup", (req,res)=>{
-    const {username, password} = req.body
-    User.findOne({'local.username': username},(err, userMatch)=>{
-        if(userMatch){
-            return res.json({
-                error: `Sorry, already a user with the same username ${username}`
-            })
-        }
-        const newUser = new User({
-            'local.username': username,
-            'local.password': password
-        })
-        newUser.save((err,savedUser)=>{
-            if (err) return res.json(err)
-            return res.json(savedUser)
-        })
-    })
-})
 app.listen(PORT, function() {
     console.log(`🌎 ==> API server now on port ${PORT}!`);
 });

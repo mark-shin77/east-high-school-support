@@ -8,6 +8,8 @@ import Contact from './components/pages/Contact';
 import Donate from './components/pages/Donate';
 import Volunteer from './components/pages/Volunteer';
 
+import SignupForm from './components/signUp';
+
 function App() {
     return (
       
@@ -18,6 +20,7 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route path="/donate" component={Donate} />
             <Route path="/volunteer" component={Volunteer} />
+            <Route path="/signup" component={SignupForm}/>
       </div>
       </Router>
     );
