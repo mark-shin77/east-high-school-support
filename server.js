@@ -1,24 +1,29 @@
+// Dependencies
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
 const cors = require('cors');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+
 const passport = require('./client/server/passport')
+
+
 // Initialize Express
 const app = express();
 
 const PORT = process.env.PORT || 5000;
+
 //Middleware
 
 // Routes
-const apiRoutes = require('./routes/api/index')
 const authRoutes = require("./routes/auth")
-app.use('/api', apiRoutes);
-app.use("/auth", authRoutes);
-const donationRoutes = require('./routes/front-end/paypal')
+const apiRoutes = require('./routes/api/index')
+//const donationRoutes = require('./routes/front-end/paypal')
 // API
-app.use('/donations', donationRoutes);
+app.use('/api', apiRoutes);
+//app.use('/donations', donationRoutes);
+app.use("/auth", authRoutes)
 
 // Configure middleware
     // Use morgan
@@ -47,9 +52,11 @@ if (process.env.NODE_ENV === "production") {
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", function(req, res) {
+//     res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
+
+
 //login check
 
 app.listen(PORT, function() {

@@ -26,7 +26,7 @@ class SignupForm extends Component {
        let username= this.state.username
        let password = this.state.password
 		axios
-			.post(`auth/signup/${username}/${password}`, {
+			.post(`/auth/signup/${username}/${password}`, {
 				//username: this.state.username,
                 //password: this.state.password
                 

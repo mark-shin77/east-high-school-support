@@ -54,19 +54,26 @@ class LogApp extends Component {
     }
 
     _login(username, password){
-        axios
-            .post(`auth/login`, {
-                username,
-                password
-            })
-            .then(response =>{
-                if (response.status ===200){
-                    this.setState({
-                        loggedIn: true,
-                        user: response.data.user
-                    })
-                }
-            })
+        axios({
+            method:"post",
+            url: '/auth/login',
+            data: {
+                username: username,
+                password: password
+            }
+        }).then(response=>{console.log(response)})
+            // .post(`/auth/login`, {
+            //     username,
+            //     password
+            // })
+            // .then(response =>{
+            //     if (response.status ===200){
+            //         this.setState({
+            //             loggedIn: true,
+            //             user: response.data.user
+            //         })
+            //     }
+            // })
     }
     render(){
         return(

@@ -1,12 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './assets/css/main.css'
 import "./assets/css/font-awesome.min.css";
-import LoginForm from "./components/Login"
-import Home from './Home'
-import Contact from './Contact'
+import Home from './components/pages/Home';
+import Admin from './components/pages/Admin';
+import Contact from './components/pages/Contact';
+import Donate from './components/pages/Donate';
+import Volunteer from './components/pages/Volunteer';
+
 import SignupForm from './components/signUp';
-import LogApp from "./components/LoginApp"
 
 function App() {
     return (
@@ -14,8 +16,10 @@ function App() {
       <Router>
       <div>
             <Route exact path="/" component={Home} />
+            <Route path="/admin" component={Admin} />
             <Route path="/contact" component={Contact} />
-            <Route path="/login" component={LogApp}/>
+            <Route path="/donate" component={Donate} />
+            <Route path="/volunteer" component={Volunteer} />
             <Route path="/signup" component={SignupForm}/>
       </div>
       </Router>
