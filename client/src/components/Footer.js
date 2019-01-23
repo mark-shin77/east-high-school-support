@@ -39,24 +39,21 @@ class Footer extends Component {
                     <ul className="labeled-icons">
                         <li>
                             <h4 className="icon alt fa-home"><span className="label">Address</span></h4>
-                            <span>1234 Somewhere Road #80486<br />
-                            Nashville, TN 00000</span>
+                            <span>840 South 1300 East<br />
+                            Salt Lake City, UT 84102</span>
                         </li>
                         <li>
                             <h4 className="icon alt fa-phone"><span className="label">Phone</span></h4>
-                            <span>(800) 555-0000 x12345</span>
+                            <span>(801) 583-1661 x2338</span>
                         </li>
                         <li>
                             <h4 className="icon alt fa-envelope"><span className="label">Email</span></h4>
-                            <a href="#">hello@untitled.tld</a>
+                            <a href="#">kris.barta@slcschools.org</a>
                         </li>
                         <li>
-                            <h4 className="icon alt fa-facebook"><span className="label">Facebook</span></h4>
-                            <a href="#">facebook.com/untitled-tld</a>
-                        </li>
-                        <li>
-                            <h4 className="icon alt fa-twitter"><span className="label">Twitter</span></h4>
-                            <a href="#">twitter.com/untitled-tld</a>
+                            <a href="https://www.instagram.com/ehsstudentandfamilysupport/">
+                            <h4 className="icon alt fa-instagram"><span className="label">Instagram</span></h4>
+                            EHS Student and Family Support</a>
                         </li>
                     </ul>
                 </section>
