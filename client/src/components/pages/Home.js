@@ -5,19 +5,18 @@ import pic00 from '../../images/pic00.jpg';
 import Header from '../../components/Header';
 import Main from '../../components/Main';
 import Footer from '../../components/Footer';
+import Banner from '../../components/Banner'
 
 class Home extends Component {
   render() {
     return (
-        <div>
+      <div>
         <Header />
-
-       
+        <Banner />
         <Main />
-     
         <Footer />
-        </div>
-       );
+      </div>
+    );
   }
 }
 
