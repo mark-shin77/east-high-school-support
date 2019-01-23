@@ -11,7 +11,7 @@ class Header extends Component {
    <div>
         <header id="header">
         <h1 style={{whiteSpace: "pre"}}>
-           <Link to="/inspect">GIVE FOOD </Link>|
+           <Link to="/fooddonation">GIVE FOOD </Link>|
            <Link to="/donate"> GIVE MONEY </Link>|
            <Link to="/volunteer"> GIVE TIME</Link></h1>
         <nav id="nav">
