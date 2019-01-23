@@ -55,7 +55,7 @@ class LogApp extends Component {
 
     _login(username, password){
         axios
-            .post(`auth/frogIn`, {
+            .post(`auth/login`, {
                 username,
                 password
             })

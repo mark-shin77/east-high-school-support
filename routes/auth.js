@@ -13,7 +13,7 @@ router.get('/user', (req, res, next) => {
 })
 
 router.post(
-	'/frogIn',
+	'/login',
 	function(req, res, next) {
 		console.log(req.body)
 		console.log('================')
