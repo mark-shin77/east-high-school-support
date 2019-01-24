@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
+
 // import googleButton from './google_signin_buttons/web/1x/btn_google_signin_dark_disabled_web.png'
 //import googleButton from './google_signin_buttons/web/1x/btn_google_signin_dark_normal_web.png'
+import Dashboard from './Dashboard';
 
 class LoginForm extends Component {
 	constructor(props) {
@@ -27,14 +29,17 @@ class LoginForm extends Component {
 		console.log('handleSubmit')
 		this.props._login(this.state.username, this.state.password)
 		this.setState({
-			redirectTo: '/admin'
+			redirectTo: true
 		})
 	}
 
 	render() {
-		if (this.state.redirectTo) {
-			return <Redirect to={{ pathname: this.state.redirectTo }} />
-		} else {
+		if(this.props.loggedIn){
+			return <Dashboard loggedIn={this.props.loggedIn}/>
+		}
+		// if (this.state.redirectTo) {
+		// 	return <Redirect to={{ pathname: "/dash/admin"}} loggedIn={this.props.loggedIn} />
+		 else {
 			return (
 				<div className="LoginForm">
 					<h1>Login form</h1>

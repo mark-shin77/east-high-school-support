@@ -1,7 +1,9 @@
-import React, {Component} from 'react'
-import axios from "axios"
-import {Route, Link} from "react-router-dom"
+import React, {Component} from 'react';
+import axios from "axios";
 import LoginForm from './Login';
+import Dashboard from "./Dashboard";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { runInThisContext } from 'vm';
 
 /*const DisplayLinks = props=>{
     if (props.loggedIn){        return (
@@ -18,8 +20,9 @@ class LogApp extends Component {
         }
         this._logout = this._logout.bind(this)
         this._login = this._login.bind(this)
-
+ 
     }
+    
     componentDidMount(){
         axios.get("/auth/user").then(response =>{
             console.log(response.data)
@@ -61,25 +64,31 @@ class LogApp extends Component {
                 email: username,
                 password: password
             }
-        }).then(response=>{console.log(response)})
+        }).then(response=>{
             // .post(`/auth/login`, {
             //     username,
             //     password
             // })
             // .then(response =>{
-            //     if (response.status ===200){
-            //         this.setState({
-            //             loggedIn: true,
-            //             user: response.data.user
-            //         })
-            //     }
-            // })
+                if (response.status ===200){
+                    this.setState({
+                        loggedIn: true,
+                        user: response.data.user
+                    })
+                 }
+             })
     }
     render(){
         return(
-            <LoginForm
+            <div>
+               
+                <LoginForm
                _login ={this._login}
+               loggedIn={this.state.loggedIn}
+               
                />
+            </div>
+            
         )
     }
 }

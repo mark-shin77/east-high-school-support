@@ -9,6 +9,8 @@ import Donate from './components/pages/Donate';
 import Volunteer from './components/pages/Volunteer';
 
 import SignupForm from './components/signUp';
+import Dashboard from './components/Dashboard';
+
 
 function App() {
     return (
@@ -21,6 +23,7 @@ function App() {
             <Route path="/donate" component={Donate} />
             <Route path="/volunteer" component={Volunteer} />
             <Route path="/signup" component={SignupForm}/>
+            <Route exact path="/dash/admin" component={Dashboard} loggedIn={false}/>
       </div>
       </Router>
     );
