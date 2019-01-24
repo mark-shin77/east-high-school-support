@@ -58,7 +58,7 @@ class LogApp extends Component {
             method:"post",
             url: '/auth/login',
             data: {
-                username: username,
+                email: username,
                 password: password
             }
         }).then(response=>{console.log(response)})

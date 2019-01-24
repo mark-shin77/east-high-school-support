@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
-
+import PropTypes from 'prop-types'
 class SignupForm extends Component {
 	constructor() {
 		super()
 		this.state = {
-			username: '',
+			email: '',
 			password: '',
 			confirmPassword: '',
+			name: '',
+		
 			redirectTo: null
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
@@ -22,13 +24,13 @@ class SignupForm extends Component {
 	handleSubmit(event) {
 		event.preventDefault()
         // TODO - validate!
-        console.log(this.state.username)
-       let username= this.state.username
-       let password = this.state.password
+        //console.log(this.state.username)
+       let email= this.state.email
+	   let password = this.state.password
 		axios
-			.post(`/auth/signup/${username}/${password}`, {
-				//username: this.state.username,
-                //password: this.state.password
+			.post(`/auth/signup`, {
+				email: email,
+                password: password
                 
 			})
 			.then(response => {
@@ -50,11 +52,11 @@ class SignupForm extends Component {
 		return (
 			<div className="SignupForm">
 				<h1>Signup form</h1>
-				<label htmlFor="username">Username: </label>
+				<label htmlFor="username">Email: </label>
 				<input
-					type="text"
-					name="username"
-					value={this.state.username}
+					type="email"
+					name="email"
+					value={this.state.email}
 					onChange={this.handleChange}
 				/>
 				<label htmlFor="password">Password: </label>
@@ -71,10 +73,71 @@ class SignupForm extends Component {
 					value={this.state.confirmPassword}
 					onChange={this.handleChange}
 				/>
+				
 				<button onClick={this.handleSubmit}>Sign up</button>
 			</div>
 		)
 	}
 }
 
-export default SignupForm
+
+
+// const SignupForm = ({
+//   onSubmit,
+//   onChange,
+//   errors,
+//   user,
+// }) => (
+//   <div className="container">
+//     <form action="/" onSubmit={onSubmit}>
+//       <h2 className="card-heading">Sign Up</h2>
+
+      
+
+//       <div className="field-line">
+//         <textarea
+//           floatingLabelText="Name"
+//           name="name"
+//           onChange={onChange}
+//           value={user.name}
+//         />
+//       </div>
+
+//       <div className="field-line">
+//         <textarea
+//           floatingLabelText="Email"
+//           name="email"
+//           onChange={onChange}
+//           value={user.email}
+//         />
+//       </div>
+
+//       <div className="field-line">
+//         <textarea
+//           floatingLabelText="Password"
+//           type="password"
+//           name="password"
+//           onChange={onChange}
+//           errorText={errors.password}
+//           value={user.password}
+//         />
+//       </div>
+
+//       <div className="button-line">
+//         <button type="submit" label="Create New Account" primary />
+//       </div>
+
+      
+//     </form>
+//   </div>
+// );
+
+// SignupForm.propTypes = {
+//   onSubmit: PropTypes.func.isRequired,
+//   onChange: PropTypes.func.isRequired,
+//   errors: PropTypes.object.isRequired,
+//   user: PropTypes.object.isRequired
+// };
+
+
+export default SignupForm;
