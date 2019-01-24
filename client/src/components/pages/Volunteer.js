@@ -31,7 +31,7 @@ class Volunteer extends Component {
     }
 
     loadAvailableTimeSlots = () => {
-        API.getReport({id: this.state.signupid})
+        API.getReport({})
             .then(res => {
                 this.setState({ availableTimeSlots: res.data.data.signup, signupid: res.data.data.signup.signupid });
                 console.log(this.state.signupid);

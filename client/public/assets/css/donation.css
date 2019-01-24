@@ -1,0 +1,64 @@
+#snack {
+    height: 150px;
+    width: auto;    
+    position: absolute;
+    left: 10px;
+    top: 25px;
+}
+
+#soap {
+    height: 100px;
+    width: auto;
+    position: absolute;
+    left: 33px;
+    top: 38px;
+}
+
+#schoolSupplies {
+    height: 100px;
+    width: auto;
+    position: absolute;
+    left: 40px;
+    top: 45px;
+}
+
+#socks {
+    height: 170px;
+    width: auto;
+    position: absolute;
+    left: 17px;
+    top: 12px;
+}
+
+#towels {
+    height: 100px;
+    width: auto;
+    position: absolute;
+    left: 33px;
+    bottom: 42px;
+}
+
+#glasses {
+    height: 105px;
+    width: auto;
+    position: absolute;
+    left: 10px;
+    top: 45px;
+}
+
+#protein {
+    height: 150px;
+    width: auto;
+    position: absolute;
+    left: 16px;
+    top: 27px;
+}
+
+#laptop{
+    height: 90px;
+    width: auto;
+    position: absolute;
+    left: 30px;
+    top: 45px;
+}
+
