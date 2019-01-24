@@ -14,7 +14,7 @@ class Banner extends Component {
 				<br/>
 				<br/>
 				<br/>
-					<h2>FAMILY & STUDENT SUPPORT</h2>
+					<h2>STUDENT & FAMILY SUPPORT</h2>
 					<ul className="actions special">
 						<li><a href="#" class="button large primary">Learn More</a></li>
 					</ul>
