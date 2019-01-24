@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Admin from './components/pages/Admin';
 import Contact from './components/pages/Contact';
 import Donate from './components/pages/Donate';
+import FoodDonation from './components/pages/FoodDonation';
 import Inspect from './components/pages/Inspect';
 import Volunteer from './components/pages/Volunteer';
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/admin" component={Admin} />
             <Route path="/contact" component={Contact} />
             <Route path="/donate" component={Donate} />
+            <Route path="/fooddonation" component={FoodDonation} />
             <Route path="/inspect" component={Inspect} />
             <Route path="/volunteer" component={Volunteer} />
             <Route path="/signup" component={SignupForm}/>
