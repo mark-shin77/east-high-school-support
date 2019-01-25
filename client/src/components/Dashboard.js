@@ -1,4 +1,9 @@
 import React, {Component} from "react"
+import '../assets/css/font-awesome.min.css';
+import '../assets/css/main.css';
+import pic08 from '../images/pic08.jpg';
+import Header from './Header';
+import Footer from './Footer';
 class Dashboard  extends Component{
     constructor(props){
        super(props)
@@ -27,7 +32,14 @@ class Dashboard  extends Component{
         if(this.state.loggedIn){
             return(
                 <div>
-                    <h3>Hello</h3>
+                    <Header/>
+                    <div id="main" className="container">
+                     <section id="content">
+                <a href="#" className="image fit"><img src={pic08} alt="" /></a>
+
+                </section>
+                </div>
+                <Footer/>
                 </div>
             )
         }
