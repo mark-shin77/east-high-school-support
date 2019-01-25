@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const User = require("../client/server/db/models/user")
-const passport = require("../client/server/passport")
+passport = require("../client/server/passport")
 const validator = require("validator")
 router.get('/user', (req, res, next) => {
 	console.log('===== user!!======')
@@ -18,7 +18,7 @@ function validateLoginForm(payload) {
 	const errors = {};
 	let isFormValid = true;
 	let message = '';
-  
+  console.log(payload);
 	if (!payload || typeof payload.email !== 'string' || payload.email.trim().length === 0) {
 	  isFormValid = false;
 	  errors.email = 'Please provide your email address.';
@@ -46,6 +46,7 @@ router.post(
 	
 	// (req, res, next) => {
 		const validationResult = validateLoginForm(req.body);
+console.log(validationResult);
 		if (!validationResult.success) {
 		  return res.status(400).json({
 			success: false,
@@ -54,8 +55,8 @@ router.post(
 		  });
 		}
 	  
-	  
 		return passport.authenticate('local', (err, token, userData) => {
+			console.log(err);
 		  if (err) {
 			if (err.name === 'IncorrectCredentialsError') {
 			  return res.status(400).json({
@@ -78,24 +79,26 @@ router.post(
 			user: userData
 		  });
 		})(req, res, next);
+	
 	  });
-	// 	console.log(`THIS IS THE REQ BODY!!!! ${req.body}`)
-	// 	console.log('================')
-	// 	next()
+// 		console.log(`THIS IS THE REQ BODY!!!! ${req.body.email}`)
+// 		console.log('================')
+// 		next()
 		
-	// },
-	// passport.authenticate('local'),
-	// (req, res) => {
-	// 	console.log('POST to /login')
-	// 	const user = JSON.parse(JSON.stringify(req.body.username)) // hack
-	// 	const cleanUser = Object.assign({}, user)
-	// 	if (cleanUser.local) {
-	// 		console.log(`Deleting ${cleanUser.local.password}`)
-	// 		delete cleanUser.local.password
-	// 	}
-	// 	res.json({ user: cleanUser })
-	// }
-//)
+// 	},
+// 	//console.log('hello hello hello hello this part is working'),
+// 	passport.authenticate('local'),
+// 	(req, res) => {
+// 		console.log('POST to /login')
+// 		const user = JSON.parse(JSON.stringify(req.body.email)) // hack
+// 		const cleanUser = Object.assign({}, user)
+// 		if (cleanUser.local) {
+// 			console.log(`Deleting ${cleanUser.local.password}`)
+// 			delete cleanUser.local.password
+// 		}
+// 		res.json({ user: cleanUser })
+// 	}
+// )
  
 
 router.post('/logout', (req, res) => {
@@ -197,8 +200,8 @@ router.post('/signup', (req, res) => {
 			})
 		}
 		const newUser = new User({
-			'local.email': email,
-			'local.password': password
+			email: email,
+			password: password
 		})
 		newUser.save((err, savedUser) => {
 			if (err) return res.json(err)

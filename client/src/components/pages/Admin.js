@@ -4,7 +4,8 @@ import '../../assets/css/main.css';
 import pic08 from '../../images/pic08.jpg';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import LogApp from "../../components/LoginApp"
+import LogApp from "../../components/LoginApp";
+
 
 class Admin extends Component {
   render() {

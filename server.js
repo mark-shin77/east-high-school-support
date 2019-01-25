@@ -44,7 +44,6 @@ const db = require('./config/keys').mongoURI;
 mongoose.connect(db)
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));

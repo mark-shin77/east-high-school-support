@@ -70,6 +70,7 @@ class LogApp extends Component {
             //     password
             // })
             // .then(response =>{
+                console.log(response)
                 if (response.status ===200){
                     this.setState({
                         loggedIn: true,

@@ -23,7 +23,7 @@ function App() {
             <Route path="/donate" component={Donate} />
             <Route path="/volunteer" component={Volunteer} />
             <Route path="/signup" component={SignupForm}/>
-            <Route exact path="/dash/admin" component={Dashboard} loggedIn={false}/>
+            <Route exact path="/admin/dash" component={Dashboard} loggedIn={false}/>
       </div>
       </Router>
     );

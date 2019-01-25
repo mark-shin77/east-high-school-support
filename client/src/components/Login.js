@@ -35,7 +35,10 @@ class LoginForm extends Component {
 
 	render() {
 		if(this.props.loggedIn){
-			return <Dashboard loggedIn={this.props.loggedIn}/>
+			return <Redirect to={{pathname:"/admin/dash",
+			                       state: {
+									   loggedIn: this.props.loggedIn 
+								   }} } /> //<location="/admin/dashboars" <Dashboard loggedIn={this.props.loggedIn}/>
 		}
 		// if (this.state.redirectTo) {
 		// 	return <Redirect to={{ pathname: "/dash/admin"}} loggedIn={this.props.loggedIn} />
@@ -44,7 +47,7 @@ class LoginForm extends Component {
 				<div className="LoginForm">
 					<h1>Login form</h1>
 					<form>
-						<label htmlFor="username">Username: </label>
+						<label htmlFor="username">Email: </label>
 						<input
 							type="text"
 							name="username"
