@@ -13,14 +13,14 @@ class Admin extends Component {
         <div>
         <Header />
 
-       
+        <div id="main" className="container">
             <section id="content">
                 <a href="#" className="image fit"><img src={pic08} alt="" /></a>
 
             </section>
             <LogApp/>
 
-     
+        </div>
         <Footer />
         </div>
        );

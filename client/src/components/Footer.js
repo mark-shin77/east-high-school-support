@@ -14,22 +14,22 @@ class Footer extends Component {
                     faucibus et cubilia.</h2>
                     <p>Arcu porttitor ut massa adipiscing nascetur varius lorem ipsum ante ac vestibulum lacinia ante praesent. Iaculis porttitor turpis orci arcu et orci. Lobortis non commodo ante lorem ipsum porttitor turpis orci. Arcu porttitor massa lorem ipsum dolor amet consequat etiam.</p>
                     <ul className="actions">
-                        <li><a href="#" className="button">Erat vestibulum</a></li>
+                        <li><a href="#" className="button">Support East High</a></li>
                     </ul>
                 </section>
                 <section className="col-4 col-6-medium col-12-small">
                     <h3>Updates</h3>
                     <ul className="updates">
                         <li>
-                            <p><a href="#">Ante ac vestibulum lacinia praesent adipiscing nascetur consequat lorem ipsum dolore.</a></p>
+                            <p><a href="https://www.sltrib.com/news/2018/11/20/big-donation-boosts-east">A big donation boosts East High’s pantry; for many districts, food help has become ‘something that our schools can’t do without’</a></p>
                             <span className="timestamp">Posted 2 hours ago</span>
                         </li>
                         <li>
-                            <p><a href="#">Mi eu gravida tortor. Commodo lacinia ut ante placerat. In lobortis ac accumsan tortor.</a></p>
+                            <p><a href="https://www.deseretnews.com/article/900043095/3-year-smiths-gift-extends-reach-of-east-highs-food-pantry.html">3-year Smith's gift extends reach of East High's food pantry</a></p>
                             <span className="timestamp">Posted 4 hours ago</span>
                         </li>
                         <li>
-                            <p><a href="#">Erat faucibus lacinia orci vestibulum massa accumsan ac vitae turpis praesent non.</a></p>
+                            <p><a href="https://fox13now.com/2018/11/20/major-donation-helps-utah-high-school-students-provide-food-for-friends/">Major donation helps Utah high school students provide food for friends</a></p>
                             <span className="timestamp">Posted 8 hours ago</span>
                         </li>
                     </ul>
@@ -39,24 +39,23 @@ class Footer extends Component {
                     <ul className="labeled-icons">
                         <li>
                             <h4 className="icon alt fa-home"><span className="label">Address</span></h4>
-                            <span>1234 Somewhere Road #80486<br />
-                            Nashville, TN 00000</span>
+                            <span>840 South 1300 East<br />
+                            Salt Lake City, UT 84102</span>
                         </li>
                         <li>
+                            <a href="tel:8015831661">
                             <h4 className="icon alt fa-phone"><span className="label">Phone</span></h4>
-                            <span>(800) 555-0000 x12345</span>
+                            <span>(801) 583-1661 x2338</span></a>
                         </li>
                         <li>
-                            <h4 className="icon alt fa-envelope"><span className="label">Email</span></h4>
-                            <a href="#">hello@untitled.tld</a>
+                            <a href={"mailto:" + "kris.barta@slcschools.org"}>
+                            <h4 className="icon alt fa-envelope" style={{cursor: "pointer"}}> <span className="label">Email</span></h4>
+                            kris.barta@slcschools.org</a>
                         </li>
                         <li>
-                            <h4 className="icon alt fa-facebook"><span className="label">Facebook</span></h4>
-                            <a href="#">facebook.com/untitled-tld</a>
-                        </li>
-                        <li>
-                            <h4 className="icon alt fa-twitter"><span className="label">Twitter</span></h4>
-                            <a href="#">twitter.com/untitled-tld</a>
+                            <a href="https://www.instagram.com/ehsstudentandfamilysupport/">
+                            <h4 className="icon alt fa-instagram" style={{cursor: "pointer"}}><span className="label">Instagram</span></h4>
+                            EHS Student and Family Support</a>
                         </li>
                     </ul>
                 </section>

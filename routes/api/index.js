@@ -58,9 +58,10 @@ router.get("/signups/all", (req, res) => {
         })
         .catch(err => res.status(422).json(err));
 });
-router.get("/report", (req, res) => {
+router.get("/report/:id", (req, res) => {
+    var signupformid = req.params.id;
     axios
-        .get("https://api.signupgenius.com/v2/k/signups/report/available/18626753/?user_key=" + signup_api_key, { params: req.query })
+        .get("https://api.signupgenius.com/v2/k/signups/report/all/" + signupformid + "/?user_key=" + signup_api_key, { params: req.query })
         .then(results => {
             console.log(results.data);
             res.json(results.data);
