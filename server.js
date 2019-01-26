@@ -15,7 +15,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 //Middleware
-
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 // Routes
 const authRoutes = require("./routes/auth")
 const apiRoutes = require('./routes/api/index')
@@ -36,15 +37,13 @@ app.use("/auth", authRoutes)
 app.use(passport.initialize())
 app.use(passport.session())//deserialize user
 // Parse request body as JSON
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+
 
 // Connect to the Mongo DB
 const db = require('./config/keys').mongoURI;
 mongoose.connect(db)
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
