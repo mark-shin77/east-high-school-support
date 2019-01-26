@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './assets/css/main.css'
 import "./assets/css/font-awesome.min.css";
+import ScrollToTop from './components/ScrollToTop';
 import Home from './components/pages/Home';
 import Admin from './components/pages/Admin';
 import Contact from './components/pages/Contact';
@@ -18,7 +19,9 @@ function App() {
     return (
       
       <Router>
+      
       <div>
+      <ScrollToTop>
             <Route exact path="/" component={Home} />
             <Route path="/admin" component={Admin} />
             <Route path="/contact" component={Contact} />
@@ -28,6 +31,7 @@ function App() {
             <Route path="/volunteer" component={Volunteer} />
             <Route path="/signup" component={SignupForm}/>
             <Route exact path="/dash" component={Dashboard} loggedIn={false}/>
+      </ScrollToTop>
       </div>
       </Router>
     );

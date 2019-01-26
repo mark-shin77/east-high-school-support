@@ -16,11 +16,11 @@ class Banner extends Component {
 				<br/>
 					<h2>STUDENT & FAMILY SUPPORT</h2>
 					<ul className="actions special">
-						<li><a href="#" class="button large primary">Learn More</a></li>
+						<li><div className="button-wrapper"><a href="#one" className="button large primary">Learn More</a></div></li>
 					</ul>
 					<p className="footnote">Sed amet magna? <a href="#">Feugiat lorem</a></p>
 				</div>
-				<a href="#one" class="more scrolly">Learn more ...</a>
+				<a href="#one" class="more scrolly">Learn more</a>
 			</section>
 
        );

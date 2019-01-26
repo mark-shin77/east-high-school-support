@@ -86,7 +86,46 @@ class EntireTemplate extends Component {
                 
             </section>
 
-      
+      					<section id="two" className="feature">
+						<div className="row">
+							<div className="col-4 col-12-medium">
+								<h2>CUT FROM THE MAIN PAGE<br />
+								interdum consequat.</h2>
+								<p>Arcu porttitor ut massa adipiscing nascetur varius lorem ipsum ante ac vestibulum lacinia ante sed praesent. Iaculis porttitor turpis orci arcu et orci. Lobortis non commodo ante lorem ipsum porttitor turpis orci. Arcu porttitor massa sed lobortis non commodo ante lorem ipsum ante ac vestibulum lacinia ante praesent. Iaculis porttitor.</p>
+								<ul className="actions">
+									<li><a href="#" className="button">Ipsum consequat</a></li>
+								</ul>
+							</div>
+							<div className="col-8 col-12-medium">
+								<ul className="major-icons row">
+									<li className="col-4 col-6-small col-12-xsmall">
+										<span className="icon alt major fa-camera"></span>
+										<p>Praesent sed adipiscing</p>
+									</li>
+									<li className="col-4 col-6-small col-12-xsmall">
+										<span className="icon alt major fa-clock-o"></span>
+										<p>Amet accumsan gravida</p>
+									</li>
+									<li className="col-4 col-6-small col-12-xsmall">
+										<span className="icon alt major fa-cloud"></span>
+										<p>Risus aliquet feugiat</p>
+									</li>
+									<li className="col-4 col-6-small col-12-xsmall">
+										<span className="icon alt major fa-code"></span>
+										<p>Accumsan rhoncus</p>
+									</li>
+									<li className="col-4 col-6-small col-12-xsmall">
+										<span className="icon alt major fa-database"></span>
+										<p>Vitae primis placerat</p>
+									</li>
+									<li className="col-4 col-6-small col-12-xsmall">
+										<span className="icon alt major fa-bolt"></span>
+										<p>Integer nisl faucibus</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
 
 
             <section>
