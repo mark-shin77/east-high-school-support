@@ -11,6 +11,8 @@ import Inspect from './components/pages/Inspect';
 import Volunteer from './components/pages/Volunteer';
 
 import SignupForm from './components/signUp';
+import Dashboard from './components/Dashboard';
+
 
 function App() {
     return (
@@ -25,6 +27,7 @@ function App() {
             <Route path="/inspect" component={Inspect} />
             <Route path="/volunteer" component={Volunteer} />
             <Route path="/signup" component={SignupForm}/>
+            <Route exact path="/admin/dash" component={Dashboard} loggedIn={false}/>
       </div>
       </Router>
     );
