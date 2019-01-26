@@ -17,7 +17,6 @@ class Dashboard  extends Component{
    componentDidMount(){
        if(!localStorage.token &&this.state.loggedIn){
            localStorage.setItem("token", "success")
-           window.location.reload()
        }
        return true
    }
@@ -38,7 +37,8 @@ class Dashboard  extends Component{
         console.log(this.state)
         console.log(localStorage)
         if(this.componentDidMount){
-        if(this.state.token ==="success"){
+            //it takes awhile for the token to update so it can take two conditions
+        if(this.state.token ==="success"|| this.state.loggedIn){
 
             return(
                 <div>
