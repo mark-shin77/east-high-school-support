@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom';
 import "../assets/css/main.css";
 import "../assets/css/font-awesome.min.css";
 
@@ -10,11 +11,11 @@ class Footer extends Component {
         <div className="container">
             <div className="row">
                 <section className="col-4 col-12-medium about">
-                    <h2>Augue eleifend<br />
-                    faucibus et cubilia.</h2>
-                    <p>Arcu porttitor ut massa adipiscing nascetur varius lorem ipsum ante ac vestibulum lacinia ante praesent. Iaculis porttitor turpis orci arcu et orci. Lobortis non commodo ante lorem ipsum porttitor turpis orci. Arcu porttitor massa lorem ipsum dolor amet consequat etiam.</p>
+                    <h2>Thank you<br />
+                    Donors!</h2>
+                    <p>These programs are supported 100% through in-kind gifts and cash, generously donated by East High students, families, PTA and an amazing community of individuals and companies who LOVE EAST and want to help each student succeed!</p>
                     <ul className="actions">
-                        <li><a href="#" className="button">Support East High</a></li>
+                        <li><Link to="/donate" className="button">Support East High</Link></li>
                     </ul>
                 </section>
                 <section className="col-4 col-6-medium col-12-small">
