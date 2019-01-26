@@ -2077,8 +2077,9 @@ input, select, textarea {
 		}
 
 		.image .caption {
-			background: #232626;
-			background: rgba(35, 38, 38, 0.7);
+			background: #333366;
+			background: #333366;
+			opacity: 0.8;
 			border-radius: 0 0 6px 6px;
 			bottom: 0;
 			color: #fff;
@@ -3643,3 +3644,11 @@ input, select, textarea {
 			}
 
 	}
+/* Our styles */
+
+.button-wrapper {
+	width: 200px;
+}
+.button-wrapper:hover  {
+	letter-spacing: 3px;
+}
