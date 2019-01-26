@@ -30,7 +30,7 @@ const AvailableTimeSlots = (props) => {
                             <td><CheckAvailability firstname={item.firstname} /></td>
                         </tr>
                 )
-            }).sort()}
+            }).sort((a , b) => { return b -a })};
             </tbody>
         </table>
     );
