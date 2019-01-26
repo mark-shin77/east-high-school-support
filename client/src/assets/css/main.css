@@ -3644,3 +3644,11 @@ input, select, textarea {
 			}
 
 	}
+/* Our styles */
+
+.button-wrapper {
+	width: 200px;
+}
+.button-wrapper:hover  {
+	letter-spacing: 3px;
+}
