@@ -12,7 +12,7 @@ const AvailableTimeSlots = (props) => {
                     <th>Event</th>
                     <th>Location</th>
                     <th>Date</th>
-                    <th>Time</th>
+                    <th>Time</th>   
                     <th>Available Slot</th>
                 </tr>
             </thead>
@@ -27,10 +27,10 @@ const AvailableTimeSlots = (props) => {
                                 <Moment format="hh:mm A" unix tz="America/Salt_Lake_City">{item.startdate}</Moment> - 
                                 <Moment format="hh:mm A" unix tz="America/Salt_Lake_City">{item.enddate}</Moment>
                             </td>
-                            <td><CheckAvailability status={item.status} /></td>
+                            <td><CheckAvailability firstname={item.firstname} /></td>
                         </tr>
                 )
-            })}
+            }).sort()}
             </tbody>
         </table>
     );

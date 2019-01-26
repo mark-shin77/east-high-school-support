@@ -10,7 +10,8 @@ export default {
     getAllSignups: function() {
         return axios.get("/api/signups/all");
     },
-    getReport: function() {
-        return axios.get("/api/report/:id");
+    getReport: function(id) {
+        console.log(id)
+        return axios.get(`/api/report/${id}`);
     }
 };

@@ -60,6 +60,7 @@ router.get("/signups/all", (req, res) => {
 });
 router.get("/report/:id", (req, res) => {
     var signupformid = req.params.id;
+    console.log(signupformid);
     axios
         .get("https://api.signupgenius.com/v2/k/signups/report/all/" + signupformid + "/?user_key=" + signup_api_key, { params: req.query })
         .then(results => {

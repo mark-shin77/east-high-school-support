@@ -1,6 +1,5 @@
 import React from 'react';
 import Moment from 'react-moment';
-import { Link } from 'react-router-dom';
 
 const ActiveSignupList = (props) => {
     return (
@@ -8,18 +7,18 @@ const ActiveSignupList = (props) => {
             {props.activeSignUpResults.map(item => {
                 return (
                     <div>
-                        <Link to={`/volunteer/${item.signupid}`} params={{id: item.signupid}} ><h4>{item.title}</h4></Link>
+                        <h4 onClick={() => props.getTimeSlots(item.signupid)}>{item.title}</h4>
                         <h5><a href={item.signupurl}>Sign up here!</a></h5>
                         <p>Date :
-                            <Moment format="MM / DD / YYYY">{item.startdatestring}</Moment>       -       
+                            <Moment format="MM / DD / YYYY">{item.startdatestring}</Moment>       -
                             <Moment format="MM / DD / YYYY">{item.enddatestring}</Moment>
                         </p>
-                        < hr/>
+                        < hr />
                     </div>
-                    )
+                )
             })}
         </div>
     );
-            }
+}
 
 export default ActiveSignupList;
