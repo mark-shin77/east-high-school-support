@@ -1,13 +1,19 @@
 import React, {Component} from "react"
 
-class Card extends Component{
+class DashCard extends Component{
+    constructor(props){
+        super(props)
+    }
     render(){
         return(
-            <div onClick={this.props.onClick} className="dashcard">
+            <div  className="dashcard"  onClick={this.props.onClick}>
                <h3 className="cardTitle">{this.props.name}</h3>
                 <img href={this.props.image}/>
+                <p>
+                    Card for {this.props.name}
+                </p>
             </div>
         )
     }
 }
-export default Card
+export default DashCard

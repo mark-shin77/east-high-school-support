@@ -76,7 +76,7 @@ console.log(validationResult);
 			success: true,
 			message: 'You have successfully logged in!',
 			token,
-			user: userData
+			user: userData,
 		  });
 		})(req, res, next);
 	

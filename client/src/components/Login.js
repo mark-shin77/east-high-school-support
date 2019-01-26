@@ -35,7 +35,7 @@ class LoginForm extends Component {
 
 	render() {
 		if(this.props.loggedIn){
-			return <Redirect to={{pathname:"/admin/dash",
+			return <Redirect to={{pathname:"/dash",
 			                       state: {
 									   loggedIn: this.props.loggedIn 
 								   }} } /> //<location="/admin/dashboars" <Dashboard loggedIn={this.props.loggedIn}/>
