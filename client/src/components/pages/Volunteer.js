@@ -84,7 +84,6 @@ class Volunteer extends Component {
                                     } */}
                                     { this.state.availableTimeSlots.length > 0 ? 
                                         <Fragment>
-                                            <h3>Available Slots</h3>
                                             <AvailableTimeSlots availableTimeSlots={this.state.availableTimeSlots} />
                                         </Fragment> 
                                         : 
