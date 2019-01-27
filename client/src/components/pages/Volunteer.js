@@ -39,7 +39,6 @@ class Volunteer extends Component {
     }
 
     render() {
-<<<<<<< HEAD
       return (
           <div>
         <Header />   
@@ -57,54 +56,6 @@ class Volunteer extends Component {
               
         <Footer />
         </div>
-=======
-        return (
-            <div>
-                <Header />
-                <div id="main" className="container">
-                    <header class="major">
-                        <h2>Left Sidebar</h2>
-                        <p>Faucibus neque adipiscing mi lorem semper blandit sed consequat</p>
-                    </header>
-                    <div className="row gtr-150">
-                        <div className="col-4 col-12-medium">
-
-                            <section id="sidebar">
-                                <section>
-                                    <div className="active">
-                                        <h3>Available Events</h3>
-                                        <ActiveSignupList activeSignUpResults={this.state.activeSignUpResults} />
-                                    </div>
-                                </section>
-                                <hr />
-                                <section>
-                                    <footer>
-                                        <ul className="actions">
-                                            <li><a href="#" className="button small alt">Learn More</a></li>
-                                        </ul>
-                                    </footer>
-                                </section>
-                            </section>
-
-                        </div>
-                        <div className="col-8 col-12-medium imp-medium">
-
-
-                            <section id="content">
-                                <a href="#" className="image fit"><img src={pic13} alt="" /></a>
-                                <div className="openslots">
-                                    <h3>Available Slots</h3>
-                                    <AvailableTimeSlots availableTimeSlots={this.state.availableTimeSlots} />
-                                </div>
-                            </section>
-
-                        </div>
-                    </div>
-                </div>
-
-                <Footer />
-            </div>
->>>>>>> c79ac7a34c07aaa18e37f8683cc3b7ef6c668c46
         );
     }
 }
