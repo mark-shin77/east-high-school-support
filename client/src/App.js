@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './assets/css/main.css'
 import "./assets/css/font-awesome.min.css";
 import ScrollToTop from './components/ScrollToTop';
@@ -18,7 +18,7 @@ function App() {
       
       <Router>
       
-      <div>
+      <Switch>
       <ScrollToTop>
             <Route exact path="/" component={Home} />
             <Route path="/admin" component={Admin} />
@@ -29,7 +29,7 @@ function App() {
             <Route path="/volunteer" component={Volunteer} />
             <Route path="/signup" component={SignupForm}/>
         </ScrollToTop>
-      </div>
+      </Switch>
       </Router>
     );
   }

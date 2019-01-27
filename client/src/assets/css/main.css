@@ -110,8 +110,6 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
-		color: #cc3333;
 		text-decoration: none;
 	}
 
@@ -3644,11 +3642,78 @@ input, select, textarea {
 			}
 
 	}
-/* Our styles */
+/* Suz CSS */
 
 .button-wrapper {
-	width: 200px;
+	width: 350px;
+	letter-spacing: 2px!important;
+	-moz-transition: letter-spacing 0.5s ease-in-out!important;
+	-webkit-transition: letter-spacing 0.5s ease-in-out!important;
+	-ms-transition: letter-spacing 0.5s ease-in-out!important;
+	-transition: letter-spacing 0.5s ease-in-out!important;
 }
+
 .button-wrapper:hover  {
-	letter-spacing: 3px;
+	letter-spacing: 3.5px!important;
+}
+
+.button-wrapper2 {
+	width: 450px;
+	letter-spacing: 2px!important;
+	-moz-transition: letter-spacing 0.5s ease-in-out!important;
+	-webkit-transition: letter-spacing 0.5s ease-in-out!important;
+	-ms-transition: letter-spacing 0.5s ease-in-out!important;
+	-transition: letter-spacing 0.5s ease-in-out!important;
+}
+
+.button-wrapper2:hover  {
+	letter-spacing: 3.5px!important;
+}
+
+@media screen and (max-width: 826px) {
+
+		.contactWrapper {
+			flex-direction: column;
+			justify-content: flex-start;
+
+	}
+}	
+
+.contacty {
+		-moz-transition: letter-spacing 0.5s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		-webkit-transition: letter-spacing 0.5s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		-ms-transition: letter-spacing 0.5s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		transition: letter-spacing 0.5s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		text-align: center;
+
+}
+.contacty:hover {
+	color:#666699!important;
+	letter-spacing: .25px;
+}
+
+a > .baby-icon{
+	-moz-transition: opacity 0.5s ease-in-out, box-shadow  0.5s ease-in-out;
+	-webkit-transition: box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	-ms-transition: box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	transition: box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	height: 30px;
+}
+
+a > .baby-icon:hover {
+	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	opacity: 0.6;
+}
+
+/* Contact form */
+
+.my-inline {
+		-moz-transition:  opacity 0.4s ease-in-out;
+		-webkit-transition:  opacity 0.4s ease-in-out;
+		-ms-transition:  opacity 0.4s ease-in-out;
+		transition:  opacity 0.4s ease-in-out;
+}
+
+.my-inline:hover {
+	opacity: 0.6;
 }

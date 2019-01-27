@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 import "../assets/css/main.css";
 import "../assets/css/font-awesome.min.css";
-import pic26 from '../images/pic26.jpg';
+import pic24 from '../images/pic24.png';
 
 
 
@@ -14,7 +14,7 @@ class Header extends Component {
         <header id="header">
         
         <h1 style={{whiteSpace: "pre"}}>
-            <Link to="/"><img src={pic26}></img></Link>
+            <Link to="/"><img src={pic24} className="baby-icon"></img></Link>
            <Link to="/fooddonation" >  GIVE FOOD </Link>|
            <Link to="/donate" > GIVE MONEY </Link>|
            <Link to="/volunteer" > GIVE TIME</Link></h1>

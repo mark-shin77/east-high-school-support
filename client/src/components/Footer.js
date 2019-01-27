@@ -11,8 +11,7 @@ class Footer extends Component {
         <div className="container">
             <div className="row">
                 <section className="col-4 col-12-medium about">
-                    <h2>Thank you<br />
-                    Donors!</h2>
+                    <h2>Thank you donors!</h2>
                     <p>These programs are supported 100% through in-kind gifts and cash, generously donated by East High students, families, PTA and an amazing community of individuals and companies who LOVE EAST and want to help each student succeed!</p>
                     <ul className="actions">
                         <li><Link to="/donate" className="button">Support East High</Link></li>
@@ -39,9 +38,11 @@ class Footer extends Component {
                     <h3>Get in touch</h3>
                     <ul className="labeled-icons">
                         <li>
+                            <a href="https://maps.google.com/?ll=40.750867,-111.854866">
                             <h4 className="icon alt fa-home"><span className="label">Address</span></h4>
                             <span>840 South 1300 East<br />
                             Salt Lake City, UT 84102</span>
+                            </a>
                         </li>
                         <li>
                             <a href="tel:8015831661">
@@ -61,14 +62,6 @@ class Footer extends Component {
                     </ul>
                 </section>
             </div>
-        </div>
-        <div className="copyright container">
-            <p>&copy; Untitled. All rights reserved.</p>
-            <ul className="menu">
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
         </div>
     </footer>
 

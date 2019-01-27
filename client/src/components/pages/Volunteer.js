@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import '../../assets/css/font-awesome.min.css';
 import '../../assets/css/main.css';
-import pic13 from '../../images/pic13.jpg';
-import pic14 from '../../images/pic14.jpg';
+import pic30 from '../../images/pic30.jpg';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -12,64 +11,21 @@ class Volunteer extends Component {
       return (
           <div>
         <Header />   
+        
         <div id="main" className="container">
-                  <header class="major">
-                      <h2>Left Sidebar</h2>
-                      <p>Faucibus neque adipiscing mi lorem semper blandit sed consequat</p>
-                  </header>
-                  <div className="row gtr-150">
-                      <div className="col-4 col-12-medium">
-  
-                              <section id="sidebar">
-                                  <section>
-                                      <h3>Magna Feugiat</h3>
-                                      <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit..</p>
-                                      <footer>
-                                          <ul className="actions">
-                                              <li><a href="#" className="button small alt">Learn More</a></li>
-                                          </ul>
-                                      </footer>
-                                  </section>
-                                  <hr />
-                                  <section>
-                                      <a href="#" className="image fit"><img src={pic14} alt="" /></a>
-                                      <h3>Amet Lorem Tempus</h3>
-                                      <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-                                      <footer>
-                                          <ul className="actions">
-                                              <li><a href="#" className="button small alt">Learn More</a></li>
-                                          </ul>
-                                      </footer>
-                                  </section>
-                              </section>
-  
-                      </div>
-                      <div className="col-8 col-12-medium imp-medium">
-  
-                      
-                              <section id="content">
-                                  <a href="#" className="image fit"><img src={pic13} alt="" /></a>
-                                  <h3>Dolore Amet Consequat</h3>
-                                  <p>Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at magna consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam.</p>
-                                  <p>Vestibulum diam quam, mollis at consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum. Morbi mattis elementum orci, nec dictum porta cursus justo. Quisque ultricies lorem in ligula condimentum, et egestas turpis sagittis. Cras ac nunc urna. Nullam eget lobortis purus. Phasellus vitae tortor non est placerat tristique.</p>
-                                  <h3>Sed Magna Ornare</h3>
-                                  <p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus.</p>
-                                  <ul>
-                                      <li>Faucibus orci lobortis ac adipiscing integer.</li>
-                                      <li>Col accumsan arcu mi aliquet placerat.</li>
-                                      <li>Lobortis vestibulum ut magna tempor massa nascetur.</li>
-                                      <li>Blandit massa non blandit tempor interdum.</li>
-                                      <li>Lacinia mattis arcu nascetur lobortis.</li>
-                                  </ul>
-                              </section>
-  
-                      </div>
-                  </div>
-              </div>        
+
+        <section>			
+			<p  style = {{textAlign:"left", fontSize: "24px"}}><a href="https://give.saltlakeeducationfoundation.org/easthighalumni/give-a-gift"><span className="image left my-inline"><img src={pic30} alt="" /></span></a>
+            <a href="https://give.saltlakeeducationfoundation.org/easthighalumni/give-a-gift"><h2 className="my-inline" style={{textAlign: "left"}}>Volunteer Opportunities <br/>East Student & Family Support ❤️</h2></a>The success of this program is highly dependent on our volunteers. We have endless service opportunities for students, teachers, parents and members of the community to help keep the Leopard Stash, Leopard Boutique and Leopard Washroom stocked and running smoothly. Click on the Sign-up Genius link below to find times that work for you!  We also have service opportunities in our school for after-school tutors, classroom assistants and more.  For more specific information as to how you can help, please contact <a href={"mailto:" + "kris.barta@slcschools.org"}>kris.barta@slcschools.org</a>.  Follow us on <a href="https://www.instagram.com/ehsstudentandfamilysupport/">instagram</a> for updates as to how local businesses, friends and neighbors are supporting East High.</p>
+            <br/>
+		</section>
+          
+
+        </div>        
               
-            <Footer />
-            </div>
-         );
+        <Footer />
+        </div>
+        );
     }
   }
   
