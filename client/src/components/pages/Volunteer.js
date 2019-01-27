@@ -69,7 +69,7 @@ class Volunteer extends Component {
 
 
                             <section id="content">
-                                <a href="#" className="image fit"><img src={pic13} alt="" /></a>
+                                {/* <a href="#" className="image fit"><img src={pic13} alt="" /></a> */}
                                 <div className="openslots">
                                     {this.state.availableTimeSlots.length > 0 ?
                                         <Fragment>
