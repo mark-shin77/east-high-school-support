@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import '../../assets/css/font-awesome.min.css';
 import '../../assets/css/main.css';
 import pic13 from '../../images/pic13.jpg';
@@ -30,10 +30,11 @@ class Volunteer extends Component {
             .catch(err => console.log(err))
     }
 
-    loadAvailableTimeSlots = () => {
-        API.getReport({})
+    loadAvailableTimeSlots = (id) => {
+        console.log(id)
+        API.getReport(id)
             .then(res => {
-                this.setState({ availableTimeSlots: res.data.data.signup, signupid: res.data.data.signup.signupid });
+                this.setState({ availableTimeSlots: res.data.data.signup });
                 console.log(this.state.signupid);
             })
             .catch(err => console.log(err))
@@ -55,7 +56,7 @@ class Volunteer extends Component {
                                 <section>
                                     <div className="active">
                                         <h3>Available Events</h3>
-                                        <ActiveSignupList activeSignUpResults={this.state.activeSignUpResults} />
+                                        <ActiveSignupList activeSignUpResults={this.state.activeSignUpResults} getTimeSlots= {this.loadAvailableTimeSlots}/>
                                     </div>
                                 </section>
                                 <hr />
@@ -75,8 +76,22 @@ class Volunteer extends Component {
                             <section id="content">
                                 <a href="#" className="image fit"><img src={pic13} alt="" /></a>
                                 <div className="openslots">
-                                    <h3>Available Slots</h3>
-                                    <AvailableTimeSlots availableTimeSlots={this.state.availableTimeSlots} />
+                                    {/* {this.state.availableTimeSlots.length > 0 &&
+                                        <Fragment>
+                                            <h3>Available Slots</h3>
+                                            <AvailableTimeSlots availableTimeSlots={this.state.availableTimeSlots} />
+                                        </Fragment>
+                                    } */}
+                                    { this.state.availableTimeSlots.length > 0 ? 
+                                        <Fragment>
+                                            <AvailableTimeSlots availableTimeSlots={this.state.availableTimeSlots} />
+                                        </Fragment> 
+                                        : 
+                                        <Fragment>
+                                            <p>Hello</p>
+                                        </Fragment>
+                                    }
+                                    {/* <AvailableTimeSlots availableTimeSlots={this.state.availableTimeSlots} /> */}
                                 </div>
                             </section>
 

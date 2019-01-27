@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CheckAvailability = props => {
-    if (props.status === "") {
+    if (props.firstname === "") {
         return "Time Available!"
     } else {
         return "Slot Filled!"
