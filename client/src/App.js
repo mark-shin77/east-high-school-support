@@ -12,6 +12,8 @@ import Inspect from './components/pages/Inspect';
 import Volunteer from './components/pages/Volunteer';
 
 import SignupForm from './components/signUp';
+import Dashboard from './components/Dashboard';
+
 
 function App() {
     return (
@@ -28,8 +30,14 @@ function App() {
             <Route path="/inspect" component={Inspect} />
             <Route path="/volunteer" component={Volunteer} />
             <Route path="/signup" component={SignupForm}/>
+<<<<<<< HEAD
         </ScrollToTop>
       </Switch>
+=======
+            <Route exact path="/admin/dash" component={Dashboard} loggedIn={false}/>
+      </ScrollToTop>
+      </div>
+>>>>>>> c79ac7a34c07aaa18e37f8683cc3b7ef6c668c46
       </Router>
     );
   }
