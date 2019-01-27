@@ -30,7 +30,7 @@ function App() {
             <Route path="/inspect" component={Inspect} />
             <Route path="/volunteer" component={Volunteer} />
             <Route path="/signup" component={SignupForm}/>
-            <Route exact path="/admin/dash" component={Dashboard} loggedIn={false}/>
+            <Route exact path="/dash" component={Dashboard} loggedIn={false}/>
       </ScrollToTop>
       </div>
       </Router>

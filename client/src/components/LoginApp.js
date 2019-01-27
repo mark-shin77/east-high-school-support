@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from "axios";
 import LoginForm from './Login';
 import Dashboard from "./Dashboard";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouterasRouter, Route, Redirect } from 'react-router-dom';
 import { runInThisContext } from 'vm';
 
 /*const DisplayLinks = props=>{
@@ -65,11 +65,7 @@ class LogApp extends Component {
                 password: password
             }
         }).then(response=>{
-            // .post(`/auth/login`, {
-            //     username,
-            //     password
-            // })
-            // .then(response =>{
+   
                 console.log(response)
                 if (response.status ===200){
                     this.setState({
@@ -80,6 +76,9 @@ class LogApp extends Component {
              })
     }
     render(){
+        if(localStorage.token==="success"){
+            window.location= "/dash"
+        }
         return(
             <div>
                
