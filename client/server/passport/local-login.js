@@ -29,6 +29,7 @@ const PassportLocalStrategy = require('passport-local').Strategy;
 const config = require("../../../conif");
 
 
+
 /**
  * Return the Passport Local Strategy object.
  */
@@ -73,11 +74,17 @@ module.exports = new PassportLocalStrategy({
       };
 
       // create a token string
+     
       const token = jwt.sign(payload, config.jwtSecret);
       const data = {
         name: user.name
       };
-
+      if (typeof window !== 'undefined') {
+        console.log('we are running on the client')
+    } else {
+        console.log('we are running on the server');
+    }
+    
       return done(null, token, data);
     });
   });

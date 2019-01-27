@@ -60,11 +60,21 @@ router.get("/signups/all", (req, res) => {
 });
 router.get("/report/:id", (req, res) => {
     var signupformid = req.params.id;
+    console.log(signupformid);
     axios
         .get("https://api.signupgenius.com/v2/k/signups/report/all/" + signupformid + "/?user_key=" + signup_api_key, { params: req.query })
         .then(results => {
-            console.log(results.data);
-            res.json(results.data);
+            console.log(results.data.data.signup[0]);
+            results.data.data.signup.sort(( a , b ) => {
+                if (a.startdatestring > b.startdatestring) {
+                    return 1;
+                } else if ( a.startdatestring < b.startdatestring ) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            })
+            res.json(results.data)
         })
         .catch(err => res.status(422).json(err));
 });

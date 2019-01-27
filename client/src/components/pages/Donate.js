@@ -9,14 +9,14 @@ import pic07 from '../../images/pic07.jpg';
 >>>>>>> c79ac7a34c07aaa18e37f8683cc3b7ef6c668c46
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import laptop from '../../images/laptop.PNG';
-import protein from '../../images/protein.PNG';
-import snack from '../../images/snack.PNG';
-import soap from '../../images/Soap.PNG';
-import socks from '../../images/socks.PNG';
-import towels from '../../images/Towels.PNG';
-import glasses from '../../images/glasses.PNG';
-import schoolSupplies from '../../images/school-supplies.PNG';
+import laptop from '../../images/laptop.png';
+import protein from '../../images/protein.png';
+import snack from '../../images/snack.png';
+import soap from '../../images/soap.png';
+import socks from '../../images/socks.png';
+import towels from '../../images/towels.png';
+import glasses from '../../images/glasses.png';
+import schoolSupplies from '../../images/school-supplies.png';
 
 class Donate extends Component {
 <<<<<<< HEAD

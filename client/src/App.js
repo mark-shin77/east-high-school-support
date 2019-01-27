@@ -19,19 +19,19 @@ function App() {
     return (
       
       <Router>
-      
-      <Switch>
-      <ScrollToTop>
-            <Route exact path="/" component={Home} />
-            <Route path="/admin" component={Admin} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/donate" component={Donate} />
-            <Route path="/fooddonation" component={FoodDonation} />
-            <Route path="/inspect" component={Inspect} />
-            <Route path="/volunteer" component={Volunteer} />
-            <Route path="/signup" component={SignupForm}/>
-        </ScrollToTop>
-      </Switch>
+          <Switch>
+              <ScrollToTop>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/admin" component={Admin} />
+                    <Route path="/contact" component={Contact} />
+                    <Route path="/donate" component={Donate} />
+                    <Route path="/fooddonation" component={FoodDonation} />
+                    <Route path="/inspect" component={Inspect} />
+                    <Route path="/volunteer" component={Volunteer} />
+                    <Route path="/signup" component={SignupForm}/>
+                    <Route exact path="/dash" component={Dashboard} loggedIn={false}/>
+              </ScrollToTop>
+          </Switch>
       </Router>
     );
   }
