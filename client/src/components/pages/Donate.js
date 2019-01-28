@@ -5,17 +5,8 @@ import pic05 from '../../images/pic05.jpg';
 import pic28 from '../../images/pic28.jpg';
 import pic39 from '../../images/pic39.jpg';
 import '../../assets/css/donation.css';
-import pic07 from '../../images/pic07.jpg';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import laptop from '../../images/laptop.png';
-import protein from '../../images/protein.png';
-import snack from '../../images/snack.png';
-import soap from '../../images/soap.png';
-import socks from '../../images/socks.png';
-import towels from '../../images/towels.png';
-import glasses from '../../images/glasses.png';
-import schoolSupplies from '../../images/school-supplies.png';
 
 class Donate extends Component {
   render() {
