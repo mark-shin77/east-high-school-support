@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import '../../assets/css/font-awesome.min.css';
 import '../../assets/css/main.css';
 import pic05 from '../../images/pic05.jpg';
+import pic28 from '../../images/pic28.jpg';
+import pic39 from '../../images/pic39.jpg';
 import '../../assets/css/donation.css';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -18,6 +20,14 @@ class Donate extends Component {
                 <a style={{ textDecoration: "none"}} href="https://give.saltlakeeducationfoundation.org/easthighalumni/give-a-gift"><span className="my-inline" style={{color:"#CC0033"}}>"STUDENT AND FAMILY SUPPORT"</span></a> in the Designation tag.  When students have their basic needs met, they are capable and empowered to succeed in school and in life! Donations are tax deductible and you will receive a receipt directly from SLEF.  Thank you for your generosity.</p>
                 <hr/>
             </section>
+            <div className="row gtr-150">
+                 <div className="col-12 col-12-small">
+                    <span className="image fit">
+                        <img src={pic39} alt="" />
+                    </span> 
+                </div>
+               
+            </div>
 
         </div>
         <Footer />

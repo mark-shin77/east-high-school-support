@@ -63,42 +63,42 @@ class Main extends Component {
 								<div className="box alt">
 									<div className="row gtr-uniform gtr-50">
 										<div className="col-6 col-12-xsmall">
-											<a href="#" className="image fit">
+											<Link to="/hours"  className="image fit my-inline">
 												<h3 className="caption">
 													FOOD
 												</h3>
 												<img src={pic20} alt="" />
-											</a>
+											</Link>
 										</div>
 										<div className="col-6 col-12-xsmall">
-											<a href="#" className="image fit">
+											<Link to="/hours"  className="image fit my-inline">
 												<h3 className="caption">CLOTHING</h3>
 												<img src={pic21} alt="" />
-											</a>
+											</Link>
 										</div>
 										<div className="col-6 col-12-xsmall">
-											<Link to="/contact" className="image fit">
+											<Link to="/contact" className="image fit my-inline">
 												<h3 className="caption">FAMILY SUPPORT</h3>
 												<img src={pic22} alt="" />
 											</Link>
 										</div>
 										<div className="col-6 col-12-xsmall">
-											<a href="#" className="image fit">
+											<a href="#" className="image fit my-inline">
 												<h3 className="caption">DENTAL VISION EQUAL OPPORTUNITIES</h3>
 												<img src={pic24} alt="" />
 											</a>
 										</div>
 										<div className="col-6 col-12-xsmall">
-											<a href="#" className="image fit">
+											<a href="#" className="image fit my-inline">
 												<h3 className="caption">LAPTOPS</h3>
 												<img src={pic23} alt="" />
 											</a>
 										</div>
 										<div className="col-6 col-12-xsmall">
-											<a href="#" className="image fit">
+											<Link to="/hours"  className="image fit my-inline">
 												<h3 className="caption">WASHROOM</h3>
 												<img src={pic18} alt="" />
-											</a>
+											</Link>
 										</div>
 
 
