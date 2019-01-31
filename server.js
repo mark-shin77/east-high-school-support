@@ -5,9 +5,7 @@ const mongoose = require("mongoose");
 const cors = require('cors');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-
 const passport = require('./client/server/passport')
-
 
 // Initialize Express
 const app = express();
@@ -20,10 +18,9 @@ app.use(express.json());
 // Routes
 const authRoutes = require("./routes/auth")
 const apiRoutes = require('./routes/api/index')
-//const donationRoutes = require('./routes/front-end/paypal')
+
 // API
 app.use('/api', apiRoutes);
-//app.use('/donations', donationRoutes);
 app.use("/auth", authRoutes)
 
 // Configure middleware
@@ -33,19 +30,23 @@ app.use("/auth", authRoutes)
     app.use(bodyParser.json());
     // Use cors
     app.use(cors());
+
 //Passport config
 app.use(passport.initialize())
-app.use(passport.session())//deserialize user
+//deserialize user
 // Parse request body as JSON
+app.use(passport.session())
 
-
-// Connect to the Mongo DB
-const db = require('./config/keys').mongoURI;
-mongoose.connect(db)
+// Connecting to DB
+mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/googlebooks", {
+        useCreateIndex: true,  
+        useNewUrlParser: true
+    })
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
+
 // Serve up static assets (usually on heroku)
-    app.use(express.static("client/build"));
+app.use(express.static("client/build"));
 
 
 // Send every request to the React app
@@ -58,5 +59,5 @@ app.get("*", function(req, res) {
 //login check
 
 app.listen(PORT, function() {
-    console.log(`🌎 ==> API server now on port ${PORT}!`);
+    console.log(`Server running on PORT : ${PORT}!`);
 });

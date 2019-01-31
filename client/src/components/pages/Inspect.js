@@ -9,7 +9,6 @@ class Inspect extends Component {
         <div>
         <EntireTemplate />
 
-       
         <div id="main" className="container">
                 <section>    
                     <h3>Use this page to see everything - refer to EntireTemplate module to see how to build these Elements</h3>
@@ -20,7 +19,7 @@ class Inspect extends Component {
                 </section>
         </div>
         </div>
-       );
+    );
   }
 }
 
