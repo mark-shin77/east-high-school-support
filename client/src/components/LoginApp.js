@@ -1,16 +1,7 @@
 import React, {Component} from 'react';
 import axios from "axios";
 import LoginForm from './Login';
-import Dashboard from "./Dashboard";
-import { BrowserRouterasRouter, Route, Redirect } from 'react-router-dom';
-import { runInThisContext } from 'vm';
 
-/*const DisplayLinks = props=>{
-    if (props.loggedIn){        return (
-            
-        )
-    }
-}*/
 class LogApp extends Component {
     constructor(){
         super()
@@ -18,7 +9,6 @@ class LogApp extends Component {
             loggedIn: false,
             user: null
         }
-        this._logout = this._logout.bind(this)
         this._login = this._login.bind(this)
  
     }
@@ -42,19 +32,6 @@ class LogApp extends Component {
 
     }
 
-    _logout(event){
-        event.preventDefault()
-        console.log('logging out')
-        axios.post('auth/logout').then(response=>{
-            console.log(response.data)
-            if (response.status ===200){
-                this.setState({
-                    loggedIn: false,
-                    user: null
-                })
-            }
-        })
-    }
 
     _login(username, password){
         axios({

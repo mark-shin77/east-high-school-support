@@ -8,6 +8,7 @@ import axios from "axios"
 import Volunteer from './pages/Volunteer';
 import DashHeader from './DashHeader';
 import FoodForm from "./foodDonate";
+import VolunteerForm from './VolunteerForm';
 
 class Dashboard  extends Component{
     constructor(props){
@@ -30,14 +31,11 @@ class Dashboard  extends Component{
    }
     onClick =()=>{
         this.setState({
-            vonunteer: false,
+            volunteer: false,
             food: false
         })
     }
-    onClickTest =()=>{
-        console.log("Testing")
-    }
-    volClick(){
+    volClick=()=>{
         this.setState({
             volunteer: true
         })
@@ -47,9 +45,14 @@ class Dashboard  extends Component{
 
         })
     }
-    food(){
+    food=()=>{
         this.setState({
             food: true
+        })
+    }
+    volunteer=()=>{
+        this.setState({
+            volunteer:true
         })
     }
     render(){
@@ -69,7 +72,7 @@ class Dashboard  extends Component{
                 <div className="row">
                 <div className="col-2"></div>
                 <div className="col-4">
-                <DashCard name={"Volunteers"} onClick={this.onClick} > <p>Card For Volunteers</p></DashCard>
+                <DashCard name={"Volunteers"} onClick={()=>this.volunteer()} > <p>Card For Volunteers</p></DashCard>
                 <DashCard name ={"Food"}  onClick={()=>{this.food()}} name="Add Food Donation"> <p>Card for Food</p> </DashCard>
                 </div>
                 
@@ -91,6 +94,15 @@ class Dashboard  extends Component{
                     <FoodForm/>
                     <button onClick={this.onClick}>Exit</button>
                 
+                </div>
+            )
+        }
+        else if(this.state.volunteer){
+            return(
+                <div>
+                    <DashHeader/>
+                    <VolunteerForm/>
+                    <button onClick={this.onClick}>Exit</button>
                 </div>
             )
         }
