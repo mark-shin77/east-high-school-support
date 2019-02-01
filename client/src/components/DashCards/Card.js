@@ -12,6 +12,7 @@ class DashCard extends Component{
                 <p>
                     Card for {this.props.name}
                 </p>
+                <button onClick={this.props.onClick}>{this.props.name}</button>
             </div>
         )
     }
