@@ -99,8 +99,8 @@ class Hours extends Component {
                             All of these services are provided free of charge to any of our students and their families. These programs are supported 100% through in-kind gifts and cash, generously donated by East High students, families, PTA and an amazing community of individuals and companies who LOVE EAST and want to help each student succeed!.</p>
                     </section>
                 </div>
-                <Footer />
                 </div>
+                <Footer />
             </div>
         );
     }
