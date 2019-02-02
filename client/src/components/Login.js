@@ -26,7 +26,6 @@ class LoginForm extends Component {
 
 	handleSubmit(event) {
 		event.preventDefault()
-		console.log('handleSubmit')
 		this.props._login(this.state.username, this.state.password)
 		this.setState({
 			redirectTo: true
@@ -38,10 +37,9 @@ class LoginForm extends Component {
 			return <Redirect to={{pathname:"/dash",
 			                       state: {
 									   loggedIn: this.props.loggedIn 
-								   }} } /> //<location="/admin/dashboars" <Dashboard loggedIn={this.props.loggedIn}/>
+								   }} } /> 
 		}
-		// if (this.state.redirectTo) {
-		// 	return <Redirect to={{ pathname: "/dash/admin"}} loggedIn={this.props.loggedIn} />
+		
 		 else {
 			return (
 				<div className="LoginForm">
