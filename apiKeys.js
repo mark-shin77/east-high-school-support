@@ -1,1 +1,0 @@
-exports.signupgenius = process.env.SIGNUP_GENIUS_APIKEY;

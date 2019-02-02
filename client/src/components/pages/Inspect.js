@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import '../../assets/css/font-awesome.min.css';
 import '../../assets/css/main.css';
-import EntireTemplate from "../EntireTemplate";
+// import EntireTemplate from "../EntireTemplate";
 
 class Inspect extends Component {
   render() {
     return (
         <div>
-        <EntireTemplate />
+        {/* <EntireTemplate /> */}
 
-       
         <div id="main" className="container">
                 <section>    
                     <h3>Use this page to see everything - refer to EntireTemplate module to see how to build these Elements</h3>
@@ -20,7 +19,7 @@ class Inspect extends Component {
                 </section>
         </div>
         </div>
-       );
+    );
   }
 }
 

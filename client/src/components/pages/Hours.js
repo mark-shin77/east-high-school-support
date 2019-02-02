@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import '../../assets/css/font-awesome.min.css';
 import '../../assets/css/main.css';
+import pic27 from '../../images/pic27.jpg';
+import pic35 from '../../images/pic35.jpg';
 import pic34 from '../../images/pic34.jpg';
+import pic36 from '../../images/pic36.jpg';
+import pic37 from '../../images/pic37.jpg';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 
-class Contact extends Component {
+class Hours extends Component {
     render() {
 
         return (
@@ -14,6 +18,35 @@ class Contact extends Component {
                 <Header />
                 <div id="main" className="container">
                     <a href="#" className="image fit"><img src={pic34} alt="" /></a>
+
+
+
+                    <div className="row gtr-150">
+
+                    <div className="col-6 col-12-small">
+                    <span className="image fit">
+                        <img src={pic37} alt="" />
+                    </span>
+                </div>
+			    <div className="col-6 col-12-small">
+                    <span className="image fit">
+                        <img src={pic27} alt="" />
+                    </span>
+                </div>
+			    <div className="col-6 col-12-small">
+                    <span className="image fit">
+                        <img src={pic35} alt="" />
+                       
+                    </span>
+                </div>            
+			    <div className="col-6 col-12-small">
+                <span className="image fit">
+                        <img src={pic36} alt="" />        
+                    </span>
+                </div>
+
+
+
                     <section id="content">
                         <div className="contactWrapper"
                             style={{
@@ -66,10 +99,11 @@ class Contact extends Component {
                             All of these services are provided free of charge to any of our students and their families. These programs are supported 100% through in-kind gifts and cash, generously donated by East High students, families, PTA and an amazing community of individuals and companies who LOVE EAST and want to help each student succeed!.</p>
                     </section>
                 </div>
+                </div>
                 <Footer />
             </div>
         );
     }
 }
 
-export default Contact;
+export default Hours;

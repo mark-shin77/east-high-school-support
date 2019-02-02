@@ -11,7 +11,7 @@ export default {
         return axios.get("/api/signups/all");
     },
     getReport: function(id) {
-        console.log(id)
+        // console.log(id)
         return axios.get(`/api/report/${id}`);
     }
 };

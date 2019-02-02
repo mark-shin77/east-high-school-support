@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import API from '../../utils/API';
 import ActiveSignupList from './../ActiveSignupList';
-import AvailableTimeSlots from './../AvailableTimeSlots';
+import FadeIn from './../FadeIn';
 
 
 class Volunteer extends Component {
@@ -30,13 +30,10 @@ class Volunteer extends Component {
     }
 
     loadAvailableTimeSlots = (id) => {
-        console.log(id)
         API.getReport(id)
             .then(res => {
                 this.setState({ availableTimeSlots: res.data.data.signup });
-                console.log(this.state.signupid);
             })
-            .catch(err => console.log(err))
     }
 
     render() {
@@ -66,14 +63,11 @@ class Volunteer extends Component {
 
                         </div>
                         <div className="col-8 col-12-medium imp-medium">
-
-
                             <section id="content">
-                                {/* <a href="#" className="image fit"><img src={pic13} alt="" /></a> */}
                                 <div className="openslots">
                                     {this.state.availableTimeSlots.length > 0 ?
                                         <Fragment>
-                                            <AvailableTimeSlots availableTimeSlots={this.state.availableTimeSlots} />
+                                            <FadeIn availableTimeSlots={this.state.availableTimeSlots}/>
                                         </Fragment>
                                         :
                                         <Fragment>
