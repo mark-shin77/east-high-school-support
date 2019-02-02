@@ -42,7 +42,7 @@ router.get("/report/:id", (req, res) => {
     var signupformid = req.params.id;
     // console.log(signupformid);
     axios
-        .get("https://api.signupgenius.com/v2/k/signups/report/all/" + signupformid + "/?user_key=" + signup_api_key, { params: req.query })
+        .get("https://api.signupgenius.com/v2/k/signups/report/available/" + signupformid + "/?user_key=" + signup_api_key, { params: req.query })
         .then(results => {
             console.log(results.data.data.signup[0]);
             results.data.data.signup.sort(( a , b ) => {
