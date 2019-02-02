@@ -13,6 +13,7 @@ import Inspect from './components/pages/Inspect';
 import Volunteer from './components/pages/Volunteer';
 import SignupForm from './components/signUp';
 import Dashboard from './components/Dashboard';
+import Computers from './components/pages/Computers';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                     <Route path="/inspect" component={Inspect} />
                     <Route path="/volunteer" component={Volunteer} />
                     <Route path="/signup" component={SignupForm}/>
+                    <Route path="/computers" component={Computers} />
                     <Route exact path="/dash" component={Dashboard} loggedIn={false}/>
               </ScrollToTop>
           </Switch>
