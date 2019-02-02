@@ -1,6 +1,7 @@
 import React from 'react';
-import Moment from 'react-moment';
+// import Moment from 'react-moment';
 import 'moment-timezone';
+import moment from 'moment';
 import CheckAvailability from './test';
 import "../assets/css/main.css";
 import "../assets/css/font-awesome.min.css";
@@ -22,18 +23,15 @@ const AvailableTimeSlots = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                {props.availableTimeSlots.map(item => {
+                {props.availableTimeSlots.filter(date => moment(date.startdatestring).isSameOrAfter(moment())).slice( 0, 10).map(item => {
                     return (
                             <tr>
-                                <td><Moment parse="YYYY-MM-DD HH:mm" format="MM / DD / YYYY">{item.startdatestring}</Moment></td>
-                                <td>
-                                    <Moment format="hh:mm A" unix tz="America/Denver">{item.startdate}</Moment> - 
-                                    <Moment format="hh:mm A" unix tz="America/Denver">{item.enddate}</Moment>
-                                </td>
+                                <td>{moment(`${item.startdatestring}`).format("MM-DD-YYYY")}</td>
+                                <td>{moment(`${item.startdatestring}`).format("hh:mm A")} - {moment(`${item.enddatestring}`).format("hh:mm A")}</td>
                                 <td><CheckAvailability firstname={item.firstname} /></td>
                             </tr>
                     )
-                }).sort((a , b) => { return b -a })};
+                })}
                 </tbody>
             </table>
         </Fragment>
