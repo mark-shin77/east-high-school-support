@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import axios from "axios"
+
 class FoodForm extends Component{
     constructor(props){
         super(props)
@@ -11,12 +11,7 @@ class FoodForm extends Component{
             quantity: ""
         }
     }
-    componentDidMount(){
-
-    }
-    submitClick =()=>{
-        axios
-    }
+    
     render(){
         return(
             <div class="container">
