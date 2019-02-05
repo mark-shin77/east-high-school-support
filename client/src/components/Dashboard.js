@@ -1,16 +1,12 @@
 import React, {Component} from "react"
 import '../assets/css/font-awesome.min.css';
 import '../assets/css/main.css';
-import pic08 from '../images/pic08.jpg';
 import Footer from './Footer';
 import DashCard from './DashCards/Card';
 import axios from "axios"
-import Volunteer from './pages/Volunteer';
 import DashHeader from './DashHeader';
 import FoodForm from "./foodDonate";
-import VolunteerForm from './VolunteerForm';
 import ExpenseForm from "./expenseForm";
-
 
 class Dashboard  extends Component{
     constructor(props){
@@ -83,11 +79,12 @@ class Dashboard  extends Component{
                 <div className="col-2"></div>
                 <div className="col-4">
                 <DashCard name={"Volunteers"} onClick={()=>this.volunteer()} > <p>Card For Volunteers</p></DashCard>
-                <DashCard name ={"Food"}  onClick={()=>{this.food()}} name="Add Food Donation" food={true}> <p>Card for Food</p> </DashCard>
-                </div>
+                <DashCard name ={"Food"} rendered="food"  onClick={()=>{this.food()}} name="Food Donation" food={true}> <p>Card for Food</p> </DashCard>
                 
+ 
+                </div>
                 <div className="col-4">
-                <DashCard name = {'Expenses'} onClick={()=>{this.expense()}}> <p>Card for Expenses</p> </DashCard>
+                <DashCard name = {'Expenses'} onClick={()=>{this.expense()}} rendered="expense"> <p>Card for Expenses</p> </DashCard>
                 <DashCard name = {"Traffic"} onClick={this.onClick} > <p>Card for Traffic</p> </DashCard>
                 </div>
                 </div>

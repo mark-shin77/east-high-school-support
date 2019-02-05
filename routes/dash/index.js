@@ -1,13 +1,10 @@
 const express = require('express')
 const router = express.Router()
-//const Food = require("../../client/server/db/models/food")
-//const Expense = require("../../client/server/db/models/expenses")
 const Food = require("../../client/server/db/models/food");
 const Expense= require("../../client/server/db/models/expenses")
-const validator = require("validator")
 
 //API routes for the food get post and delete  
-router.get("/food", (req, res)=>{
+router.get("/food1", (req, res)=>{
     Food.find({}).then(data=>res.json(data))
 })
 router.post("/food", (req,res)=>{
