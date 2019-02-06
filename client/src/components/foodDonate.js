@@ -13,6 +13,7 @@ class FoodForm extends Component{
         }
         this.submitClick = this.submitClick.bind(this);
         this.handleChange= this.handleChange.bind(this);
+        this.submitClick = this.submitClick.bind(this)
     }
     componentDidMount(){
 
@@ -33,7 +34,7 @@ class FoodForm extends Component{
              food: this.state.food,
              quantity: this.state.quantity,
             }
-        })
+        }).then(alert("Donation has Been Updated!"), this.setState({name:"", email:"", phone:"", food:"", quantity:""}))
     }
     render(){
         return(

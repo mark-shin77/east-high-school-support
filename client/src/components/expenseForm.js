@@ -29,7 +29,7 @@ class ExpenseForm extends Component{
              ammount: this.state.ammount,
              quantity: this.state.quantity,
             }
-        }).then(alert("The expense item has been updated!"))
+        }).then(alert("The expense item has been updated!"), this.setState({item:"",ammount:"", quantity:""}))
     }
     render(){
         return(

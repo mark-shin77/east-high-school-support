@@ -9,6 +9,7 @@ import FoodForm from "./foodDonate";
 import ExpenseForm from "./expenseForm";
 import "./dash.css" 
 import ExpenseAll from "./DashCards/expenseAll";
+import FoodAll from "./DashCards/foodAll";
 
 class Dashboard  extends Component{
     constructor(props){
@@ -40,7 +41,8 @@ class Dashboard  extends Component{
         this.setState({
             volunteer: false,
             food: false,
-            expense: false
+            expense: false,
+            expenseAll: false
         })
     }
     volClick=()=>{
@@ -140,7 +142,18 @@ class Dashboard  extends Component{
         else if(this.state.expenseAll){
             return(
                 <div>
+                    <DashHeader />
                     <ExpenseAll/>
+                    <button onClick={this.onClick}>Exit</button>
+                </div>
+            )
+        }
+        else if(this.foodAll){
+            return(
+                <div>
+                    <DashHeader/>
+                    <FoodAll/>
+                    <button className="button" onClick={this.onClick}>Exit</button>
                 </div>
             )
         }
