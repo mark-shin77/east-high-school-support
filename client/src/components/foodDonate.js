@@ -14,9 +14,9 @@ class FoodForm extends Component{
     componentDidMount(){
 
     }
-    submitClick =()=>{
-        axios
-    }
+//     submitClick =()=>{
+//     axios
+// } 
     render(){
         return(
             <div class="container">
