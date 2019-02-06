@@ -29,7 +29,6 @@ class ExpenseRend extends Component{
         //if it hasn't been populated don't do anything db calls 
         //can take a while
         if(this.state.expenseItem===""){
-            console.log('Hello')
         }
         else if(this.state.expenseItem != ""){
             //Outer loop to create parent
@@ -41,7 +40,6 @@ class ExpenseRend extends Component{
                 }
                 table.push(<tr>{children}</tr>)
             }
-            console.log(table)
             return (table)
         }
     }

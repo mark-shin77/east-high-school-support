@@ -32,7 +32,7 @@ class DashCard extends Component{
         <Nav.Link  className="navtab" href="#first">Overview</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link  className="navtab" href="#link">View All</Nav.Link>
+        <Nav.Link  className="navtab" onClick={this.props.onClick1} href="#link">View All</Nav.Link>
       </Nav.Item>
       <Nav.Item>
         <Nav.Link  className="navtab" onClick={this.props.onClick}>
