@@ -24,7 +24,7 @@ class DashCard extends Component{
     
     render(){
         return(
-            <div>
+            <div className="cardwidth">
            <Card>
   <Card.Header>
     <Nav variant="tabs" className="navtab" defaultActiveKey="#first">
@@ -42,13 +42,13 @@ class DashCard extends Component{
     </Nav>
   </Card.Header>
   <Card.Body>
-    <Card.Title>Special title treatment</Card.Title>
+    <Card.Title>{this.props.name}</Card.Title>
     <Card.Text>
       {this.cardPicker()}    
     </Card.Text>
     {/* <Button variant="primary">Go somewhere</Button> */}
   </Card.Body>
-</Card>;
+</Card>
 
 
        {/* <Card>

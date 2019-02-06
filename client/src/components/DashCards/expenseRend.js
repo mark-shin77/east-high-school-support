@@ -33,7 +33,7 @@ class ExpenseRend extends Component{
         }
         else if(this.state.expenseItem != ""){
             //Outer loop to create parent
-            for(let i =0; i < 2; i++){
+            for(let i =0; i < 3; i++){
                 let children = []
                 //inner loop for children
                 for(let j =0; j< 1; j++){

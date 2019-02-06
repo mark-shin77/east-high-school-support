@@ -7,6 +7,7 @@ import axios from "axios"
 import DashHeader from './DashHeader';
 import FoodForm from "./foodDonate";
 import ExpenseForm from "./expenseForm";
+import "./dash.css" 
 
 class Dashboard  extends Component{
     constructor(props){
@@ -76,16 +77,16 @@ class Dashboard  extends Component{
                     <div id="main" className="container">
                      <section id="content">
                 <div className="row">
-                <div className="col-2"></div>
-                <div className="col-4">
-                <DashCard name={"Volunteers"} onClick={()=>this.volunteer()} > <p>Card For Volunteers</p></DashCard>
-                <DashCard name ={"Food"} rendered="food"  onClick={()=>{this.food()}} name="Food Donation" food={true}> <p>Card for Food</p> </DashCard>
+                <div className="col-1"></div>
+                <div className="col-5">
+                <DashCard className="volcard"name={"Volunteers"} onClick={()=>this.volunteer()} > <p>Card For Volunteers</p></DashCard>
+                <DashCard className="foodcard"name ={"Food"} rendered="food"  onClick={()=>{this.food()}} name="Food Donation" food={true}> <p>Card for Food</p> </DashCard>
                 
  
                 </div>
-                <div className="col-4">
-                <DashCard name = {'Expenses'} onClick={()=>{this.expense()}} rendered="expense"> <p>Card for Expenses</p> </DashCard>
-                <DashCard name = {"Traffic"} onClick={this.onClick} > <p>Card for Traffic</p> </DashCard>
+                <div className="col-5">
+                <DashCard className="expcard" name = {'Expenses'} onClick={()=>{this.expense()}} rendered="expense"> <p>Card for Expenses</p> </DashCard>
+                <DashCard className="trafcard" name = {"Traffic"} onClick={this.onClick} > <p>Card for Traffic</p> </DashCard>
                 </div>
                 </div>
                 </section>
