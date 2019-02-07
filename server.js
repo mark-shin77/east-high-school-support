@@ -18,10 +18,11 @@ app.use(express.json());
 // Routes
 const authRoutes = require("./routes/auth")
 const apiRoutes = require('./routes/api/index')
-
+const dashRoutes = require('./routes/dash/index')
 // API
 app.use('/api', apiRoutes);
-app.use("/auth", authRoutes)
+app.use("/auth", authRoutes);
+app.use("/authorize", dashRoutes)
 
 // Configure middleware
     // Use morgan
@@ -38,7 +39,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 // Connecting to DB
-mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/googlebooks", {
+mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/east-high-support", {
         useCreateIndex: true,  
         useNewUrlParser: true
     })
