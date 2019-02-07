@@ -17,7 +17,6 @@ const AvailableTimeSlots = (props) => {
                     <tr>
                         <th>Date</th>
                         <th>Time</th>   
-                        <th>Availability</th>
                     </tr>
                 </thead>
                 <tbody>
