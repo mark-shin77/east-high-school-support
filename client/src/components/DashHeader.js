@@ -17,6 +17,7 @@ class DashHeader extends Component {
          
         <nav id="nav">
             <ul>
+                <li><Link to="/dash">Change Password</Link></li>
                 <li><Link to="/" onClick={()=>{localStorage.clear()}}>Log Out</Link></li>
                 
             </ul>
@@ -28,5 +29,6 @@ class DashHeader extends Component {
     );
   }
 }
+
 
 export default DashHeader;
