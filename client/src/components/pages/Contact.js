@@ -21,7 +21,7 @@ class Contact extends Component {
                                 justifyContent: "space-around",
                                 padding: "15px"
                             }}>
-                            <a href={"mailto:" + "kris.barta@slcschools.org"}>
+                            <a href={"mailto: kris.barta@slcschools.org"}>
                                 <div style={{ display: "flex", alignItems: "center" }}>
                                     <div style={{ marginRight: "20px" }}>
                                         <h2 className="icon alt fa-envelope" style={{ cursor: "pointer", fontSize: "5em", paddingTop: "60px" }}></h2>
