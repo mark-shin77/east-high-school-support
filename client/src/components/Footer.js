@@ -8,6 +8,9 @@ import pic45 from '../images/pic45.png';
 import pic46 from '../images/pic46.png';
 import pic47 from '../images/pic47.png';
 import pic48 from '../images/pic48.png';
+import pic49 from '../images/pic49.png';
+import pic50 from '../images/pic50.png';
+import pic52 from '../images/pic52.png';
 
 class Footer extends Component {
   render() {
@@ -104,6 +107,24 @@ class Footer extends Component {
                 <section className="col-4 col-6-medium col-12-small">
                     <span className="image fit">
                         <img src={pic48} alt=""/>
+                    </span>
+                </section>
+
+                <section className="col-4 col-6-medium col-12-small">
+                    <span className="image fit">
+                        <img src={pic49} alt=""/>
+                    </span>
+                </section>
+
+                <section className="col-4 col-6-medium col-12-small">
+                    <span className="image fit">
+                        <img src={pic50} alt=""/>
+                    </span>
+                </section>
+
+                <section className="col-4 col-6-medium col-12-small">
+                    <span className="image fit">
+                        <img src={pic52} alt=""/>
                     </span>
                 </section>
 

@@ -43,7 +43,8 @@ class Dashboard  extends Component{
             volunteer: false,
             food: false,
             expense: false,
-            expenseAll: false
+            expenseAll: false,
+            foodAll: false
         })
     }
 
@@ -114,7 +115,7 @@ class Dashboard  extends Component{
                 <div className="row">
                 <div className="col-1"></div>
                 <div className="col-5">
-                <DashCard className="volcard"name={"Volunteers"} onClick={()=>this.volunteer()} onClick1={()=>{{this.volAll()}}}> <p>Card For Volunteers</p></DashCard>
+                <DashCard className="volcard"name={"Volunteers"} onClick={()=>this.volunteer()} onClick1={()=>{{this.volAll()}}} rendered="volunteer"> <p>Card For Volunteers</p></DashCard>
                 <DashCard className="foodcard"name ={"Food"} rendered="food"  onClick={()=>{this.food()}} onClick1={()=>{this.foodAll()}} name="Food Donation" food={true}> <p>Card for Food</p> </DashCard>
                 
  
@@ -135,7 +136,7 @@ class Dashboard  extends Component{
                 <div>
                     <DashHeader/>
                     <FoodForm/>
-                    <button onClick={this.onClick}>Exit</button>
+                    <button className="button formbutton" onClick={this.onClick}>Exit</button>
                 
                 </div>
             )
@@ -145,7 +146,7 @@ class Dashboard  extends Component{
                 <div>
                     <DashHeader/>
                     <ExpenseForm/>
-                    <button onClick={this.onClick}>Exit</button>
+                    <button className="button formbutton" onClick={this.onClick}>Exit</button>
                 </div>
             )
         }
@@ -154,7 +155,7 @@ class Dashboard  extends Component{
                 <div>
                     <DashHeader />
                     <ExpenseAll/>
-                    <button onClick={this.onClick}>Exit</button>
+                    <button className="button formbutton" onClick={this.onClick}>Exit</button>
                 </div>
             )
         }
@@ -163,7 +164,7 @@ class Dashboard  extends Component{
                 <div>
                     <DashHeader/>
                     <FoodAll/>
-                    <button className="button" onClick={this.onClick}>Exit</button>
+                    <button className="button formbutton" onClick={this.onClick}>Exit</button>
                 </div>
             )
         }

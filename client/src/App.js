@@ -14,6 +14,8 @@ import Volunteer from './components/pages/Volunteer';
 import SignupForm from './components/signUp';
 import Dashboard from './components/Dashboard';
 import Computers from './components/pages/Computers';
+import AddUser from './components/pages/AddUser';
+import ChangePassword from "./components/pages/ChangePassword";
 
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
                     <Route path="/signup" component={SignupForm}/>
                     <Route path="/computers" component={Computers} />
                     <Route exact path="/dash" component={Dashboard} loggedIn={false}/>
+                    <Route exact path="/add/user" component={AddUser}/>
+                    <Route exact path="/change/password" component={ChangePassword}/>
               </ScrollToTop>
           </Switch>
       </Router>

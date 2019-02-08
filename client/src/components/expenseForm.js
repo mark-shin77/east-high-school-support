@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import axios from "axios"
+import {Form} from "react-bootstrap"
 class ExpenseForm extends Component{
     //state handles form for submission
     constructor(props){
@@ -33,7 +34,28 @@ class ExpenseForm extends Component{
     }
     render(){
         return(
+
             <div class="container">
+                {/* <Form>
+                <Form.Group controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Text className="text-muted">
+                   We'll never share your email with anyone else.
+                </Form.Text>
+                </Form.Group>
+
+                 <Form.Group controlId="formBasicPassword">
+                   <Form.Label>Password</Form.Label>
+                   <Form.Control type="password" placeholder="Password" />
+                </Form.Group>
+  <               Form.Group controlId="formBasicChecbox">
+                    <Form.Check type="checkbox" label="Check me out" />
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                    Submit
+                </Button>
+                </Form> */}
                 <form id="foodform">
                 <label htmlFor="name">Item: </label>
 						<input
@@ -59,7 +81,7 @@ class ExpenseForm extends Component{
                     
                         
                 </form>
-                <button  onClick={()=>{this.submitClick()}}>Submit</button>
+                <button className="button" onClick={()=>{this.submitClick()}}>Submit</button>
             </div>
         )
     }
