@@ -37,17 +37,19 @@ class FoodDonation extends Component {
                         </h3>
                         </span>
                         <ul>
-                            <li>New items sizes S-XXXL</li>
+                            <li>New & gently used items sizes S-XXXL</li>
                             <li>Men's plaid button-down</li>
                             <li>Flannel tops</li>
                             <li>Men's & Women's socks</li>
-                            <li>Underwear</li>
+                            <li>Men's Underwear all sizes</li>
+                            <li>Plain White T-shirts all sizes</li>
+                            <li>Women's underwear and bras all sizes</li>
                             <li>Fleece or lightweight jackets</li>
-                            <li>Jeans, leggins and shorts</li>
+                            <li>Jeans, leggings and shorts</li>
                             <li>Sneakers and flip-flops</li>
                             <li>Hoodies</li>
-                            <li>Hangers (not wire)</li>
                             <li>Walmart, Target, Old Navy Gift Cards in any amount</li>
+                            <li>Formal dresses, used & new</li>
                         </ul>           
                     </span>
                 </div>
@@ -66,7 +68,7 @@ class FoodDonation extends Component {
                             <li>Canned fruit</li>
                             <li>Cooking oil</li>
                             <li>Jars of peanut butter</li>
-                            <li>Canned chicken and tuna</li>
+                            <li>Canned chicken, tuna & spam</li>
                             <li>Bags of beans and rice</li>
                             <li>Pasta sauce</li>
                             <li>Ziplock bags</li>
@@ -84,17 +86,10 @@ class FoodDonation extends Component {
                         </h3>
                         </span>
                         <ul>
-                            <li>Detergent pods and liquid laundry soap</li>
-                            <li>Body wash & bar soap</li>
-                            <li>Deodorant</li>
-                            <li>Body lotion</li>
-                            <li>Razors</li>
-                            <li>Toothbrushes & toothpaste</li>
-                            <li>Shampoo & conditioner</li>
-                            <li>Wash cloths</li>
-                            <li>Baby wipes</li>
-                            <li>Travel sized health care products</li>
-                            <li>Walmart, Target, Old Navy Gift Cards in any amount</li>
+                            <li>Currently Stocked</li>
+                            <li>Thank you donors!</li>
+                            <li>Check back for updates</li>
+
                         </ul>           
                     </span>
                 </div>
