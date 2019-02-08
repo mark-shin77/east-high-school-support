@@ -51,14 +51,6 @@ class Volunteer extends Component {
                                         <ActiveSignupList activeSignUpResults={this.state.activeSignUpResults} getTimeSlots={this.loadAvailableTimeSlots} />
                                     </div>
                                 </section>
-                                <hr />
-                                <section>
-                                    <footer>
-                                        <ul className="actions">
-                                            <li><a href="#" className="button small alt">Learn More</a></li>
-                                        </ul>
-                                    </footer>
-                                </section>
                             </section>
 
                         </div>
@@ -84,7 +76,7 @@ class Volunteer extends Component {
                                                 teachers, parents and members of the community to help keep the Leopard Stash, Leopard Boutique and Leopard Washroom 
                                                 stocked and running smoothly. Click on the Sign-up Genius link below to find times that work for you!  We also have 
                                                 service opportunities in our school for after-school tutors, classroom assistants and more.  For more specific information 
-                                                as to how you can help, please contact <a href={"mailto:" + "kris.barta@slcschools.org"}> kris.barta@slcschools.org </a>.  
+                                                as to how you can help, please contact <a href={"mailto: kris.barta@slcschools.org"}> kris.barta@slcschools.org </a>.  
                                                 Follow us on <a href="https://www.instagram.com/ehsstudentandfamilysupport/"> instagram </a> for updates as to how local 
                                                 businesses, friends and neighbors are supporting East High.
                                             </p>

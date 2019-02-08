@@ -18,7 +18,7 @@ class Header extends Component {
                     <nav id="nav">
                         <ul>
                             <li><Link to="/contact">CONTACT</Link></li>
-                            <li><Link to="/admin">Log In</Link></li>
+                            <li><Link to="/admin">LOGIN</Link></li>
                         </ul>
                     </nav>
                 </header>

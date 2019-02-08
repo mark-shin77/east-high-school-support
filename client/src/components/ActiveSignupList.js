@@ -1,5 +1,5 @@
 import React from 'react';
-import Moment from 'react-moment';
+import moment from 'moment';
 
 const ActiveSignupList = (props) => {
     return (
@@ -10,8 +10,8 @@ const ActiveSignupList = (props) => {
                         <h4 onClick={() => props.getTimeSlots(item.signupid)}>{item.title}</h4>
                         <h5><a href={item.signupurl}>Sign up here!</a></h5>
                         <p>Date :
-                            <Moment format="MM / DD / YYYY">{item.startdatestring}</Moment>       -
-                            <Moment format="MM / DD / YYYY">{item.enddatestring}</Moment>
+                            {moment(`${item.startdatestring}`).format("MM-DD-YYYY")}   - 
+                            {moment(`${item.enddatestring}`).format("MM-DD-YYYY")}
                         </p>
                         < hr />
                     </div>

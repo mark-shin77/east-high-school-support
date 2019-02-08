@@ -13,30 +13,31 @@ import FoodAll from "./DashCards/foodAll";
 
 class Dashboard  extends Component{
     constructor(props){
-       super(props)
-       this.state={
-         loggedIn: this.props.location.state,
-         token: localStorage.token,
-         volunteer: false,
-         food: false,
-         expense: false,
-         expenseAll: false,
-         foodAll: false
-       }
-       this.food = this.food.bind(this)
-       this.onClick = this.onClick.bind(this)
-       this.expense=this.expense.bind(this)
-       this.foodAll = this.foodAll.bind(this)
-       this.volAll = this.volAll.bind(this)
-       this.expAll = this.expAll.bind(this)
-
+        super(props)
+        this.state={
+            loggedIn: this.props.location.state,
+            token: localStorage.token,
+            volunteer: false,
+            food: false,
+            expense: false,
+            expenseAll: false,
+            foodAll: false
+        }
+        this.food = this.food.bind(this)
+        this.onClick = this.onClick.bind(this)
+        this.expense=this.expense.bind(this)
+        this.foodAll = this.foodAll.bind(this)
+        this.volAll = this.volAll.bind(this)
+        this.expAll = this.expAll.bind(this)
     }
-   componentDidMount(){
-       if(!localStorage.token &&this.state.loggedIn){
-           localStorage.setItem("token", "success")
-       }
-       return true
-   }
+
+    componentDidMount(){
+        if(!localStorage.token &&this.state.loggedIn){
+            localStorage.setItem("token", "success")
+        }
+        return true
+    }
+
     onClick =()=>{
         this.setState({
             volunteer: false,
@@ -46,6 +47,7 @@ class Dashboard  extends Component{
             foodAll: false
         })
     }
+
     volClick=()=>{
         this.setState({
             volunteer: true
@@ -53,7 +55,6 @@ class Dashboard  extends Component{
         axios({
             method: "POST",
             url: "/volunteers"
-
         })
     }
     
@@ -85,15 +86,24 @@ class Dashboard  extends Component{
             food: true
         })
     }
+
     volunteer=()=>{
         this.setState({
             volunteer:true
         })
     }
+
     render(){
         
             //it takes awhile for the token to update so it can take two conditions
-        if(localStorage.token ==="success"|| this.state.loggedIn){
+            if(localStorage.token ==="success"|| this.state.loggedIn){
+                if(this.state.food===false && this.state.volunteer===false ){
+                return(
+                    <div>
+                        <DashHeader/>
+                    </div>
+                )
+                }
 
             if(this.state.food===false && this.state.volunteer===false && this.state.expense===false && this.state.expenseAll===false && this.state.foodAll===false){
 

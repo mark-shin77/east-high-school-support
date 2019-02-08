@@ -1,8 +1,6 @@
 import React from 'react';
-// import Moment from 'react-moment';
 import 'moment-timezone';
 import moment from 'moment';
-import CheckAvailability from './test';
 import "../assets/css/main.css";
 import "../assets/css/font-awesome.min.css";
 import { Fragment } from 'react';
@@ -19,7 +17,6 @@ const AvailableTimeSlots = (props) => {
                     <tr>
                         <th>Date</th>
                         <th>Time</th>   
-                        <th>Availability</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,7 +25,6 @@ const AvailableTimeSlots = (props) => {
                             <tr>
                                 <td>{moment(`${item.startdatestring}`).format("MM-DD-YYYY")}</td>
                                 <td>{moment(`${item.startdatestring}`).format("hh:mm A")} - {moment(`${item.enddatestring}`).format("hh:mm A")}</td>
-                                <td><CheckAvailability firstname={item.firstname} /></td>
                             </tr>
                     )
                 })}
