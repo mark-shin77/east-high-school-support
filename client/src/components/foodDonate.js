@@ -77,7 +77,7 @@ class FoodForm extends Component{
                         />
                         
                 </form>
-                <button  onClick={()=>{this.submitClick()}}>Submit</button>
+                <button className="button"  onClick={()=>{this.submitClick()}}>Submit</button>
             </div>
         )
     }

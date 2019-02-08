@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import SignupForm from '../signUp';
+import DashHeader1 from './../DashHeader1';
 
 export default class AddUser extends Component {
   render() {
       if(localStorage.token="success" ){
     return (
+
       <div>
+          <DashHeader1/>
          <SignupForm/>
       </div>
     )

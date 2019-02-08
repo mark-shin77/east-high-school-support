@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from "axios"
+import DashHeader1 from '../DashHeader1';
 export default class ChangePassword extends Component {
     constructor(props){
         super(props)
@@ -28,6 +29,7 @@ export default class ChangePassword extends Component {
   render() {
     return (
       <div>
+          <DashHeader1/>
           <form class="newForm">
               <label for="email">Email</label>
               <input 
