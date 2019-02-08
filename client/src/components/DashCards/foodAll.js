@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import axios from "axios"
 import moment from "moment"
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
+
 export default class FoodAll extends Component {
     constructor(props){
         super(props)
@@ -13,15 +16,26 @@ export default class FoodAll extends Component {
         this.getFood()
     }
     //deletes a item with params from the object
-    alertDelete=(id)=>{
-        alert("Are you sure you want to delete this item?")
-        if(alert){
-            axios({
-                method: "POST",
-                url: "/authorize/food/delete/" + id
-            }).then(alert("Item has been deleted!"))
+    alertDelete=(id)=>{        
+            confirmAlert({
+                title: 'Confirm to submit',
+                message: 'Are you sure you want to delete this item?',
+                buttons: [
+                  {
+                    label: 'Yes',
+                    onClick: () => {axios({
+                        method: "POST",
+                        url: "/authorize/food/delete/" + id
+                    })}
+                  },
+                  {
+                    label: 'No',
+                    onClick: () => alert('Click No')
+                  }
+                ]
+              })
         }
-    }
+    
     //gets all the records from DB and adds them to state
     getFood=()=>{
        axios({
@@ -48,7 +62,7 @@ export default class FoodAll extends Component {
                 {this.state.food.map(food => {
                     return (
                         <tr>
-                            <td>{food.item}</td>
+                            <td>{food.food}</td>
                             <td>{moment(`${food.date}`).format("MM / DD / YYYY")}</td>
                             <td>{food.name}</td>
                             <td>{food.email}</td>
@@ -64,3 +78,4 @@ export default class FoodAll extends Component {
     )
   }
 }
+

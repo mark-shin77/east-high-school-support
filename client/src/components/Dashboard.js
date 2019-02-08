@@ -42,7 +42,8 @@ class Dashboard  extends Component{
             volunteer: false,
             food: false,
             expense: false,
-            expenseAll: false
+            expenseAll: false,
+            foodAll: false
         })
     }
     volClick=()=>{
@@ -104,7 +105,7 @@ class Dashboard  extends Component{
                 <div className="row">
                 <div className="col-1"></div>
                 <div className="col-5">
-                <DashCard className="volcard"name={"Volunteers"} onClick={()=>this.volunteer()} onClick1={()=>{{this.volAll()}}}> <p>Card For Volunteers</p></DashCard>
+                <DashCard className="volcard"name={"Volunteers"} onClick={()=>this.volunteer()} onClick1={()=>{{this.volAll()}}} rendered="volunteer"> <p>Card For Volunteers</p></DashCard>
                 <DashCard className="foodcard"name ={"Food"} rendered="food"  onClick={()=>{this.food()}} onClick1={()=>{this.foodAll()}} name="Food Donation" food={true}> <p>Card for Food</p> </DashCard>
                 
  

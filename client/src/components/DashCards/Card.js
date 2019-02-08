@@ -1,10 +1,10 @@
 import React, {Component} from "react"
 import Card from 'react-bootstrap/Card'
 import {Nav} from 'react-bootstrap'
-import Button from 'react-bootstrap/Button';
 import FoodRend from './FoodRend';
 import ExpenseRend from './expenseRend';
 import "./dash.css"
+import VolunteerRend from './volunteerRend';
 class DashCard extends Component{
     constructor(props){
         super(props)
@@ -19,6 +19,9 @@ class DashCard extends Component{
         }
         else if(this.state.rendered ==='expense'){
             return <ExpenseRend/>
+        }
+        else if(this.state.rendered ==='volunteer'){
+            return <VolunteerRend/>
         }
     }
     

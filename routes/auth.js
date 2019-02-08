@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const User = require("../client/server/db/models/user")
 passport = require("../client/server/passport")
+
 const validator = require("validator")
 router.get('/user', (req, res, next) => {
 	console.log('===== user!!======')
@@ -122,7 +123,10 @@ function validateSignupForm(payload) {
 	};
   }
 
-
+router.post('/passwordchange', (req,res)=>{
+	console.log(req.body)
+	User.findOneAndUpdate({email: req.body.email}, {password: req.body.password}).then(console.log('success'))
+})
 router.post('/signup', (req, res) => {
     console.log(`this is the req body!!!!! ${req.body}`)
    // const { username, password } = req.body
