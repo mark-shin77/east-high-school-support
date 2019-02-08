@@ -7,26 +7,38 @@ import Footer from '../../components/Footer';
 import API from '../../utils/API';
 import ActiveSignupList from './../ActiveSignupList';
 import FadeIn from './../FadeIn';
+import CurrentSignUpInfo from "../CurrentSignUpInfo";
 
 
 class Volunteer extends Component {
     state = {
         signupid: "",
         activeSignUpResults: [],
-        availableTimeSlots: []
+        availableTimeSlots: [],
+        selectedSignup: {}
     }
 
     componentDidMount() {
         this.loadActiveSignups();
         this.loadAvailableTimeSlots();
+        this.loadSelectedSignup();
     }
 
     loadActiveSignups = () => {
         API.getActiveSignups()
             .then(res => {
                 this.setState({ activeSignUpResults: res.data.data });
+
             })
             .catch(err => console.log(err))
+    }
+
+    loadSelectedSignup = () => {
+        API.getActiveSignups()
+            .then(res => {
+                this.setState({ selectedSignup: res.data.data})
+                console.log(this.state.selectedSignup);
+            })
     }
 
     loadAvailableTimeSlots = (id) => {
@@ -34,6 +46,12 @@ class Volunteer extends Component {
             .then(res => {
                 this.setState({ availableTimeSlots: res.data.data.signup });
             })
+    }
+
+    selected = (id) => {
+        if ( id !== '18845734' ) {
+
+        }
     }
 
     render() {
@@ -48,7 +66,11 @@ class Volunteer extends Component {
                                 <section>
                                     <div className="active">
                                         <h3>Available Events</h3>
-                                        <ActiveSignupList activeSignUpResults={this.state.activeSignUpResults} getTimeSlots={this.loadAvailableTimeSlots} />
+                                        <ActiveSignupList 
+                                            activeSignUpResults={this.state.activeSignUpResults} 
+                                            getTimeSlots={this.loadAvailableTimeSlots} 
+                                            selectedSignup={this.state.selectedSignup}
+                                        />
                                     </div>
                                 </section>
                             </section>
@@ -59,6 +81,7 @@ class Volunteer extends Component {
                                 <div className="openslots">
                                     {this.state.availableTimeSlots.length > 0 ?
                                         <Fragment>
+                                            <CurrentSignUpInfo selectedSignup={this.state.selectedSignup} availableTimeSlots={this.state.availableTimeSlots}/>
                                             <FadeIn availableTimeSlots={this.state.availableTimeSlots}/>
                                         </Fragment>
                                         :

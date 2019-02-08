@@ -15,16 +15,16 @@ const AvailableTimeSlots = (props) => {
             <table>
                 <thead>
                     <tr>
-                        <th>Date</th>
-                        <th>Time</th>   
+                        <th style={tableStyling} >Date</th>
+                        <th style={tableStyling} >Time</th>
                     </tr>
                 </thead>
                 <tbody>
                 {props.availableTimeSlots.filter(date => moment(date.startdatestring).isSameOrAfter(moment())).slice( 0, 10).map(item => {
                     return (
                             <tr>
-                                <td>{moment(`${item.startdatestring}`).format("MM-DD-YYYY")}</td>
-                                <td>{moment(`${item.startdatestring}`).format("hh:mm A")} - {moment(`${item.enddatestring}`).format("hh:mm A")}</td>
+                                <td style={tableStyling} >{moment(`${item.startdatestring}`).format("MM-DD-YYYY")}</td>
+                                <td style={tableStyling} >{moment(`${item.startdatestring}`).format("hh:mm A")} - {moment(`${item.enddatestring}`).format("hh:mm A")}</td>
                             </tr>
                     )
                 })}
@@ -32,6 +32,11 @@ const AvailableTimeSlots = (props) => {
             </table>
         </Fragment>
     );
+}
+
+const tableStyling = {
+    letterSpacing: '3px',
+    textAlign: 'center',
 }
 
 export default AvailableTimeSlots;
