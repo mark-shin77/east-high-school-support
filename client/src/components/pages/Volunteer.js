@@ -6,14 +6,15 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import API from '../../utils/API';
 import ActiveSignupList from './../ActiveSignupList';
-import FadeIn from './../FadeIn';
+import FadeIn from '../FadeIn/FadeIn';
 
 
 class Volunteer extends Component {
     state = {
         signupid: "",
         activeSignUpResults: [],
-        availableTimeSlots: []
+        availableTimeSlots: [],
+        selectedSignup: {}
     }
 
     componentDidMount() {
@@ -36,6 +37,13 @@ class Volunteer extends Component {
             })
     }
 
+    selected = (id) => {
+        console.log('this is the id i need',id)
+        let found = this.state.activeSignUpResults.find((item) => item.signupid === id)
+        this.setState({ selectedSignup: found})
+        console.log(found)
+    }
+
     render() {
         return (
             <div>
@@ -43,24 +51,28 @@ class Volunteer extends Component {
                 <div id="main" className="container">
                     <div className="row gtr-150">
                         <div className="col-4 col-12-medium">
-
                             <section id="sidebar">
                                 <section>
                                     <div className="active">
-                                        <h3>Available Events</h3>
-                                        <ActiveSignupList activeSignUpResults={this.state.activeSignUpResults} getTimeSlots={this.loadAvailableTimeSlots} />
+                                        <h2 style={{textAlign: 'center'}}>Available Events</h2>
+                                        <ActiveSignupList 
+                                            activeSignUpResults={this.state.activeSignUpResults} 
+                                            getTimeSlots={this.loadAvailableTimeSlots} 
+                                            selectedSignup={(id)=>this.selected(id)}
+                                        />
                                     </div>
                                 </section>
                             </section>
-
                         </div>
+
                         <div className="col-8 col-12-medium imp-medium">
                             <section id="content">
                                 <div className="openslots">
                                     {this.state.availableTimeSlots.length > 0 ?
-                                        <Fragment>
-                                            <FadeIn availableTimeSlots={this.state.availableTimeSlots}/>
-                                        </Fragment>
+                                        <FadeIn 
+                                            availableTimeSlots={this.state.availableTimeSlots} 
+                                            selectedSignup={this.state.selectedSignup}
+                                        />
                                         :
                                         <Fragment>
                                             <p style={{ textAlign: "left", fontSize: "24px" }}>
@@ -85,7 +97,6 @@ class Volunteer extends Component {
                                     }
                                 </div>
                             </section>
-
                         </div>
                     </div>
                 </div>

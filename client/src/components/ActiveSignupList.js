@@ -1,20 +1,22 @@
-import React from 'react';
-import moment from 'moment';
+import React, { Fragment }  from 'react';
 
 const ActiveSignupList = (props) => {
     return (
-        <div>
+        <div style={{ textAlign : 'center' }} >
             {props.activeSignUpResults.map(item => {
                 return (
-                    <div>
-                        <h4 onClick={() => props.getTimeSlots(item.signupid)}>{item.title}</h4>
-                        <h5><a href={item.signupurl}>Sign up here!</a></h5>
-                        <p>Date :
-                            {moment(`${item.startdatestring}`).format("MM-DD-YYYY")}   - 
-                            {moment(`${item.enddatestring}`).format("MM-DD-YYYY")}
-                        </p>
-                        < hr />
-                    </div>
+                    <Fragment>
+                        <div 
+                            onClick={() => { 
+                                props.getTimeSlots(item.signupid);
+                                props.selectedSignup(item.signupid);                               
+                            }} 
+                            className={'button active-signups'}
+                            >
+                                {item.title}
+                        </div>
+                        < hr style={{ margin: '2em 0'}}/>
+                    </Fragment>
                 )
             })}
         </div>
