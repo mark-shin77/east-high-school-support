@@ -23,12 +23,33 @@ componentDidMount(){
 createTable = () => {
     let table = []
       
-    if(this.state.foodItem===''){
-        console.log('hello')
-    }
-    else{
-    // Outer loop to create parent
-    //Only returns the more recent 3 from the DB
+     if(this.state.foodItem===''){
+         console.log('hello')
+         
+     }
+     else{
+    // // Outer loop to create parent
+    // //Only returns the more recent 3 from the DB
+    // return(
+    //     <table className="table1">
+    //        <thread>
+    //            <tr>
+    //                <th>
+    //                    Doner Name
+    //                </th>
+    //                <th>
+    //                    Food Item
+    //                </th>
+    //                <th>
+    //                   Doner Email
+    //                </th>
+    //            </tr>
+    //        </thread>
+    //        <tbody>
+    //          {}
+    //        </tbody>
+    //     </table>
+    // )
     for (let i = 0; i < 3; i++) {
       let children = []
       //Inner loop to create children
@@ -41,10 +62,7 @@ createTable = () => {
     console.log(table)
     return (table) 
 }
-}
-
-
-  
+}  
 
 render(){
     return(

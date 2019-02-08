@@ -8,14 +8,13 @@ router.get("/food1", (req, res)=>{
     Food.find({}).then(data=>res.json(data))
 })
 router.post("/food", (req,res)=>{
-    console.log(req.body)
     Food.create({
         name: req.body.name,
         email: req.body.email,
         food: req.body.food,
         quantity: req.body.quantity,
         phone: req.body.phone
-    }).then(data=>console.log(data)).catch(err=>console.log(err))
+    }).then(data=>console.log('working')).catch(err=>console.log(err))
 
 })
 router.post("/food/delete/:id", (req,res)=>{
@@ -24,7 +23,6 @@ router.post("/food/delete/:id", (req,res)=>{
 })
 //API routes for the expenses get post and delete
 router.get("/expenses", (req,res)=>{
-    console.log(req)
     Expense.find({}).then(data=>res.json(data))
 })
 router.post("/expenses", (req,res)=>{

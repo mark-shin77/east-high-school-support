@@ -38,7 +38,7 @@ class SignupForm extends Component {
 				if (!response.data.errmsg) {
 					console.log('youre good')
 					this.setState({
-						redirectTo: '/login'
+						redirectTo: '/dash'
 					})
 				} else {
 					console.log('duplicate')
@@ -74,7 +74,7 @@ class SignupForm extends Component {
 					onChange={this.handleChange}
 				/>
 				
-				<button onClick={this.handleSubmit}>Sign up</button>
+				<button className="button" onClick={this.handleSubmit}>Sign up</button>
 			</div>
 		)
 	}

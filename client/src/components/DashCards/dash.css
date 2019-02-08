@@ -18,7 +18,8 @@
     margin-right: 5%
 }
 .table1{
-    width: 400px;
+    width: 105%;
+    
 }
 .daterow{
     position:absolute;
@@ -155,4 +156,10 @@ input[type="submit"],
 			.button.disabled.primary,
 			.button:disabled.primary {
 				background-color: #93999a !important;
-			}
+            }
+            
+.formbutton{
+    position:absolute;
+    margin-left: 87%;
+    bottom: 18%
+}

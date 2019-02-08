@@ -4,7 +4,7 @@ import "../assets/css/main.css";
 import "../assets/css/font-awesome.min.css";
 
 
-class DashHeader extends Component {
+class DashHeader1 extends Component {
   render() {
     return (
       
@@ -15,8 +15,7 @@ class DashHeader extends Component {
          
         <nav id="nav">
             <ul>
-                <li><Link to="/add/user">Add User</Link></li>
-                <li><Link to="/change/password">Change Password</Link></li>
+                <li><Link to="/dash">Home</Link></li>
                 <li><Link to="/" onClick={()=>{localStorage.clear()}}>Log Out</Link></li>
                 
             </ul>
@@ -29,4 +28,4 @@ class DashHeader extends Component {
 }
 
 
-export default DashHeader;
+export default DashHeader1;
