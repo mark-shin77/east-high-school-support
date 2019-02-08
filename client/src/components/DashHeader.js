@@ -4,28 +4,21 @@ import "../assets/css/main.css";
 import "../assets/css/font-awesome.min.css";
 
 class DashHeader extends Component {
-  render() {
-    return (
-      
-   <div>
-        <header id="header">
-        
-        
-         
-        <nav id="nav">
-            <ul>
-                <li><Link to="/dash">Change Password</Link></li>
-                <li><Link to="/" onClick={()=>{localStorage.clear()}}>Log Out</Link></li>
-                
-            </ul>
-        </nav>
-        </header>
-    </div>
-
-
-    );
-  }
+    render() {
+        return (
+            <div>
+                <header id="header">
+                <nav id="nav">
+                    <ul>
+                        <li><Link to="/dash">Change Password</Link></li>
+                        <li><Link to="/" onClick={()=>{localStorage.clear()}}>Log Out</Link></li>
+                        
+                    </ul>
+                </nav>
+                </header>
+            </div>
+        );
+    }
 }
-
 
 export default DashHeader;

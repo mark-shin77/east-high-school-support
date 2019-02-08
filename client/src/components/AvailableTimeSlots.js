@@ -8,10 +8,6 @@ import { Fragment } from 'react';
 const AvailableTimeSlots = (props) => {
     return (
         <Fragment>
-            <div className="row eventinfo">
-                <h4 className="col-6 col-12-xsmall">Event : {props.availableTimeSlots[0].item}</h4>
-                <h4 className="col-6 col-12-xsmall">Event Location : {props.availableTimeSlots[0].location}</h4>
-            </div>
             <table>
                 <thead>
                     <tr>

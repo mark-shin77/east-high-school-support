@@ -6,8 +6,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import API from '../../utils/API';
 import ActiveSignupList from './../ActiveSignupList';
-import FadeIn from './../FadeIn';
-import CurrentSignUpInfo from "../CurrentSignUpInfo";
+import FadeIn from '../FadeIn/FadeIn';
 
 
 class Volunteer extends Component {
@@ -21,24 +20,14 @@ class Volunteer extends Component {
     componentDidMount() {
         this.loadActiveSignups();
         this.loadAvailableTimeSlots();
-        this.loadSelectedSignup();
     }
 
     loadActiveSignups = () => {
         API.getActiveSignups()
             .then(res => {
                 this.setState({ activeSignUpResults: res.data.data });
-
             })
             .catch(err => console.log(err))
-    }
-
-    loadSelectedSignup = () => {
-        API.getActiveSignups()
-            .then(res => {
-                this.setState({ selectedSignup: res.data.data})
-                console.log(this.state.selectedSignup);
-            })
     }
 
     loadAvailableTimeSlots = (id) => {
@@ -49,9 +38,10 @@ class Volunteer extends Component {
     }
 
     selected = (id) => {
-        if ( id !== '18845734' ) {
-
-        }
+        console.log('this is the id i need',id)
+        let found = this.state.activeSignUpResults.find((item) => item.signupid === id)
+        this.setState({ selectedSignup: found})
+        console.log(found)
     }
 
     render() {
@@ -61,29 +51,28 @@ class Volunteer extends Component {
                 <div id="main" className="container">
                     <div className="row gtr-150">
                         <div className="col-4 col-12-medium">
-
                             <section id="sidebar">
                                 <section>
                                     <div className="active">
-                                        <h3>Available Events</h3>
+                                        <h2 style={{textAlign: 'center'}}>Available Events</h2>
                                         <ActiveSignupList 
                                             activeSignUpResults={this.state.activeSignUpResults} 
                                             getTimeSlots={this.loadAvailableTimeSlots} 
-                                            selectedSignup={this.state.selectedSignup}
+                                            selectedSignup={(id)=>this.selected(id)}
                                         />
                                     </div>
                                 </section>
                             </section>
-
                         </div>
+
                         <div className="col-8 col-12-medium imp-medium">
                             <section id="content">
                                 <div className="openslots">
                                     {this.state.availableTimeSlots.length > 0 ?
-                                        <Fragment>
-                                            <CurrentSignUpInfo selectedSignup={this.state.selectedSignup} availableTimeSlots={this.state.availableTimeSlots}/>
-                                            <FadeIn availableTimeSlots={this.state.availableTimeSlots}/>
-                                        </Fragment>
+                                        <FadeIn 
+                                            availableTimeSlots={this.state.availableTimeSlots} 
+                                            selectedSignup={this.state.selectedSignup}
+                                        />
                                         :
                                         <Fragment>
                                             <p style={{ textAlign: "left", fontSize: "24px" }}>
@@ -108,7 +97,6 @@ class Volunteer extends Component {
                                     }
                                 </div>
                             </section>
-
                         </div>
                     </div>
                 </div>
