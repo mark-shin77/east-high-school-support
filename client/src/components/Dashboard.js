@@ -97,13 +97,7 @@ class Dashboard  extends Component{
         
             //it takes awhile for the token to update so it can take two conditions
             if(localStorage.token ==="success"|| this.state.loggedIn){
-                if(this.state.food===false && this.state.volunteer===false ){
-                return(
-                    <div>
-                        <DashHeader/>
-                    </div>
-                )
-                }
+              
 
             if(this.state.food===false && this.state.volunteer===false && this.state.expense===false && this.state.expenseAll===false && this.state.foodAll===false){
 
