@@ -17,7 +17,7 @@ class Hours extends Component {
             <div>
                 <Header />
                 <div id="main" className="container">
-                    <a href="#" className="image fit"><img src={pic34} alt="" /></a>
+                    <img src={pic34} className="image fit" alt="" />
 
 
 
@@ -48,19 +48,19 @@ class Hours extends Component {
 
 
                     <section id="content">
-                        <div className="contactWrapper"
+                    <div className="contactWrapper"
                             style={{
                                 display: "flex",
                                 justifyContent: "space-around",
                                 padding: "15px"
                             }}>
-                            <a href={"mailto:" + "kris.barta@slcschools.org"}>
+                            <a href={"mailto: kris.barta@slcschools.org"}>
                                 <div style={{ display: "flex", alignItems: "center" }}>
                                     <div style={{ marginRight: "20px" }}>
-                                        <h2 className="icon alt fa-envelope" style={{ cursor: "pointer", fontSize: "5em", paddingTop: "60px" }}></h2>
+                                        <div className="icon alt fa-envelope" style={{ cursor: "pointer", fontSize: "5em", paddingTop: "60px" }} alt=""></div>
                                     </div>
                                     <div style={{ display: "grid", gridTemplateColumns: "1fr", gridGap: "1px" }}>
-                                        <div style={{ paddingLeft: "10px" }}>
+                                        <div style={{ paddingLeft: "10px", paddingTop: "60px" }}>
                                             <h4 className="contacty" style={{ width: "190px" }}>Kris Barta</h4></div>
                                         <div style={{ paddingLeft: "10px", width: "240px" }}><h4 className="contacty">kris.barta@slcschools.org</h4></div>
                                     </div>
@@ -69,10 +69,10 @@ class Hours extends Component {
                             <a href="https://maps.google.com/?ll=40.750867,-111.854866">
                                 <div style={{ display: "flex", alignItems: "center" }}>
                                     <div style={{ marginRight: "20px" }}>
-                                        <h2 className="icon alt fa-home" style={{ cursor: "pointer", fontSize: "5em", paddingTop: "60px", color: "#cc3333" }}></h2>
+                                        <div className="icon alt fa-home" style={{ cursor: "pointer", fontSize: "5em", paddingTop: "60px", color: "#cc3333" }}></div>
                                     </div>
                                     <div style={{ display: "grid", gridTemplateColumns: "1fr", gridGap: "1px" }}>
-                                        <div style={{ paddingLeft: "10px" }}><h4 className="contacty" style={{ width: "210px" }}>840 South 1300 East</h4></div>
+                                        <div style={{ paddingLeft: "10px", paddingTop: "60px" }}><h4 className="contacty" style={{ width: "210px" }}>840 South 1300 East</h4></div>
                                         <div style={{ paddingLeft: "10px" }}><h4 style={{ width: "200px" }} className="contacty">SLC, UT 84102</h4></div>
                                     </div>
                                 </div>
@@ -80,10 +80,10 @@ class Hours extends Component {
                             <a className="noUnderline" href="tel:8015831661" style={{ textDecoration: "none" }}>
                                 <div style={{ display: "flex", alignItems: "center" }}>
                                     <div style={{ marginRight: "20px" }}>
-                                        <h2 className="icon alt fa-phone" style={{ cursor: "pointer", fontSize: "5em", paddingTop: "60px" }}></h2>
+                                        <div className="icon alt fa-phone" style={{ cursor: "pointer", fontSize: "5em", paddingTop: "60px" }}></div>
                                     </div>
                                     <div style={{ display: "grid", gridTemplateColumns: "1fr", gridGap: "1px" }}>
-                                        <div style={{ paddingLeft: "10px" }}><h4 className="contacty" style={{ width: "140px" }}>801-583-1661</h4></div>
+                                        <div style={{ paddingLeft: "10px", paddingTop: "60px" }}><h4 className="contacty" style={{ width: "140px" }}>801-583-1661</h4></div>
                                         <div style={{ paddingLeft: "10px" }}><h4 className="contacty" style={{ width: "110px" }}>ex. 2338</h4></div>
                                     </div>
                                 </div>

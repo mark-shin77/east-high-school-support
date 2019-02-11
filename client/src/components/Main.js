@@ -17,18 +17,20 @@ class Main extends Component {
 		return (
 			<div id="main" className="container">
 				<section id="one" className="feature major">
-					<header class="major">
+					<header className="major">
 						<h2>East High Student & Family Support</h2>
 					</header>
 					
 					<section>
 						<h2>Hello Friends of <span style={{color:"#CC0033"}}>E</span>ast High School</h2>
-						<p  style = {{textAlign:"left"}}><span class="image left"><img src={pic00} alt="" /></span>At East High School we are committed to helping each student reach their full potential.  Through generous community donations and partnerships, we provide a very popular food pantry and a fantastic washroom with private and safe shower and laundry facilities; both are open daily.  We also have a wonderful clothing boutique, loaded with necessities for all weather conditions and special occasions. These services are free for all EHS students.  When students have their basic needs met, they are capable and empowered to succeed in school and in life!</p>
+						<p  style = {{textAlign:"left"}}><span className="image left"><img src={pic00} alt="" /></span>At East High School we are committed to helping each student reach their full potential.  Through generous community donations and partnerships, we provide a very popular food pantry and a fantastic washroom with private and safe shower and laundry facilities; both are open daily.  We also have a wonderful clothing boutique, loaded with necessities for all weather conditions and special occasions. These services are free for all EHS students.  When students have their basic needs met, they are capable and empowered to succeed in school and in life!</p>
 					</section>
 
 					<section>
 						<h2 style={{letterSpacing:"3px"}}>W<span style={{color:"#CC0033"}}>E</span> CAN H<span style={{color:"#CC0033"}}>E</span>LP</h2>
-						<p  style = {{textAlign:"left"}}><span class="image right"><img src={pic16} alt="" /></span>
+						<div  style = {{textAlign:"left"}}><span className="image right"><img src={pic16} alt="" /></span>
+							<br/>
+							<br/>
 							<ul>
 								<li>
 									East High School is a rigorous and diverse public school of 2,000 students.
@@ -46,7 +48,7 @@ class Main extends Component {
 									The East High Student and Family Support Initiative was created in 2016 to assist these students and their families.
 								</li>
 							</ul>
-						</p>
+						</div>
 					</section>
 				</section>
 
@@ -70,20 +72,20 @@ class Main extends Component {
 										</Link>
 									</div>
 									<div className="col-6 col-12-xsmall">
-										<Link to="/contact" className="image fit my-inline">
+										<Link to="/familysupport" className="image fit my-inline">
 											<h3 className="caption">FAMILY SUPPORT</h3>
 											<img src={pic22} alt="" />
 										</Link>
 									</div>
 									<div className="col-6 col-12-xsmall">
 
-										<Link to="/" className="image fit my-inline">
+										<Link to="/familysupport" className="image fit my-inline">
 											<h3 className="caption">DENTAL VISION EQUAL OPPORTUNITIES</h3>
 											<img src={pic24} alt="" />
 										</Link>
 									</div>
 									<div className="col-6 col-12-xsmall">
-										<Link to="#" className="image fit my-inline">
+										<Link to="/computers" className="image fit my-inline">
 											<h3 className="caption">LAPTOPS</h3>
 											<img src={pic23} alt="" />
 										</Link>

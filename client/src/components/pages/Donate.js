@@ -14,9 +14,9 @@ class Donate extends Component {
             <Header />
             <div id="main" className="container">
                 <section>			
-                    <p  style = {{textAlign:"left", fontSize: "24px"}}>
+                    <div  style = {{textAlign:"left", fontSize: "24px"}}>
                         <a href="https://give.saltlakeeducationfoundation.org/easthighalumni/give-a-gift">
-                            <span class="image left my-inline"><img src={pic05} alt="" /></span>
+                            <span className="image left my-inline"><img src={pic05} alt="" /></span>
                         </a>
                         <a href="https://give.saltlakeeducationfoundation.org/easthighalumni/give-a-gift">
                             <h2 className="my-inline" style={{textAlign: "left"}}>Click Here to Donate through <br/>Salt Lake Education Foundation ❤️</h2>
@@ -27,7 +27,7 @@ class Donate extends Component {
                             <span className="my-inline" style={{color:"#CC0033"}}>"STUDENT AND FAMILY SUPPORT"</span>
                         </a> 
                         in the Designation tag.  When students have their basic needs met, they are capable and empowered to succeed in school and in life! Donations are tax deductible and you will receive a receipt directly from SLEF.  Thank you for your generosity.
-                    </p>
+                    </div>
                     <hr/>
                 </section>
                 <div className="row gtr-150">

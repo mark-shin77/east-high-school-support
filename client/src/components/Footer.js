@@ -11,6 +11,9 @@ import pic48 from '../images/pic48.png';
 import pic49 from '../images/pic49.png';
 import pic50 from '../images/pic50.png';
 import pic52 from '../images/pic52.png';
+import pic43 from '../images/pic43.png';
+import pic53 from '../images/pic53.png';
+import pic54 from '../images/pic54.png';
 
 class Footer extends Component {
   render() {
@@ -59,7 +62,7 @@ class Footer extends Component {
                             <span>(801) 583-1661 x2338</span></a>
                         </li>
                         <li>
-                            <a href={"mailto:" + "kris.barta@slcschools.org"}>
+                            <a href={"mailto: kris.barta@slcschools.org"}>
                             <h4 className="icon alt fa-envelope" style={{cursor: "pointer"}}> <span className="label">Email</span></h4>
                             kris.barta@slcschools.org</a>
                         </li>
@@ -72,61 +75,89 @@ class Footer extends Component {
                 </section>
             </div>
 
+            <br/>
+            <br/>
+            <br/>
+
             <div className="row">
 
                 <section className="col-4 col-6-medium col-12-small">
                     <span className="image fit">
-                        <img src={pic41} alt=""/>
+                        <img src={pic41} alt="" style={{opacity:"0.8"}}/>
                     </span>
                 </section>
                 
                 <section className="col-4 col-6-medium col-12-small">
                     <span className="image fit">
-                        <img src={pic44} alt=""/>
+                        <img src={pic44} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
                
                 <section className="col-4 col-6-medium col-12-small">
                     <span className="image fit">
-                        <img src={pic45} alt=""/>
+                        <img src={pic45} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
                 
                 <section className="col-4 col-6-medium col-12-small">
                     <span className="image fit">
-                        <img src={pic46} alt=""/>
+                        <img src={pic46} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
                 
                 <section className="col-4 col-6-medium col-12-small">
                     <span className="image fit">
-                        <img src={pic47} alt=""/>
+                        <img src={pic47} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
 
                 <section className="col-4 col-6-medium col-12-small">
                     <span className="image fit">
-                        <img src={pic48} alt=""/>
+                        <img src={pic48} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
 
                 <section className="col-4 col-6-medium col-12-small">
                     <span className="image fit">
-                        <img src={pic49} alt=""/>
+                        <img src={pic49} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
 
                 <section className="col-4 col-6-medium col-12-small">
                     <span className="image fit">
-                        <img src={pic50} alt=""/>
+                        <img src={pic50} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
 
                 <section className="col-4 col-6-medium col-12-small">
                     <span className="image fit">
-                        <img src={pic52} alt=""/>
+                        <img src={pic52} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
+
+                <section className="col-4 col-6-medium col-12-small">
+                    <span className="image fit">
+                        <img src={pic43} alt="" style={{opacity:"0.3"}}/>
+                    </span>
+                </section>
+
+                
+                <section className="col-4 col-6-medium col-12-small">
+                    <span className="image fit">
+                        <img src={pic53} alt="" style={{opacity:"0.3"}}/>
+                    </span>
+                </section>
+
+                
+                <section className="col-4 col-6-medium col-12-small">
+                    <span className="image fit">
+                        <img src={pic54} alt="" style={{opacity:"0.3"}}/>
+                    </span>
+                </section>
+
+    
+
+      
 
 
             </div>
