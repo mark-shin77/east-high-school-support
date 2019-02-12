@@ -30,8 +30,8 @@ class Donate extends Component {
                     </div>
                     <hr/>
                 </section>
-                <div className="row gtr-150">
-                    <div className="col-12 col-12-small">
+                <div className="row">
+                    <div className="col-12">
                         <span className="image fit">
                             <img src={pic39} alt="" />
                         </span> 

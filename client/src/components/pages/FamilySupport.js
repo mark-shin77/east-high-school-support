@@ -30,7 +30,7 @@ class FamilySupport extends Component {
 
                 <h4>Food Support supplied directly to district families by Salt Lake Education Foundation is limited to <a href="https://www.slcschools.org/departments/salt-lake-education-foundation-and-development-office/family-support/"><span  className="my-inline" style={{fontVariant: 'small-caps', color:'#CC0033'}}>emergency gift cards</span></a>.  Through partnerships and relationships with other service providers, we have the following options available:</h4>
                 
-            <div className="row gtr-150">
+            <div className="row">
 			    <div className="col-4 col-12-small">
 
                 <a href="https://www.slcschools.org/departments/salt-lake-education-foundation-and-development-office/family-support/"><h4 className="my-inline">Emergency Gift Cards:</h4></a>
@@ -61,7 +61,7 @@ class FamilySupport extends Component {
                 <h2>Sh<span style={{fontVariant: 'small-caps', color:'#CC0033'}}>e</span>lt<span style={{fontVariant: 'small-caps', color:'#CC0033'}}>e</span>r R<span style={{fontVariant: 'small-caps', color:'#CC0033'}}>e</span>sourc<span style={{fontVariant: 'small-caps', color:'#CC0033'}}>e</span>s</h2>
             </header>
                 
-            <div className="row gtr-150">
+            <div className="row">
 			    <div className="col-4 col-12-small">
                 
                 <a href="https://www.habitatsaltlake.com/restore/"><h4 className="my-inline">Habitat for Humanity Restore:</h4></a>
@@ -92,7 +92,7 @@ class FamilySupport extends Component {
             <h4>Salt Lake Education Foundation has partnerships that allow us to reach more students in need of clothing. <a href="https://www.slcschools.org/departments/salt-lake-education-foundation-and-development-office/family-support/"><span  className="my-inline" style={{fontVariant: 'small-caps', color:'#CC0033'}}>emergency gift cards</span></a>.  </h4>
 
 
-            <div className="row gtr-150">
+            <div className="row">
 			    <div className="col-4 col-12-small">
                 
                 <a href="https://www.slcschools.org/departments/salt-lake-education-foundation-and-development-office/family-support/"><h4 className="my-inline">Deseret Industry Vouchers:</h4></a>

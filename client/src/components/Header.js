@@ -8,14 +8,14 @@ class Header extends Component {
     render() {
         return (
             <div>
-                <header id="header">
+                <header  id="header">
                     <h1 style={{ whiteSpace: "pre" }}>
                         <Link to="/"><img src={pic24} className="baby-icon" alt="navbar"></img></Link>
                         <Link to="/fooddonation" >  GIVE FOOD </Link>|
                         <Link to="/donate" > GIVE MONEY </Link>|
                         <Link to="/volunteer" > GIVE TIME</Link>
                     </h1>
-                    <nav id="nav">
+                    <nav  id="nav">
                         <ul>
                             <li><Link to="/contact">CONTACT</Link></li>
                             <li><Link to="/admin">LOGIN</Link></li>

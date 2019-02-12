@@ -21,7 +21,7 @@ class Hours extends Component {
 
 
 
-                    <div className="row gtr-150">
+            <div className="row gtr-150">
 
                     <div className="col-6 col-12-small">
                     <span className="image fit">
@@ -33,6 +33,8 @@ class Hours extends Component {
                         <img src={pic27} alt="" />
                     </span>
                 </div>
+            </div>
+            <div className="row gtr-150">
 			    <div className="col-6 col-12-small">
                     <span className="image fit">
                         <img src={pic35} alt="" />
@@ -44,6 +46,7 @@ class Hours extends Component {
                         <img src={pic36} alt="" />        
                     </span>
                 </div>
+            </div>
 
 
 
@@ -99,7 +102,7 @@ class Hours extends Component {
                             All of these services are provided free of charge to any of our students and their families. These programs are supported 100% through in-kind gifts and cash, generously donated by East High students, families, PTA and an amazing community of individuals and companies who LOVE EAST and want to help each student succeed!.</p>
                     </section>
                 </div>
-                </div>
+                
                 <Footer />
             </div>
         );
