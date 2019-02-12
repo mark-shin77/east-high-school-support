@@ -49,7 +49,7 @@ class Volunteer extends Component {
             <div>
                 <Header />
                 <div id="main" className="container">
-                    <div className="row gtr-150">
+                    <div className="row">
                         <div className="col-4 col-12-medium">
                             <section id="sidebar">
                                 <section>
@@ -111,7 +111,7 @@ class Volunteer extends Component {
             </header>
 
                 
-            <div className="row gtr-150">
+            <div className="row">
 			    <div className="col-4 col-12-small">
                     <a href="https://mountainview.slcschools.org/"><h4 className="my-inline">Mountain View Elementary:</h4></a>
                     <p>Contact Christine Tuirfua and/or Wendy Morse <br/>

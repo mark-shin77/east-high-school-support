@@ -14,7 +14,8 @@ class Contact extends Component {
                 <Header />
                 <div id="main" className="container">
                     <img className = "image fit" src={pic34} alt="" />
-                    <section id="content">
+                    
+                    <div id="content">
                         <div className="contactWrapper"
                             style={{
                                 display: "flex",
@@ -57,6 +58,8 @@ class Contact extends Component {
                             </a>
                         </div>
                         <br/>
+
+                        
                         <h3>About our School</h3>
                         <p>East High School is a rigorous and diverse public school of 2,000 students. Approximately 64% of the student body is living below the poverty line (including 85 homeless students). The East High Student and Family Support Initiative was created in 2016 to assist these students. We evaluate and fulfill the unique needs of each student, to assure that they have their basic needs met. This includes some dental and vision assistance. At East we feel that if the student is not worrying about pain, food, clothing, and cleanliness, they will be better able to thrive in school and in life.
                             <br />
@@ -65,7 +68,9 @@ class Contact extends Component {
                                     <br />
                             <br />
                             All of these services are provided free of charge to any of our students and their families. These programs are supported 100% through in-kind gifts and cash, generously donated by East High students, families, PTA and an amazing community of individuals and companies who LOVE EAST and want to help each student succeed!.</p>
-                    </section>
+                    
+                    </div>
+                            
                 </div>
                 <Footer />
             </div>
