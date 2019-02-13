@@ -16,6 +16,7 @@ import Dashboard from './components/Dashboard';
 import Computers from './components/pages/Computers';
 import AddUser from './components/pages/AddUser';
 import ChangePassword from "./components/pages/ChangePassword";
+import FamilySupport from './components/pages/FamilySupport';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
                     <Route path="/volunteer" component={Volunteer} />
                     <Route path="/signup" component={SignupForm}/>
                     <Route path="/computers" component={Computers} />
+                    <Route path="/familysupport" component={FamilySupport} />
                     <Route exact path="/dash" component={Dashboard} loggedIn={false}/>
                     <Route exact path="/add/user" component={AddUser}/>
                     <Route exact path="/change/password" component={ChangePassword}/>

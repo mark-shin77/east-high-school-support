@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom';
 import '../../assets/css/font-awesome.min.css';
 import '../../assets/css/main.css';
 import Header from '../../components/Header';
@@ -14,6 +15,7 @@ class Admin extends Component {
 
         <div id="main" className="container">
             <section id="content">
+                <Link to="/contact" className="image fit"><img src={pic34} alt="" /></Link>
 
             </section>
             <LogApp/>

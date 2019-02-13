@@ -16,7 +16,7 @@ class FoodDonation extends Component {
         <section>        
         <div id="main" className="container">
 
-        <header class="major">
+        <header className="major" style={{textAlign: 'center'}}>
 			<h2>Community Drop off: <br/>Wednesdays 2:45-3:15pm<br/> <span style={{color: "#cc0033"}}> East High School</span></h2>
 			<p>840 S. 1300 E. SLC UT, 84102 
             <br/> Look for the students with the red cart!<br />
@@ -27,8 +27,8 @@ class FoodDonation extends Component {
 		</header>
         <hr/>
 
-            <div className="row gtr-150">
-			    <div className="col-4 col-12-small">
+            <div className="row">
+			    <div className="col-4-xlarge col-12-small">
                     <span className="image fit">
                         <img src={pic32} alt="" />
                         <span style={{textAlign: "center"}}>
@@ -53,7 +53,7 @@ class FoodDonation extends Component {
                         </ul>           
                     </span>
                 </div>
-			    <div className="col-4 col-12-small">
+			    <div className="col-4-xlarge col-12-small">
                 <span className="image fit">
                         <img src={pic31} alt="" />
                         <span style={{textAlign: "center"}}>
@@ -77,7 +77,7 @@ class FoodDonation extends Component {
                         </ul>           
                     </span>
                 </div>              
-			    <div className="col-4 col-12-small">
+			    <div className="col-4-xlarge col-12-small">
                 <span className="image fit">
                         <img src={pic33} alt="" />
                         <span style={{textAlign: "center"}}>
@@ -97,9 +97,9 @@ class FoodDonation extends Component {
             </div>
             <hr />
                 
-			<p  style = {{textAlign:"left", fontSize: "24px"}}><a href="https://give.saltlakeeducationfoundation.org/easthighalumni/give-a-gift"><span className="image left my-inline"><img src={pic05} alt="" /></span></a>
+			<div style = {{textAlign:"left", fontSize: "24px"}}><a href="https://give.saltlakeeducationfoundation.org/easthighalumni/give-a-gift"><span className="image left my-inline"><img src={pic05} alt="" /></span></a>
             <a href="https://give.saltlakeeducationfoundation.org/easthighalumni/give-a-gift"><h2 className="my-inline" style={{textAlign: "left"}}>Click Here to Donate through <br/>Salt Lake Education Foundation ❤️</h2></a>We hope you will consider donating to East High School Student and Family Support through the Salt Lake Education Foundation (SLEF).  Any contribution will help make a student's future brighter. 100% of your donation goes toward the initiative of your choice.  Simply choose the donation amount, and scroll down and <span style={{whiteSpace: "pre"}}>highlight  </span>
-            <a style={{ textDecoration: "none"}} href="https://give.saltlakeeducationfoundation.org/easthighalumni/give-a-gift"><span className="my-inline" style={{color:"#CC0033"}}>"STUDENT AND FAMILY SUPPORT"</span></a> in the Designation tag.  When students have their basic needs met, they are capable and empowered to succeed in school and in life! Donations are tax deductible and you will receive a receipt directly from SLEF.</p>
+            <a style={{ textDecoration: "none"}} href="https://give.saltlakeeducationfoundation.org/easthighalumni/give-a-gift"><span className="my-inline" style={{color:"#CC0033"}}>"STUDENT AND FAMILY SUPPORT"</span></a> in the Designation tag.  When students have their basic needs met, they are capable and empowered to succeed in school and in life! Donations are tax deductible and you will receive a receipt directly from SLEF.</div>
             </div>
 		</section>
         <Footer />

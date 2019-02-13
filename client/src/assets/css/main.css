@@ -1710,11 +1710,9 @@ input, select, textarea {
 					.row.gtr-200.gtr-uniform {
 						margin-top: -4em;
 					}
-
 						.row.gtr-200.gtr-uniform > * {
 							padding-top: 4em;
 						}
-
 		}
 
 /* Container */
@@ -2616,7 +2614,7 @@ input, select, textarea {
 	#header {
 		background: #fff;
 		border-bottom: solid 1px #e2eaec;
-		height: 3.5em;
+		height: 4em;
 		left: 0;
 		line-height: 3.5em;
 		position: fixed;
@@ -2630,7 +2628,7 @@ input, select, textarea {
 			left: 1em;
 			line-height: inherit;
 			position: absolute;
-			top: 0;
+			top: 5px;
 			letter-spacing: 1px;
 		}
 
@@ -2665,7 +2663,7 @@ input, select, textarea {
 		#header nav {
 			position: absolute;
 			right: 0;
-			top: 0;
+			top: 5px;
 		}
 
 			#header nav:after {
@@ -3235,7 +3233,7 @@ input, select, textarea {
 			}
 
 			#header {
-				height: 3em;
+				height: 3.5em;
 				line-height: 3em;
 			}
 
@@ -3385,12 +3383,11 @@ input, select, textarea {
 			}
 
 			#header {
-				height: 2.75em;
 				line-height: 2.75em;
 			}
 
 				#header h1 {
-					left: 0.75em;
+					left: .32em;
 				}
 
 					#header h1 a {
@@ -3644,6 +3641,44 @@ input, select, textarea {
 	}
 /* Suz CSS */
 
+/*ugly phone number color*/
+
+
+
+a[href^="tel:"] {
+	color:#cc3333;
+	text-decoration: none;
+	letter-spacing: 1px;
+	-moz-transition:  opacity  0.4s ease-in-out;
+	-webkit-transition:  opacity  0.4s ease-in-out;
+	-ms-transition:  opacity  0.4s ease-in-out;
+	transition:  opacity  0.4s ease-in-out;
+	width: 150px!important;
+	text-align: center;
+  }
+
+  a:hover[href^="tel:"] {
+	color:#cc3333;
+	text-decoration: none;
+	opacity: 0.6;
+  }
+
+  a[href^="mailto:"] {
+	color:#cc3333;
+	text-decoration: none;
+	letter-spacing: 1px;
+	-moz-transition:  opacity  0.6s ease-in-out;
+	-webkit-transition:  opacity  0.6s ease-in-out;
+	-ms-transition:  opacity  0.6s ease-in-out;
+	transition:  opacity  0.6s ease-in-out;
+  }
+
+  a:hover[href^="mailto:"] {
+	color:#cc3333;
+	text-decoration: none;
+	opacity: 0.8;
+  }
+
 .button-wrapper {
 	width: 350px;
 	letter-spacing: 2px!important;
@@ -3697,13 +3732,16 @@ a > .baby-icon{
 	-webkit-transition: box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
 	-ms-transition: box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
 	transition: box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
-	height: 30px;
+	top: 8px;
+    position: relative;
+    height: 30px;
 }
 
 a > .baby-icon:hover {
 	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 	opacity: 0.6;
 }
+
 
 /* Contact form */
 
