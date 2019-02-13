@@ -1,12 +1,10 @@
-import ReactGA from 'react-ga';
-
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './assets/css/main.css'
 import "./assets/css/font-awesome.min.css";
 import ScrollToTop from './components/ScrollToTop';
 import Home from './components/pages/Home';
-import Admin from './components/pages/Admin';
+ import Admin from './components/pages/Admin';
 import Contact from './components/pages/Contact';
 import Donate from './components/pages/Donate';
 import FoodDonation from './components/pages/FoodDonation';
@@ -29,7 +27,7 @@ function App() {
           <Switch>
               <ScrollToTop>
                     <Route exact path="/" component={Home} />
-                    <Route path="/admin" component={Admin} />
+                    <Route path="/admin" component={Admin} /> 
                     <Route path="/contact" component={Contact} />
                     <Route path="/donate" component={Donate} />
                     <Route path="/fooddonation" component={FoodDonation} />

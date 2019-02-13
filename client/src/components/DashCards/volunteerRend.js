@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from "axios"
-import Volunteer from './../pages/Volunteer';
 class VolunteerRend extends Component{
 constructor(props){
   super(props)
