@@ -5,7 +5,7 @@ constructor(props){
   super(props)
 
   this.state = {
-     foodItem: []
+      foodItem: []
   }
   this.getFood = this.getFood.bind(this)
   this.createTable = this.createTable.bind(this)
@@ -22,17 +22,17 @@ componentDidMount(){
 
 createTable = () => {
     //table to push the most recent 3 donations
-     const newTable =[] 
-     console.log(this.state.foodItem)
-     if(this.state.foodItem.length >2){
-     for(let i=this.state.foodItem.length-1; i> this.state.foodItem.length-4; i--){
-         newTable.push(this.state.foodItem[i])
-     }
-     console.log(newTable)
+      const newTable =[] 
+      console.log(this.state.foodItem)
+      if(this.state.foodItem.length >2){
+      for(let i=this.state.foodItem.length-1; i> this.state.foodItem.length-4; i--){
+          newTable.push(this.state.foodItem[i])
+      }
+      console.log(newTable)
     // // Outer loop to create parent
     // //Only returns the more recent 3 from the DB
-     return(
-         <table className="table1">
+      return(
+          <table className="table1">
             <thread>
                 <tr>
                     <th>
@@ -42,7 +42,7 @@ createTable = () => {
                         Ammount($)
                 </th>
                     <th>
-                       Service
+                        Service
                     </th>
                 </tr>
             </thread>
@@ -54,28 +54,21 @@ createTable = () => {
                         <td>{table.ammount}</td>
                         <td>{table.store}</td>
                         <td>{table.service}</td>
-                       
                     </tr>
-                   
                 )
               })}
- 
             </tbody>
-         </table>
-     )
-
+          </table>
+    )
 }  
 }
 render(){
     return(
             <div>
-                 {this.createTable()}
-                
+                  {this.createTable()}    
             </div>
         )
     }
 }
 
-
-
-export default FoodRend
+export default FoodRend;
