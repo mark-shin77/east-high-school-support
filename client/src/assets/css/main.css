@@ -1710,11 +1710,9 @@ input, select, textarea {
 					.row.gtr-200.gtr-uniform {
 						margin-top: -4em;
 					}
-
-					.row.gtr-200.gtr-uniform > * {
-						padding-top: 4em;
-					}
-
+						.row.gtr-200.gtr-uniform > * {
+							padding-top: 4em;
+						}
 		}
 
 /* Container */
