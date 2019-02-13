@@ -9,11 +9,10 @@ router.get("/food1", (req, res)=>{
 })
 router.post("/food", (req,res)=>{
     Food.create({
-        name: req.body.name,
-        email: req.body.email,
-        food: req.body.food,
-        quantity: req.body.quantity,
-        phone: req.body.phone
+        item: req.body.item,
+        store: req.body.store,
+        ammount: req.body.ammount,
+        service: req.body.service,
     }).then(data=>console.log('working')).catch(err=>console.log(err))
 
 })
@@ -30,7 +29,8 @@ router.post("/expenses", (req,res)=>{
          item: req.body.item,
          ammount: req.body.ammount,
          date: req.body.date,
-         quantity: req.body.quantity
+         quantity: req.body.quantity,
+         doner: req.body.doner
     }).then(data=> res.json(data))
     
 })

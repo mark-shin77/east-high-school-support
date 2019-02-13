@@ -10,6 +10,7 @@ import ExpenseForm from "./expenseForm";
 import "./dash.css" 
 import ExpenseAll from "./DashCards/expenseAll";
 import FoodAll from "./DashCards/foodAll";
+import AnalyticsCard from './DashCards/analyticsCard';
 
 class Dashboard  extends Component{
     constructor(props){
@@ -46,6 +47,7 @@ class Dashboard  extends Component{
             expenseAll: false,
             foodAll: false
         })
+        window.location.href="/dash"
     }
 
     volClick=()=>{
@@ -75,7 +77,6 @@ class Dashboard  extends Component{
         })
     }
     expense=()=>{
-       console.log('fuck')
         this.setState({
             expense:true
         })
@@ -110,13 +111,12 @@ class Dashboard  extends Component{
                 <div className="col-1"></div>
                 <div className="col-5">
                 <DashCard className="volcard"name={"Volunteers"} onClick={()=>this.volunteer()} onClick1={()=>{{this.volAll()}}} rendered="volunteer"> <p>Card For Volunteers</p></DashCard>
-                <DashCard className="foodcard"name ={"Food"} rendered="food"  onClick={()=>{this.food()}} onClick1={()=>{this.foodAll()}} name="Food Donation" food={true}> <p>Card for Food</p> </DashCard>
+                <DashCard className="foodcard"name ={"Expenses"} rendered="food"  onClick={()=>{this.food()}} onClick1={()=>{this.foodAll()}} food={true}> <p>Expenses</p> </DashCard>
                 
- 
                 </div>
                 <div className="col-5">
-                <DashCard className="expcard" name = {'Expenses'} onClick={()=>{this.expense()}} onClick1={()=>{this.expAll()}}rendered="expense"> <p>Card for Expenses</p> </DashCard>
-                <DashCard className="trafcard" name = {"Traffic"} onClick={this.onClick} > <p>Card for Traffic</p> </DashCard>
+                <DashCard className="expcard" name = {'Donations'} onClick={()=>{this.expense()}} onClick1={()=>{this.expAll()}} rendered="expense"> <p>Donations</p> </DashCard>
+                <AnalyticsCard/>
                 </div>
                 </div>
                 </section>
@@ -158,7 +158,7 @@ class Dashboard  extends Component{
                 <div>
                     <DashHeader/>
                     <FoodAll/>
-                    <button className="button formbutton" onClick={this.onClick}>Exit</button>
+                    <button className="button formbutton " onClick={this.onClick}>Exit</button>
                 </div>
             )
         }

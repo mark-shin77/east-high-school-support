@@ -2,7 +2,7 @@
     color: black
 }
 .cardwidth{
-    width: 110%;
+    width: 108%;
     
 }
 .volcard{
@@ -18,14 +18,21 @@
     margin-right: 5%
 }
 .table1{
-    width: 105%;
+    width: 100%;
     
 }
 .daterow{
     position:absolute;
     right: 85% 
 }
-
+.foodbutton{
+	position: absolute;
+	margin-left: 8%
+}
+#foodform{
+	width: 80%;
+	margin-left: 9%
+}
 input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -159,7 +166,6 @@ input[type="submit"],
             }
             
 .formbutton{
-    position:absolute;
-    margin-left: 87%;
-    bottom: 18%
+    margin-left: 76%;
+    margin-bottom: 16%
 }

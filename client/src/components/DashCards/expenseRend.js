@@ -63,7 +63,6 @@ class ExpenseRend extends Component{
             </tbody>
         </table>
     )
-    
     }
 }
     render(){
@@ -75,4 +74,5 @@ class ExpenseRend extends Component{
     }
     
 }
+
 export default ExpenseRend;

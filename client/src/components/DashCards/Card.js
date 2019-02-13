@@ -14,13 +14,13 @@ class DashCard extends Component{
         
         }
     cardPicker=()=>{
-        if(this.state.rendered ==='food'){
+        if(this.state.rendered =='food'){
             return <FoodRend />
         }
-        else if(this.state.rendered ==='expense'){
+       if(this.state.rendered =='expense'){
             return <ExpenseRend/>
         }
-        else if(this.state.rendered ==='volunteer'){
+        if(this.state.rendered =='volunteer'){
             return <VolunteerRend/>
         }
     }
@@ -45,11 +45,10 @@ class DashCard extends Component{
     </Nav>
   </Card.Header>
   <Card.Body>
-    <Card.Title>{this.props.name}</Card.Title>
+    <Card.Title>Recent {this.props.name}</Card.Title>
     <Card.Text>
       {this.cardPicker()}    
     </Card.Text>
-    {/* <Button variant="primary">Go somewhere</Button> */}
   </Card.Body>
 </Card>
 

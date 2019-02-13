@@ -30,7 +30,9 @@ export default class ChangePassword extends Component {
     return (
       <div>
           <DashHeader1/>
-          <form class="newForm">
+          <h3 className="text-center">Change Password</h3>
+          <div className="container foodform">
+          <form class="newForm" id="foodform">
               <label for="email">Email</label>
               <input 
                  type="email"
@@ -47,6 +49,7 @@ export default class ChangePassword extends Component {
                   />
                   <button className="button" onClick={()=>{this.changePassword()}}>Submit</button>
           </form>
+          </div>
       </div>
     )
   }

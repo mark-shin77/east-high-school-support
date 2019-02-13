@@ -4,7 +4,7 @@ import DashHeader1 from './../DashHeader1';
 
 export default class AddUser extends Component {
   render() {
-      if(localStorage.token="success" ){
+      if(localStorage.token==="success" ){
     return (
 
       <div>

@@ -6,11 +6,10 @@ class FoodForm extends Component{
     constructor(props){
         super(props)
         this.state={
-            name: "",
-            email: "",
-            phone: "",
-            food: "",
-            quantity: ""
+            item: "",
+            store: "",
+            service: "",
+            ammount: ""
         }
         this.submitClick = this.submitClick.bind(this);
         this.handleChange= this.handleChange.bind(this);
@@ -29,56 +28,50 @@ class FoodForm extends Component{
             method:"POST",
             url: "/authorize/food",
             data: {
-             name: this.state.name,
-             email: this.state.email,
-             phone: this.state.phone,
-             food: this.state.food,
-             quantity: this.state.quantity,
+             item: this.state.item,
+             ammount: this.state.ammount,
+             store: this.state.store,
+             service: this.state.service,
             }
-        }).then(alert("Donation has Been Updated!"), this.setState({name:"", email:"", phone:"", food:"", quantity:""}))
+        }).then(alert("Donation has Been Updated!"), this.setState({item:"", store:"", service:"", ammount: ""}))
     }
     render(){
         return(
             <div class="container">
+                <h3 className="text-center">Expenses</h3>
                 <form id="foodform">
-                <label htmlFor="name">Name: </label>
+                <label htmlFor="name">Item: </label>
 						<input
 							type="text"
-							name="name"
-							value={this.state.username}
+							name="item"
+							value={this.state.item}
 							onChange={this.handleChange}
 						/>
-						<label htmlFor="email">Email: </label>
+						<label htmlFor="ammount">Ammount: </label>
 						<input
-							type="email"
-							name="email"
-							value={this.state.password}
+							type="text"
+							name="ammount"
+							value={this.state.ammount}
 							onChange={this.handleChange}
 						/>
-                        <label htmlFor="phone">Phone:</label>
+                        <label htmlFor="store">Store:</label>
                         <input 
                            type="text"
-                           name="phone"
-                           value={this.state.phone}
+                           name="store"
+                           value={this.state.store}
                            onChange={this.handleChange}
                         />
-                        <label htmlFor="food">Food Item:</label>
+                        <label htmlFor="food">Service Type:</label>
                         <input 
                           type="text"
-                          name="food"
-                          value={this.state.food}
+                          name="service"
+                          value={this.state.service}
                           onChange={this.handleChange}
                         />
-                        <label htmlFor="quantity">Quantity: </label>
-                        <input
-                          type="number"
-                          name="quantity"
-                          value={this.state.quantity}
-                          onChange={this.handleChange}
-                        />
+                       
                         
                 </form>
-                <button className="button"  onClick={()=>{this.submitClick()}}>Submit</button>
+                <button className="button foodbutton"  onClick={()=>{this.submitClick()}}>Submit</button>
             </div>
         )
     }
