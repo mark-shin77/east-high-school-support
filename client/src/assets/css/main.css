@@ -3233,7 +3233,7 @@ input, select, textarea {
 			}
 
 			#header {
-				height: 3em;
+				height: 3.5em;
 				line-height: 3em;
 			}
 
@@ -3383,12 +3383,11 @@ input, select, textarea {
 			}
 
 			#header {
-				height: 2.75em;
 				line-height: 2.75em;
 			}
 
 				#header h1 {
-					left: 0.75em;
+					left: .32em;
 				}
 
 					#header h1 a {
