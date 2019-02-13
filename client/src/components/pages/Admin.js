@@ -15,7 +15,6 @@ class Admin extends Component {
 
         <div id="main" className="container">
             <section id="content">
-                <Link to="/contact" className="image fit"><img src={pic34} alt="" /></Link>
 
             </section>
             <LogApp/>
