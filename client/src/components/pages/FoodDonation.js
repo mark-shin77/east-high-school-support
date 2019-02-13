@@ -16,7 +16,7 @@ class FoodDonation extends Component {
         <section>        
         <div id="main" className="container">
 
-        <header className="major">
+        <header className="major" style={{textAlign: 'center'}}>
 			<h2>Community Drop off: <br/>Wednesdays 2:45-3:15pm<br/> <span style={{color: "#cc0033"}}> East High School</span></h2>
 			<p>840 S. 1300 E. SLC UT, 84102 
             <br/> Look for the students with the red cart!<br />
@@ -28,7 +28,7 @@ class FoodDonation extends Component {
         <hr/>
 
             <div className="row">
-			    <div className="col-4 col-12-small">
+			    <div className="col-4-xlarge col-12-small">
                     <span className="image fit">
                         <img src={pic32} alt="" />
                         <span style={{textAlign: "center"}}>
@@ -53,7 +53,7 @@ class FoodDonation extends Component {
                         </ul>           
                     </span>
                 </div>
-			    <div className="col-4 col-12-small">
+			    <div className="col-4-xlarge col-12-small">
                 <span className="image fit">
                         <img src={pic31} alt="" />
                         <span style={{textAlign: "center"}}>
@@ -77,7 +77,7 @@ class FoodDonation extends Component {
                         </ul>           
                     </span>
                 </div>              
-			    <div className="col-4 col-12-small">
+			    <div className="col-4-xlarge col-12-small">
                 <span className="image fit">
                         <img src={pic33} alt="" />
                         <span style={{textAlign: "center"}}>

@@ -50,7 +50,7 @@ class Volunteer extends Component {
                 <Header />
                 <div id="main" className="container">
                     <div className="row">
-                        <div className="col-4 col-12-medium">
+                        <div className="col-4-xlarge col-12-medium">
                             <section id="sidebar">
                                 <section>
                                     <div className="active">
@@ -65,7 +65,7 @@ class Volunteer extends Component {
                             </section>
                         </div>
 
-                        <div className="col-8 col-12-medium imp-medium">
+                        <div className="col-8-xlarge col-12-medium imp-medium">
                             <section id="content">
                                 <div className="openslots">
                                     {this.state.availableTimeSlots.length > 0 ?
@@ -106,13 +106,13 @@ class Volunteer extends Component {
                 <div>
 
             <hr/>
-            <header className="major">
+            <header className="major" style={{textAlign:'center'}}>
                 <h2>Community Servic<span style={{fontVariant: 'small-caps', color:'#CC0033'}}>e</span> Opportuniti<span style={{fontVariant: 'small-caps', color:'#CC0033'}}>e</span>s</h2>
             </header>
 
                 
-            <div className="row">
-			    <div className="col-4 col-12-small">
+            <div className="row" style={{textAlign:'center'}}>
+			    <div className="col-4-xlarge col-12-small">
                     <a href="https://mountainview.slcschools.org/"><h4 className="my-inline">Mountain View Elementary:</h4></a>
                     <p>Contact Christine Tuirfua and/or Wendy Morse <br/>
                     <a href="tel:8019748315"> (801) 974-8315</a></p>
@@ -147,7 +147,7 @@ class Volunteer extends Component {
 
                 </div>
 
-			    <div className="col-4 col-12-small">
+			    <div className="col-4-xlarge col-12-small">
                     <a href="https://utah.bestfriends.org/node/72/"><h4 className="my-inline">No More Homeless Pets:</h4></a>
                     <p>Contact information on the website. <br/>
                     <a href="tel:8015742454"> (801) 574-2454</a></p>
@@ -175,7 +175,7 @@ class Volunteer extends Component {
 
                 </div>  
 
-			    <div className="col-4 col-12-small">                     
+			    <div className="col-4-xlarge col-12-small">                     
                     <a href="https://bbbsu.org/"><h4 className="my-inline">Big Brothers Big Sisters of Utah:</h4></a>
                     <p>Contact the main office for more information.<br/>
                     <a href="tel:8013130303"> (801) 313-0303</a></p>

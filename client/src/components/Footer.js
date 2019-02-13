@@ -22,14 +22,14 @@ class Footer extends Component {
         <footer id="footer">
         <div className="container">
             <div className="row">
-                <section className="col-4 col-12-small">
+                <section className="col-4-xlarge col-12-small">
                     <h2>Thank you donors!</h2>
                     <p>These programs are supported 100% through in-kind gifts and cash, generously donated by East High students, families, PTA and an amazing community of individuals and companies who LOVE EAST and want to help each student succeed!</p>
                     <ul className="actions">
                         <li><Link to="/donate" className="button">Support East High</Link></li>
                     </ul>
                 </section>
-                <section className="col-4 col-12-small">
+                <section className="col-4-xlarge col-12-small">
                     <h3>Updates</h3>
                     <ul className="updates">
                         <li>
@@ -46,7 +46,7 @@ class Footer extends Component {
                         </li>
                     </ul>
                 </section>
-                <section className="col-4 col-12-small">
+                <section className="col-4-xlarge col-12-small">
                     <h3>Get in touch</h3>
                     <ul className="labeled-icons">
                         <li>
@@ -81,88 +81,80 @@ class Footer extends Component {
 
             <div className="row">
 
-                <section className="col-4 col-12-small">
+                <section className="col-4">
                     <span className="image fit">
                         <img src={pic41} alt="" style={{opacity:"0.8"}}/>
                     </span>
                 </section>
                 
-                <section className="col-4 col-12-small">
+                <section className="col-4">
                     <span className="image fit">
                         <img src={pic44} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
                
-                <section className="col-4 col-12-small">
+                <section className="col-4">
                     <span className="image fit">
                         <img src={pic45} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
                 
-                <section className="col-4 col-12-small">
+                <section className="col-4">
                     <span className="image fit">
                         <img src={pic46} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
                 
-                <section className="col-4 col-12-small">
+                <section className="col-4">
                     <span className="image fit">
                         <img src={pic47} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
 
-                <section className="col-4 col-12-small">
+                <section className="col-4">
                     <span className="image fit">
                         <img src={pic48} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
 
-                <section className="col-4 col-12-small">
+                <section className="col-4">
                     <span className="image fit">
                         <img src={pic49} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
 
-                <section className="col-4 col-12-small">
+                <section className="col-4">
                     <span className="image fit">
                         <img src={pic50} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
 
-                <section className="col-4 col-12-small">
+                <section className="col-4">
                     <span className="image fit">
                         <img src={pic52} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
 
-                <section className="col-4 col-12-small">
+                <section className="col-4">
                     <span className="image fit">
                         <img src={pic43} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
 
                 
-                <section className="col-4 col-12-small">
+                <section className="col-4">
                     <span className="image fit">
                         <img src={pic53} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
 
                 
-                <section className="col-4 col-12-small">
+                <section className="col-4">
                     <span className="image fit">
                         <img src={pic54} alt="" style={{opacity:"0.3"}}/>
                     </span>
                 </section>
-
-    
-
-      
-
-
             </div>
-
-
         </div>
     </footer>
 
