@@ -23,25 +23,25 @@ class Hours extends Component {
 
             <div className="row gtr-150">
 
-                    <div className="col-6 col-12-small">
+                    <div className="col-6-xlarge col-12-small">
                     <span className="image fit">
                         <img src={pic37} alt="" />
                     </span>
                 </div>
-			    <div className="col-6 col-12-small">
+			    <div className="col-6-xlarge col-12-small">
                     <span className="image fit">
                         <img src={pic27} alt="" />
                     </span>
                 </div>
             </div>
             <div className="row gtr-150">
-			    <div className="col-6 col-12-small">
+			    <div className="col-6-xlarge col-12-small">
                     <span className="image fit">
                         <img src={pic35} alt="" />
                        
                     </span>
                 </div>            
-			    <div className="col-6 col-12-small">
+			    <div className="col-6-xlarge col-12-small">
                 <span className="image fit">
                         <img src={pic36} alt="" />        
                     </span>

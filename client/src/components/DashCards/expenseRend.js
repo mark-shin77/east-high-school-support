@@ -26,23 +26,46 @@ class ExpenseRend extends Component{
     createTable =()=>{
         console.log(this.state.expenseItem)
         let table= []
-        //if it hasn't been populated don't do anything db calls 
-        //can take a while
-        if(this.state.expenseItem===""){
+        const newTable =[] 
+        console.log(this.state.foodItem)
+        if(this.state.expenseItem.length >2){
+        for(let i=this.state.expenseItem.length-1; i> this.state.expenseItem.length-4; i--){
+            newTable.push(this.state.expenseItem[i])
         }
-        else if(this.state.expenseItem != ""){
-            //Outer loop to create parent
-            for(let i =0; i < 3; i++){
-                let children = []
-                //inner loop for children
-                for(let j =0; j< 1; j++){
-                    children.push(<td key={this.state.expenseItem[i]._id}>{` ${this.state.expenseItem[i].item} ${this.state.expenseItem[i].date}`}</td>)
-                }
-                table.push(<tr>{children}</tr>)
-            }
-            return (table)
-        }
+        console.log(newTable)
+        // // Outer loop to create parent
+        // //Only returns the more recent 3 from the DB
+    return(
+        <table className="table1">
+            <thread>
+                <tr>
+                    <th>
+                        Item
+                    </th>
+                    <th>
+                        Ammount($)
+                </th>
+                    <th>
+                        Doner
+                    </th>
+                </tr>
+            </thread>
+            <tbody>
+                {newTable.map(table=>{
+                    return (
+                    <tr>
+                        <td>{table.item}</td>                           
+                        <td>{table.ammount}</td>
+                        <td>{table.doner}</td>
+                    </tr>
+                )
+            })}
+            </tbody>
+        </table>
+    )
+    
     }
+}
     render(){
         return(
             <div>
@@ -52,4 +75,4 @@ class ExpenseRend extends Component{
     }
     
 }
-export default ExpenseRend
+export default ExpenseRend;
