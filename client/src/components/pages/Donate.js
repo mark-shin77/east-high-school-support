@@ -3,7 +3,6 @@ import '../../assets/css/font-awesome.min.css';
 import '../../assets/css/main.css';
 import pic05 from '../../images/pic05.jpg';
 import pic39 from '../../images/pic39.jpg';
-import '../../assets/css/donation.css';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -16,7 +15,7 @@ class Donate extends Component {
                 <section>			
                     <div  style = {{textAlign:"left", fontSize: "24px"}}>
                         <a href="https://give.saltlakeeducationfoundation.org/easthighalumni/give-a-gift">
-                            <span className="image left my-inline"><img src={pic05} alt="" /></span>
+                            <span className="image left my-inline money-donation-image"><img src={pic05} alt="" /></span>
                         </a>
                         <a href="https://give.saltlakeeducationfoundation.org/easthighalumni/give-a-gift">
                             <h2 className="my-inline" style={{textAlign: "left"}}>Click Here to Donate through <br/>Salt Lake Education Foundation ❤️</h2>
