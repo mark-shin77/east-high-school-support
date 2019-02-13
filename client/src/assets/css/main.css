@@ -2614,7 +2614,7 @@ input, select, textarea {
 	#header {
 		background: #fff;
 		border-bottom: solid 1px #e2eaec;
-		height: 3.5em;
+		height: 4em;
 		left: 0;
 		line-height: 3.5em;
 		position: fixed;
@@ -2628,7 +2628,7 @@ input, select, textarea {
 			left: 1em;
 			line-height: inherit;
 			position: absolute;
-			top: 0;
+			top: 5px;
 			letter-spacing: 1px;
 		}
 
@@ -2663,7 +2663,7 @@ input, select, textarea {
 		#header nav {
 			position: absolute;
 			right: 0;
-			top: 0;
+			top: 5px;
 		}
 
 			#header nav:after {
@@ -3733,7 +3733,9 @@ a > .baby-icon{
 	-webkit-transition: box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
 	-ms-transition: box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
 	transition: box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
-	height: 30px;
+	top: 8px;
+    position: relative;
+    height: 30px;
 }
 
 a > .baby-icon:hover {
