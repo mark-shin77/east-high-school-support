@@ -2633,7 +2633,7 @@ input, select, textarea {
 			#header h1 a {
 				text-decoration: none;
 				border: 0;
-				font-size: 1 em;
+				font-size: 1em;
 			}
 			
 
@@ -3385,7 +3385,7 @@ input, select, textarea {
 			}
 
 				#header h1 {
-					left: .32em;
+					margin: auto;
 				}
 
 					#header h1 a {
