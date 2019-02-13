@@ -31,7 +31,7 @@ const AvailableTimeSlots = (props) => {
 }
 
 const tableStyling = {
-    letterSpacing: '3px',
+    letterSpacing: '2px',
     textAlign: 'center',
 }
 
