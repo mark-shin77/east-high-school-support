@@ -132,7 +132,6 @@ router.post('/signup', (req, res) => {
    // const { username, password } = req.body
     // const username = req.params.username
     // const password = req.params.password
-	console.log("hey loot at me!!!!!!!!!!!" +req.body.email)
 	const email = req.body.email
 	const password = req.body.password
 	// ADD VALIDATION

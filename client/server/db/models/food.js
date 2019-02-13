@@ -1,24 +1,23 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const FoodSchema = new Schema({
-    name:{
+  
+    item: {
         type: String,
-        required: true
-        },
-    email: {
-        type: String
     },
-    food: {
+    store:{
         type: String,
-        required: true
+        required:true
     },
-    quantity:{
-        type: Number,
+    ammount:{
+        type: String,
         
     },
-    phone:{
-        type: String
+    service:{
+        type: String,
+        required: true
     },
+   
     date: {
         type : Date, default: Date.now
     }

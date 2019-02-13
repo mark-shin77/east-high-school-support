@@ -4,7 +4,7 @@ import './assets/css/main.css'
 import "./assets/css/font-awesome.min.css";
 import ScrollToTop from './components/ScrollToTop';
 import Home from './components/pages/Home';
-import Admin from './components/pages/Admin';
+ import Admin from './components/pages/Admin';
 import Contact from './components/pages/Contact';
 import Donate from './components/pages/Donate';
 import FoodDonation from './components/pages/FoodDonation';
@@ -20,13 +20,15 @@ import FamilySupport from './components/pages/FamilySupport';
 
 
 function App() {
+    // ReactGA.initialize('UA-134365368-1')
+    //console.log(ga.q)
     return (
       
       <Router>
           <Switch>
               <ScrollToTop>
                     <Route exact path="/" component={Home} />
-                    <Route path="/admin" component={Admin} />
+                    <Route path="/admin" component={Admin} /> 
                     <Route path="/contact" component={Contact} />
                     <Route path="/donate" component={Donate} />
                     <Route path="/fooddonation" component={FoodDonation} />
