@@ -8,7 +8,9 @@ class ExpenseForm extends Component{
         this.state={
             item: "",
             ammount: "",
-            quantity: ""
+            quantity: "",
+            doner: "",
+            email: ""
         }
         this.submitClick = this.submitClick.bind(this);
         this.handleChange= this.handleChange.bind(this);
@@ -29,6 +31,8 @@ class ExpenseForm extends Component{
              item: this.state.item,
              ammount: this.state.ammount,
              quantity: this.state.quantity,
+             doner: this.state.doner,
+             email: this.state.email
             }
         }).then(alert("The expense item has been updated!"), this.setState({item:"",ammount:"", quantity:""}))
     }
@@ -36,26 +40,7 @@ class ExpenseForm extends Component{
         return(
 
             <div class="container">
-                {/* <Form>
-                <Form.Group controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-                <Form.Text className="text-muted">
-                   We'll never share your email with anyone else.
-                </Form.Text>
-                </Form.Group>
-
-                 <Form.Group controlId="formBasicPassword">
-                   <Form.Label>Password</Form.Label>
-                   <Form.Control type="password" placeholder="Password" />
-                </Form.Group>
-  <               Form.Group controlId="formBasicChecbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
-                </Form> */}
+                <h3 className="text-center">Donations</h3>
                 <form id="foodform">
                 <label htmlFor="name">Item: </label>
 						<input
@@ -64,7 +49,7 @@ class ExpenseForm extends Component{
 							value={this.state.item}
 							onChange={this.handleChange}
 						/>
-						<label htmlFor="email">Ammount: </label>
+						<label htmlFor="email">Ammount($): </label>
 						<input
 							type="text"
 							name="ammount"
@@ -73,15 +58,28 @@ class ExpenseForm extends Component{
 						/>
                         <label htmlFor="phone">Quantity:</label>
                         <input 
-                           type="number"
+                           type="text"
                            name="quantity"
                            value={this.state.quantity}
                            onChange={this.handleChange}
                         />
+                        <label htmlFor="doner">Doner Name:</label>
+                        <input
+                           type="text"
+                           name="doner"
+                           value={this.state.doner}
+                           onChange={this.handleChange}
+                           />
+                        <label htmlFor="donerEmail">Doner Email:</label>
+                        <input
+                           type="email"
+                           name="email"
+                           onChange={this.handleChange}
+                           />
                     
                         
                 </form>
-                <button className="button" onClick={()=>{this.submitClick()}}>Submit</button>
+                <button className="button foodbutton" onClick={()=>{this.submitClick()}}>Submit</button>
             </div>
         )
     }

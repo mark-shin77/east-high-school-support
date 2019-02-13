@@ -1,3 +1,5 @@
+import ReactGA from 'react-ga';
+
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './assets/css/main.css'
@@ -19,6 +21,8 @@ import ChangePassword from "./components/pages/ChangePassword";
 
 
 function App() {
+    // ReactGA.initialize('UA-134365368-1')
+    //console.log(ga.q)
     return (
       
       <Router>

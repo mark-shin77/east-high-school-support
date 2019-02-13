@@ -15,6 +15,13 @@ const ExpenseSchema = new Schema({
     quantity:{
         type: Number,
         
+    },
+    doner:{
+        type: String,
+        required: true
+    },
+    email: {
+        type: String
     }
 });
 
