@@ -19,7 +19,7 @@ class Banner extends Component {
 					<ul className="actions special">
 						<li>
 							<div className="button-wrapper">
-								<a href="/#one" className="button-wrapper button large primary">Learn More</a>
+								<a href="/#one" target="_top" className="button-wrapper button large primary">Learn More</a>
 							</div>
 						</li>
 					</ul>
