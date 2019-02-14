@@ -1,9 +1,15 @@
+.allHead{
+	margin-top: 50px
+}
 .navtab{
     color: black
 }
 .cardwidth{
-    width: 105%;
+    width: 100%;
     
+}
+.dashcontain{
+    font-size: 20x
 }
 .volcard{
     margin-right: 15%;
@@ -16,4 +22,9 @@
 }
 .foodcard{
     margin-right: 5%
+}
+.table1{
+	width: 100%;
+	
+    
 }

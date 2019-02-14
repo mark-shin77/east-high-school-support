@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import {Link} from 'react-router-dom';
-import "../assets/css/main.css";
+import "./DashCards/dash.css";
 import "../assets/css/font-awesome.min.css";
+import pic24 from '../images/pic24.png';
 
 
 class DashHeader extends Component {
@@ -9,10 +10,12 @@ class DashHeader extends Component {
     return (
       
    <div>
-        <header id="header">
+        <header id="dashhead">
         
         
-         
+        <h1 style={{ whiteSpace: "pre" }}>
+                        <Link to="/"><img src={pic24} className="baby-icon" alt="navbar"></img></Link>
+                        </h1>
         <nav id="nav">
             <ul>
                 <li><Link to="/add/user">Add User</Link></li>

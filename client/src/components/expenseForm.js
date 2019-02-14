@@ -9,7 +9,8 @@ class ExpenseForm extends Component{
             ammount: "",
             quantity: "",
             doner: "",
-            email: ""
+            email: "",
+            date: ""
         }
         this.submitClick = this.submitClick.bind(this);
         this.handleChange= this.handleChange.bind(this);
@@ -31,15 +32,16 @@ class ExpenseForm extends Component{
              ammount: this.state.ammount,
              quantity: this.state.quantity,
              doner: this.state.doner,
-             email: this.state.email
+             email: this.state.email,
+             date: this.state.date
             }
-        }).then(alert("The expense item has been updated!"), this.setState({item:"",ammount:"", quantity:""}))
+        }).then(alert("The expense item has been updated!"), this.setState({item:"",ammount:"", quantity:"", doner:"", email:"", date:""}))
     }
     render(){
         return(
 
             <div class="container">
-                <h3 className="text-center">Donations</h3>
+                <h3  className="text-center">Donations</h3>
                 <form id="foodform">
                 <label htmlFor="name">Item: </label>
 						<input
@@ -73,6 +75,12 @@ class ExpenseForm extends Component{
                         <input
                            type="email"
                            name="email"
+                           onChange={this.handleChange}
+                           />
+                        <label htmlFor="date">Date: </label>
+                        <input
+                           type="text"
+                           name="date"
                            onChange={this.handleChange}
                            />
                     

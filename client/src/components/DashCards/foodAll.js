@@ -3,6 +3,7 @@ import axios from "axios"
 import moment from "moment"
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
+import "./dash.css"
 
 export default class FoodAll extends Component {
     constructor(props){
@@ -22,7 +23,7 @@ export default class FoodAll extends Component {
     alertDelete=(id)=>{        
             confirmAlert({
                 title: 'Confirm to submit',
-                message: 'How Many do you Want to Remove?',
+                message: 'Are You Sure You Want to Delete?',
                 buttons: [
                   {
                     label: 'Remove',
@@ -64,11 +65,12 @@ export default class FoodAll extends Component {
     const other = [];
       if(this.state.sort==""){
     return (
-        <div>
+        <div className="divtab">
         <h3>Food Donations</h3>
+        <div className="container">
         <table className="table1">
             <thead>
-                <tr>
+                <tr className="tableRow">
                     <th>Item</th>
                     <th>Ammount</th>
                     <th>Store</th>
@@ -80,7 +82,7 @@ export default class FoodAll extends Component {
             <tbody>
                 {this.state.food.map(food => {
                     return (
-                        <tr>
+                        <tr className="tableRow">
                             <td>{food.item}</td>                           
                             <td>{food.ammount}</td>
                             <td>{food.store}</td>
@@ -94,6 +96,7 @@ export default class FoodAll extends Component {
             </tbody>
         </table>
         <button className="button foodbutton" onClick={()=>{this.service()}}>Sort By Service</button>
+        </div>
       </div>
     )
   }
@@ -122,10 +125,12 @@ export default class FoodAll extends Component {
   
       return(
         <div>
+            <div className="allHead">
             <h3>Food Donations</h3>
+            </div>
         <table className="table1">
             <thead>
-                <tr>
+                <tr className="tableRow">
                     <th>Item</th>
                     <th>Ammount</th>
                     <th>Store</th>
@@ -137,7 +142,7 @@ export default class FoodAll extends Component {
             <tbody>
                 {stashArray.map(food => {
                     return (
-                        <tr>
+                        <tr className="tableRow">
                             <td>{food.item}</td>                           
                             <td>{food.ammount}</td>
                             <td>{food.store}</td>
@@ -150,7 +155,7 @@ export default class FoodAll extends Component {
                 })}
                  {hygineArray.map(food => {
                     return (
-                        <tr>
+                        <tr className="tableRow">
                             <td>{food.item}</td>                           
                             <td>{food.ammount}</td>
                             <td>{food.store}</td>
@@ -163,7 +168,7 @@ export default class FoodAll extends Component {
                 })}
                  {support.map(food => {
                     return (
-                        <tr>
+                        <tr className="tableRow">
                             <td>{food.item}</td>                           
                             <td>{food.ammount}</td>
                             <td>{food.store}</td>
@@ -176,7 +181,7 @@ export default class FoodAll extends Component {
                 })}
                  {boutique.map(food => {
                     return (
-                        <tr>
+                        <tr className="tableRow">
                             <td>{food.item}</td>                           
                             <td>{food.ammount}</td>
                             <td>{food.store}</td>
@@ -189,7 +194,7 @@ export default class FoodAll extends Component {
                 })}
                 {other.map(food => {
                     return (
-                        <tr>
+                        <tr className="tableRow">
                             <td>{food.item}</td>                           
                             <td>{food.ammount}</td>
                             <td>{food.store}</td>

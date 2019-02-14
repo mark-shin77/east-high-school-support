@@ -31,9 +31,10 @@ createTable = () => {
       console.log(newTable)
     // // Outer loop to create parent
     // //Only returns the more recent 3 from the DB
-      return(
-          <table className="table1">
-            <thread>
+     return(
+         <table className="table1">
+            <thead>
+
                 <tr>
                     <th>
                         Item
@@ -42,18 +43,21 @@ createTable = () => {
                         Ammount($)
                 </th>
                     <th>
-                        Service
+                       Date
+
                     </th>
                 </tr>
-            </thread>
+            </thead>
             <tbody>
               {newTable.map(table=>{
                   return (
                     <tr>
                         <td>{table.item}</td>                           
                         <td>{table.ammount}</td>
-                        <td>{table.store}</td>
-                        <td>{table.service}</td>
+
+                        <td>{table.date}</td>
+                       
+
                     </tr>
                 )
               })}
