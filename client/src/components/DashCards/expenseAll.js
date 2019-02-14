@@ -19,7 +19,7 @@ export default class ExpenseAll extends Component {
   alertDelete=(id)=>{        
     confirmAlert({
         title: 'Confirm to submit',
-        message: 'How Many do you Want to Remove?',
+        message: 'Are You Sure You Want to Delete?',
         buttons: [
           {
             label: 'Remove',

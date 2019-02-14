@@ -19,7 +19,7 @@ export default class ChangePassword extends Component {
     changePassword(){
        axios({
            method:"POST",
-           url: "auth/passwordchange",
+           url: "auth/delete",
            data: {
                email:this.state.email,
                password: this.state.password

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from "axios"
-import moment from "moment"
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
 
@@ -70,7 +69,6 @@ export default class VolAll extends Component {
                             <td>{volunteer.firstname}</td>
                             <td>{volunteer.lastname}</td>                           
                             <td>{volunteer.email}</td>
-                            <button type="submit" className="button1" onClick={()=>{this.alertDelete(volunteer._id)}} >X</button>
                         </tr>
                        
                     )

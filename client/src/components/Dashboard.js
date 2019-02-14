@@ -110,12 +110,14 @@ class Dashboard  extends Component{
                     <div id="main" className="container dashcontain">
                      <section id="content" className="section1">
                 <div className="row">
-                <div className="col-6">
+                <div className="col-xl-0 col-lg-0 "></div>
+                <div className="col-xl-5 col-lg-5 col-12">
                 <DashCard className="volcard"name={"Volunteers"} onClick={()=>this.volunteer()} onClick1={()=>{{this.volAll()}}} rendered="volunteer"> <p>Card For Volunteers</p></DashCard>
                 <DashCard className="foodcard"name ={"Expenses"} rendered="food"  onClick={()=>{this.food()}} onClick1={()=>{this.foodAll()}} food={true}> <p>Expenses</p> </DashCard>
                 
                 </div>
-                <div className="col-6">
+                <div className="col-xl-1 col-lg-1" ></div>
+                <div className="col-xl-5 col-lg-5 col-12" >
                 <DashCard className="expcard" name = {'Donations'} onClick={()=>{this.expense()}} onClick1={()=>{this.expAll()}} rendered="expense"> <p>Donations</p> </DashCard>
                 <AnalyticsCard/>
                 </div>

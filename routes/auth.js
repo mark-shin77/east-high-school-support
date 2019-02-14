@@ -82,7 +82,19 @@ console.log(validationResult);
 		})(req, res, next);
 	
 	  });
-
+router.post("/delete", (req,res)=>{
+	User.destroy({email:req.body.email})
+	   .then(()=>{
+			const newUser = new User({
+				email: req.body.email,
+				password: req.body.password
+			})
+			newUser.save((err, savedUser) => {
+				if (err) return res.json(err)
+				return res.json(savedUser)
+			})
+		 })
+})
 router.post('/logout', (req, res) => {
 	if (req.user) {
 		req.session.destroy()

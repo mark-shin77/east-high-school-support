@@ -5,13 +5,13 @@
 	margin-top: 50px
 }
 .cardwidth{
-    width: 108%;
+    width: 100%;
     
 }
 .dashcontain{
     font-size: 30x
 }
-.volcard{
+/* .volcard{
     margin-right: 15%;
 }
 .expcard{
@@ -22,9 +22,11 @@
 }
 .foodcard{
     margin-right: 5%
-}
+} */
 .table1{
-    width: 100%;
+	max-width: 100%;
+	
+	
     
 }
 .daterow{
@@ -169,9 +171,123 @@ input[type="submit"],
 			.button.disabled.primary,
 			.button:disabled.primary {
 				background-color: #93999a !important;
-            }
+			}
+			
+			body {
+				padding-top: 3.5em;
+			}
+		
+			#dashhead {
+				background: #fff;
+				border-bottom: solid 1px #e2eaec;
+				height: 3.5em;
+				left: 0;
+				line-height: 3em;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 10000;
+			}
+		
+				#dashhead h1 {
+					height: inherit;
+					left: .5em;
+					line-height: inherit;
+					position: absolute;
+					top: 5px;
+					letter-spacing: 1px;
+				}
+		
+					#dashhead h1 a {
+						text-decoration: none;
+						border: 0;
+						font-size: 1 em;
+					}
+					
+		
+						#dashhead h1 a:before {
+							-moz-osx-font-smoothing: grayscale;
+							-webkit-font-smoothing: antialiased;
+							font-family: FontAwesome;
+							font-style: normal;
+							font-weight: normal;
+							text-transform: none !important;
+						}
+		
+						#dashhead h1 a:before {
+							color: #fff !important;
+							text-shadow: 1px 0 0 #cc0033, -1px 0 0 #cc0033, 0 1px 0 #cc0033, 0 -1px 0 #cc0033;
+						}
+		
+						#dashhead h1 a:before {
+							color: #cc0033;
+							content: none;
+							margin-right: 0.6em;
+							/*content: '\f0c2'; */
+						}
+		
+				#dashhead nav {
+					position: absolute;
+					right: 0;
+					top: 5px;
+				}
+		
+					#dashhead nav:after {
+						clear: both;
+						content: '';
+						display: block;
+					}
+		
+					#dashhead nav ul {
+						list-style: none;
+						padding: 0;
+					}
+		
+						#dashhead nav ul li {
+							display: block;
+							float: left;
+							padding: 0;
+						}
+		
+							#dashhead nav ul li > a, #header nav ul li > span {
+								border: 0;
+								color: #333366;
+								display: block;
+								font-weight: bold;
+								padding: 0 1em;
+							}
+		
+							#dashhead nav ul li.special {
+								border-left: solid 1px #e2eaec;
+							}
+		
+								#dashhead nav ul li.special > a, #header nav ul li.special > span {
+									padding: 0 1em;
+								}
+		
+								#dashhead nav ul li.special > .icon:before {
+									color: #c2cacc;
+									margin-right: 0.5em;
+								}
+		
+							#dashhead nav ul li:not(.special) + .special {
+								margin-left: 0.5em;
+							}
             
 .formbutton{
     margin-left: 76%;
     margin-bottom: 16%
+}
+
+@media screen and (max-width:500px){
+	.divtab{
+	
+		width: 300px;
+
+	}
+	.tableRow{
+		width:300px;
+		max-width: 350px
+	}
+	
 }

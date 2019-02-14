@@ -35,7 +35,7 @@ class FoodForm extends Component{
              service: this.state.service,
              date: this.state.date
             }
-        }).then(alert("Donation has Been Updated!"), this.setState({item:"", store:"", service:"", ammount: ""}))
+        }).then(alert("Donation has Been Updated!"), this.setState({item:"", store:"", service:"", ammount: "", date:""}))
     }
     render(){
         return(
