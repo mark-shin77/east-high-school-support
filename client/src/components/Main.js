@@ -1,25 +1,31 @@
 import React, { Component } from "react";
 import {Link} from 'react-router-dom';
+import ScrollableAnchor from 'react-scrollable-anchor';
+import { configureAnchors } from 'react-scrollable-anchor';
 import "../assets/css/main.css";
 import "../assets/css/font-awesome.min.css";
 import pic00 from '../images/pic00.jpg';
-import pic16 from '../images/pic16.jpg';
 import pic18 from '../images/pic18.jpg';
 import pic20 from '../images/pic20.jpg';
 import pic21 from '../images/pic21.jpg';
 import pic22 from '../images/pic22.jpg';
 import pic23 from '../images/pic23.jpg';
 import pic24 from '../images/pic24.jpg';
+import pic30 from '../images/pic30.jpg';
 
+configureAnchors({offset: -80, scrollDuration: 500})
 
 class Main extends Component {
+
 	render() {
 		return (
 			<div id="main" className="container">
-				<section id="one" className="feature major">
-					<header className="major">
-						<h2>East High Student & Family Support</h2>
-					</header>
+				<section className="feature major">
+					<ScrollableAnchor id={'one'} >
+						<header className="major">
+							<h2>East High Student & Family Support</h2>
+						</header>
+					</ScrollableAnchor>
 					
 					<section>
 						<h2>Hello Friends of <span style={{color:"#CC0033"}}>E</span>ast High School</h2>
@@ -37,7 +43,7 @@ class Main extends Component {
 
 					<section>
 						<h2 style={{letterSpacing:"3px"}}>W<span style={{color:"#CC0033"}}>E</span> CAN H<span style={{color:"#CC0033"}}>E</span>LP</h2>
-						<div  style = {{textAlign:"left"}}><span className="image right"><img src={pic16} alt="" /></span>
+						<div  style = {{textAlign:"left"}}><span className="image right"><img src={pic30} alt="" /></span>
 							<br/>
 							<br/>
 							<ul>
@@ -45,7 +51,7 @@ class Main extends Component {
 									East High School is a rigorous and diverse public school of 2,000 students.
 								</li>
 								<li>
-									Approximately 64% life below the poverty line, receiving free/reduced breakfasts and lunches.
+									Approximately 64% live below the poverty line, receiving free/reduced breakfasts and lunches.
 								</li>
 								<li>
 									400 Refugee students

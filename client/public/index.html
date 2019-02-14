@@ -13,27 +13,29 @@
   crossorigin="anonymous"
 />
 <link rel="shortcut icon" href="../src/images/favicon.png" type="image/x-icon">
+
   </head>
 
   <body class="is pre-loaded">
     <div id="root"></div>
+    <!-- Google Analytics -->
     <script>
       (function(w, d, s, g, js, fjs) {
-    g = w.gapi || (w.gapi = {})
-    g.analytics = {
-      q: [],
-      ready: function(cb) {
-        this.q.push(cb)
-      }
-    }
-    js = d.createElement(s)
-    fjs = d.getElementsByTagName(s)[0]
-    js.src = "https://apis.google.com/js/platform.js"
-    fjs.parentNode.insertBefore(js, fjs)
-    js.onload = function() {
-      g.load("analytics")
-    }
-  })(window, document, "script")
+        g = w.gapi || (w.gapi = {})
+        g.analytics = {
+          q: [],
+          ready: function(cb) {
+            this.q.push(cb)
+          }
+        }
+        js = d.createElement(s)
+        fjs = d.getElementsByTagName(s)[0]
+        js.src = "https://apis.google.com/js/platform.js"
+        fjs.parentNode.insertBefore(js, fjs)
+        js.onload = function() {
+          g.load("analytics")
+        }
+      })(window, document, "script")
     </script>
   </body>
 
