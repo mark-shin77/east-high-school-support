@@ -66,8 +66,9 @@ export default class FoodAll extends Component {
       if(this.state.sort==""){
     return (
         <div className="divtab">
-        <h3>Food Donations</h3>
         <div className="container">
+        <h3>Expenses</h3>
+
         <table className="table1">
             <thead>
                 <tr className="tableRow">
@@ -124,7 +125,7 @@ export default class FoodAll extends Component {
   }
   
       return(
-        <div>
+        <div className="container">
             <div className="allHead">
             <h3>Food Donations</h3>
             </div>

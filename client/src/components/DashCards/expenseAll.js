@@ -61,8 +61,8 @@ export default class ExpenseAll extends Component {
  
     return (
 
-      <div>
-        <h3 className="allHead">Expenses</h3>
+      <div className="container">
+        <h3 className="allHead">Donations</h3>
         <table className="table1">
             <thead>
                 <tr className="tableRow">
@@ -102,8 +102,8 @@ export default class ExpenseAll extends Component {
             else {item.push(this.state.expenses[i])}
         }
         return(
-            <div>
-                <h3>Expenses</h3>
+            <div className="container">
+                <h3>Donations</h3>
 
                 <table className="table1">
             <thead>
