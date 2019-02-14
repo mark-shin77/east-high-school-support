@@ -20,11 +20,10 @@ import FamilySupport from './components/pages/FamilySupport';
 
 
 function App() {
-    // ReactGA.initialize('UA-134365368-1')
-    //console.log(ga.q)
+   
     return (
-      
       <Router>
+
           <Switch>
               <ScrollToTop>
                     <Route exact path="/" component={Home} />

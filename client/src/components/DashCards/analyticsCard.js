@@ -11,7 +11,7 @@ const AnalyticsCard = ()=>{
               <Nav.Link  className="navtab" href="#first">Overview</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link  className="navtab"  href="https://analytics.google.com/analytics/web/#/report-home/a134365368w194358811p189848989">View Analytics</Nav.Link>
+              <Nav.Link  className="navtab"  href="https://analytics.google.com/analytics/web/#/report-home/a134365368w194358811p189848989" target="_blank">View Analytics</Nav.Link>
             </Nav.Item>
           
           </Nav>
