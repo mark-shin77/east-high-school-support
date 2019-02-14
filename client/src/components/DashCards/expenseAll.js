@@ -65,7 +65,7 @@ export default class ExpenseAll extends Component {
         <h3 className="allHead">Expenses</h3>
         <table className="table1">
             <thead>
-                <tr>
+                <tr className="tableRow">
                     <th>Item</th>
                     <th>Date</th>
                     <th>Value($)</th>
@@ -78,7 +78,7 @@ export default class ExpenseAll extends Component {
             <tbody>
                 {this.state.expenses.map(expenses => {
                     return (
-                        <tr>
+                        <tr className="tableRow">
                             <td>{expenses.item}</td>
                             <td>{moment(`${expenses.date}`).format("MM / DD / YYYY")}</td>
                             <td>{`$${expenses.ammount}`}</td>
@@ -107,7 +107,7 @@ export default class ExpenseAll extends Component {
 
                 <table className="table1">
             <thead>
-                <tr>
+                <tr className="tableRow">
                     <th>Item</th>
                     <th>Date</th>
                     <th>Value($)</th>
@@ -118,7 +118,7 @@ export default class ExpenseAll extends Component {
             <tbody>
                 {cash.map(expenses => {
                     return (
-                        <tr>
+                        <tr className="tableRow">
                             <td>{expenses.item}</td>
                             <td>{moment(`${expenses.date}`).format("MM / DD / YYYY")}</td>
                             <td>{`$${expenses.ammount}`}</td>
@@ -129,7 +129,7 @@ export default class ExpenseAll extends Component {
                 })}
                 {item.map(expenses => {
                     return (
-                        <tr>
+                        <tr className="tableRow">
                             <td>{expenses.item}</td>
                             <td>{moment(`${expenses.date}`).format("MM / DD / YYYY")}</td>
                             <td>{`$${expenses.ammount}`}</td>

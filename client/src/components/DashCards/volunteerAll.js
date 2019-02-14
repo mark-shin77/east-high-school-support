@@ -54,7 +54,7 @@ export default class VolAll extends Component {
             </div>
         <table className="table1">
             <thead>
-                <tr>
+                <tr className="tableRow">
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email</th>
@@ -65,7 +65,7 @@ export default class VolAll extends Component {
             <tbody>
                 {this.state.volunteer.map(volunteer => {
                     return (
-                        <tr>
+                        <tr className="tableRow">
                             <td>{volunteer.firstname}</td>
                             <td>{volunteer.lastname}</td>                           
                             <td>{volunteer.email}</td>

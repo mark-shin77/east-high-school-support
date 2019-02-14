@@ -130,7 +130,7 @@ export default class FoodAll extends Component {
             </div>
         <table className="table1">
             <thead>
-                <tr>
+                <tr className="tableRow">
                     <th>Item</th>
                     <th>Ammount</th>
                     <th>Store</th>
@@ -142,7 +142,7 @@ export default class FoodAll extends Component {
             <tbody>
                 {stashArray.map(food => {
                     return (
-                        <tr>
+                        <tr className="tableRow">
                             <td>{food.item}</td>                           
                             <td>{food.ammount}</td>
                             <td>{food.store}</td>
@@ -155,7 +155,7 @@ export default class FoodAll extends Component {
                 })}
                  {hygineArray.map(food => {
                     return (
-                        <tr>
+                        <tr className="tableRow">
                             <td>{food.item}</td>                           
                             <td>{food.ammount}</td>
                             <td>{food.store}</td>
@@ -168,7 +168,7 @@ export default class FoodAll extends Component {
                 })}
                  {support.map(food => {
                     return (
-                        <tr>
+                        <tr className="tableRow">
                             <td>{food.item}</td>                           
                             <td>{food.ammount}</td>
                             <td>{food.store}</td>
@@ -181,7 +181,7 @@ export default class FoodAll extends Component {
                 })}
                  {boutique.map(food => {
                     return (
-                        <tr>
+                        <tr className="tableRow">
                             <td>{food.item}</td>                           
                             <td>{food.ammount}</td>
                             <td>{food.store}</td>
@@ -194,7 +194,7 @@ export default class FoodAll extends Component {
                 })}
                 {other.map(food => {
                     return (
-                        <tr>
+                        <tr className="tableRow">
                             <td>{food.item}</td>                           
                             <td>{food.ammount}</td>
                             <td>{food.store}</td>

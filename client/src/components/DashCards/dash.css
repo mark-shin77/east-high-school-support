@@ -286,8 +286,11 @@ input[type="submit"],
 
 	}
 	.tableRow{
-		width:300px;
-		max-width: 350px
+		max-width:350px;
+		width: 350px;
+		display: block;
+		font-size: 16px
+		
 	}
 	
 }
