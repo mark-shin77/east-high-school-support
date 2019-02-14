@@ -28,7 +28,7 @@ class FamilySupport extends Component {
                             <h4>Food Support supplied directly to district families by Salt Lake Education Foundation is limited to <a href="https://www.slcschools.org/departments/salt-lake-education-foundation-and-development-office/family-support/"><span  className="my-inline" style={{fontVariant: 'small-caps', color:'#CC0033'}}>emergency gift cards</span></a>.  Through partnerships and relationships with other service providers, we have the following options available:</h4>
                             
                         <div className="row">
-                            <div className="col-4 col-12-small">
+                            <div className="col-4-xlarge col-12-small">
 
                             <a href="https://www.slcschools.org/departments/salt-lake-education-foundation-and-development-office/family-support/"><h4 className="my-inline">Emergency Gift Cards:</h4></a>
                                 <p>Gift cards can be requested from a button on the district website Family Support subpage of the Salt Lake Education Foundation and Development Office page.</p>
@@ -39,13 +39,13 @@ class FamilySupport extends Component {
 
                             </div>
 
-                            <div className="col-4 col-12-small">
+                            <div className="col-4-xlarge col-12-small">
                             <a href="https://www.utahfoodbank.org/"><h4 className="my-inline">Utah Food Bank:</h4></a>
                                 <p>Utah Food Bank serves our district with mobile food pantry visits to designated schools and food pantries at other schools. </p>
 
                             </div>  
 
-                            <div className="col-4 col-12-small">
+                            <div className="col-4-xlarge col-12-small">
                             <a href="https://www.crossroadsurbancenter.org/emergency-food-pantry.html"><h4 className="my-inline">Crossroads Urban Center:</h4></a>
                                 <p>Crossroads’ Emergency Food Pantry distributes boxes that supply three days worth of food to hungry individuals. We specialize in supporting infant needs with formula, diapers and baby food.</p>
                         
@@ -59,20 +59,20 @@ class FamilySupport extends Component {
                         </header>
                             
                         <div className="row">
-                            <div className="col-4 col-12-small">
+                            <div className="col-4-xlarge col-12-small">
                             
                             <a href="https://www.habitatsaltlake.com/restore/"><h4 className="my-inline">Habitat for Humanity Restore:</h4></a>
                             <p>Salt Lake Valley Habitat for Humanity ReStore is a retail outlet where quality used furniture is available to those in need.</p>
 
                             </div>
 
-                            <div className="col-4 col-12-small">
+                            <div className="col-4-xlarge col-12-small">
                             <a href="https://www.utahfoodbank.org/"><h4 className="my-inline">District Homeless Liason:</h4></a>
                                 <p className="contacty" style={{textAlign:"left"}}><a href="tel:8015831661">Mark Harmon 801-578-8140 ex. 2114</a> <a href={"mailto: Mike.Harman@slcschools.org"}>Mike.Harman@slcschools.org</a></p>
 
                             </div>  
 
-                            <div className="col-4 col-12-small">
+                            <div className="col-4-xlarge col-12-small">
                             <a href="https://www.utahca.org/"><h4 className="my-inline">Utah Community Action:</h4></a>
                             <p>Utah Community Action’s mission is to empower individuals, strengthen families, and build communities through self-sufficiency and education programs.</p>
                             
@@ -90,7 +90,7 @@ class FamilySupport extends Component {
 
 
                         <div className="row">
-                            <div className="col-4 col-12-small">
+                            <div className="col-4-xlarge col-12-small">
                             
                             <a href="https://www.slcschools.org/departments/salt-lake-education-foundation-and-development-office/family-support/"><h4 className="my-inline">Deseret Industry Vouchers:</h4></a>
                             <p>Vouchers can be requested from a button on the district website Family Support sub-page of the Salt Lake Education Foundation and Development Office page.</p>
@@ -100,14 +100,14 @@ class FamilySupport extends Component {
 
                             </div>
 
-                            <div className="col-4 col-12-small">
+                            <div className="col-4-xlarge col-12-small">
                             <a href="https://www.crossroadsurbancenter.org/crossroads-thrift-store.html"><h4 className="my-inline">Crossroads Thrift Stores:</h4></a>
                             <p>Vouchers can be issued by Family Support and
                                 exchanged for clothing and household essentials at the Store at no cost. Items are also offered at nominal prices to those without referrals or in need of other goods. </p>
 
                             </div>  
 
-                            <div className="col-4 col-12-small">
+                            <div className="col-4-xlarge col-12-small">
                             <a href="https://www.slcschools.org/departments/salt-lake-education-foundation-and-development-office/family-support/"><h4 className="my-inline">Emergency Gift Cards:</h4></a>
                             <p>Gift cards to Walmart and Payless shoes can be requested from a button on the district website Family Support sub-page of the Salt Lake Education Foundation and Development Office page.</p>
                             
