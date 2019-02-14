@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {Link} from 'react-router-dom';
-import ScrollableAnchor from 'react-scrollable-anchor'
-import { configureAnchors } from 'react-scrollable-anchor'
+import ScrollableAnchor from 'react-scrollable-anchor';
+import { configureAnchors } from 'react-scrollable-anchor';
 import "../assets/css/main.css";
 import "../assets/css/font-awesome.min.css";
 import pic00 from '../images/pic00.jpg';
@@ -13,18 +13,19 @@ import pic23 from '../images/pic23.jpg';
 import pic24 from '../images/pic24.jpg';
 import pic30 from '../images/pic30.jpg';
 
-configureAnchors({offset: -100, scrollDuration: 500})
+configureAnchors({offset: -80, scrollDuration: 500})
 
 class Main extends Component {
 
 	render() {
 		return (
 			<div id="main" className="container">
-			<ScrollableAnchor id={'one'} >
 				<section className="feature major">
-					<header className="major">
-						<h2>East High Student & Family Support</h2>
-					</header>
+					<ScrollableAnchor id={'one'} >
+						<header className="major">
+							<h2>East High Student & Family Support</h2>
+						</header>
+					</ScrollableAnchor>
 					
 					<section>
 						<h2>Hello Friends of <span style={{color:"#CC0033"}}>E</span>ast High School</h2>
@@ -65,7 +66,6 @@ class Main extends Component {
 						</div>
 					</section>
 				</section>
-			</ScrollableAnchor>
 
 			<hr/>	
 					<div className="row">
