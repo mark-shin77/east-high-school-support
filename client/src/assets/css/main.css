@@ -1438,7 +1438,6 @@ input, select, textarea {
 
 				.row.gtr-150 {
 					margin-top: 0;
-					margin-left: -3em;
 				}
 
 					.row.gtr-150 > * {
@@ -1683,7 +1682,6 @@ input, select, textarea {
 
 				.row.gtr-150 {
 					margin-top: 0;
-					margin-left: -3em;
 				}
 
 					.row.gtr-150 > * {
@@ -2635,7 +2633,7 @@ input, select, textarea {
 			#header h1 a {
 				text-decoration: none;
 				border: 0;
-				font-size: 1 em;
+				font-size: 1em;
 			}
 			
 
@@ -3387,7 +3385,7 @@ input, select, textarea {
 			}
 
 				#header h1 {
-					left: .32em;
+					margin: auto;
 				}
 
 					#header h1 a {
