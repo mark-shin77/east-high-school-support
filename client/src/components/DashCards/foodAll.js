@@ -122,7 +122,9 @@ export default class FoodAll extends Component {
   
       return(
         <div>
+            <div className="allHead">
             <h3>Food Donations</h3>
+            </div>
         <table className="table1">
             <thead>
                 <tr>

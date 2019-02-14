@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from "axios"
 import moment from 'moment';
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'
 
 export default class ExpenseAll extends Component {
     constructor(props){
@@ -14,15 +16,25 @@ export default class ExpenseAll extends Component {
   componentDidMount(){
       this.getExpense()
   }
-  alertDelete=(id)=>{
-      alert("Are you sure you want to delete this item?")
-      if(alert){
-          axios({
-              method: "POST",
-              url: "/authorize/expenses/delete/" + id
-          }).then(alert("Item has been deleted!"))
-      }
-  }
+  alertDelete=(id)=>{        
+    confirmAlert({
+        title: 'Confirm to submit',
+        message: 'How Many do you Want to Remove?',
+        buttons: [
+          {
+            label: 'Remove',
+            // input:input,
+            onClick: () => {axios({
+                method: "POST",
+                url: "/authorize/expenses/delete/" + id
+            }).then(window.location.href="/dash")}
+          },
+          {
+            label: 'Cancel'
+                              }
+        ]
+      })
+}
   //gets all the records from DB and adds them to state
   getExpense=()=>{
      axios({
@@ -50,7 +62,7 @@ export default class ExpenseAll extends Component {
     return (
 
       <div>
-        <h3>Expenses</h3>
+        <h3 className="allHead">Expenses</h3>
         <table className="table1">
             <thead>
                 <tr>
@@ -58,6 +70,8 @@ export default class ExpenseAll extends Component {
                     <th>Date</th>
                     <th>Value($)</th>
                     <th>Quantity</th>
+                    <th>Doner Name</th>
+                    <th>Doner Email</th>
                 </tr>
             </thead>
 
@@ -69,6 +83,7 @@ export default class ExpenseAll extends Component {
                             <td>{moment(`${expenses.date}`).format("MM / DD / YYYY")}</td>
                             <td>{`$${expenses.ammount}`}</td>
                             <td>{expenses.quantity}</td>
+                            <td>{expenses.doner}</td>
                             <button type="submit" className="button1" onClick={()=>{this.alertDelete(expenses._id)}} >X</button>
                         </tr>
                     )

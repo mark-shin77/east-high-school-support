@@ -15,9 +15,9 @@ class DashHeader extends Component {
          
         <nav id="nav">
             <ul>
-                <li><Link to="/add/user">Add User</Link></li>
-                <li><Link to="/change/password">Change Password</Link></li>
-                <li><Link to="/" onClick={()=>{localStorage.clear()}}>Log Out</Link></li>
+                <li><Link to="/add/user">ADD USER</Link></li>
+                <li><Link to="/change/password">CHANGE PASSWORD</Link></li>
+                <li><Link to="/" onClick={()=>{localStorage.clear()}}>LOG OUT</Link></li>
                 
             </ul>
         </nav>

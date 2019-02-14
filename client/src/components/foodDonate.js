@@ -9,7 +9,8 @@ class FoodForm extends Component{
             item: "",
             store: "",
             service: "",
-            ammount: ""
+            ammount: "",
+            date: ""
         }
         this.submitClick = this.submitClick.bind(this);
         this.handleChange= this.handleChange.bind(this);
@@ -32,6 +33,7 @@ class FoodForm extends Component{
              ammount: this.state.ammount,
              store: this.state.store,
              service: this.state.service,
+             date: this.state.date
             }
         }).then(alert("Donation has Been Updated!"), this.setState({item:"", store:"", service:"", ammount: ""}))
     }
@@ -68,6 +70,13 @@ class FoodForm extends Component{
                           value={this.state.service}
                           onChange={this.handleChange}
                         />
+                        <label htmlFor="data">Date:</label>
+                        <input
+                          type="text"
+                          name="date"
+                          value={this.state.date}
+                          onChange={this.handleChange}
+                          />
                        
                         
                 </form>

@@ -53,66 +53,7 @@ class DashCard extends Component{
 </Card>
 
 
-       {/* <Card>
-<Card.Header>
-  <Nav variant="pills" defaultActiveKey="#first">
-    <Nav.Item>
-      <Nav.Link className="button" href="#first">Overview</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link href="#link">View All</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link onClick={this.props.onClick}>
-        Add {this.props.name}
-      </Nav.Link>
-    </Nav.Item>
-  </Nav>
-</Card.Header>
-<Card.Body>
-  <Card.Title>Special title treatment</Card.Title>
-  <Card.Text>
-      {this.cardPicker()}
-  </Card.Text>
-  <button className="button">Go somewhere</button>
-</Card.Body>
-</Card> */}
-         {/* <Card>
-  <Card.Header>
-    <Nav variant="pills" defaultActiveKey="#first">
-      <Nav.Item>
-        <Nav.Link href="#first">Active</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link href="#link">Link</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link href="#disabled" disabled>
-          Disabled
-        </Nav.Link>
-      </Nav.Item>
-    </Nav>
-  </Card.Header>
-  <Card.Body>
-    <Card.Title>Special title treatment</Card.Title>
-    <Card.Text>
-      With supporting text below as a natural lead-in to additional content.
-    </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
-  </Card.Body>
-</Card>; */}
-
-
-            {/* <div  className="dashcard"  onClick={this.props.onClick}>
-               <h3 className="cardTitle">{this.props.name}</h3>
-                <img href={this.props.image}/>
-                <p>
-                    Card for {this.props.name}
-                </p>
-                {this.cardPicker()}
-                <button onClick={this.props.onClick}>{this.props.name}</button>
-                <button onClick={this.props.onClick1}>View All</button>
-            </div> */}
+      
             </div>
         )
     }

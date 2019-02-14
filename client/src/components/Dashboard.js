@@ -11,6 +11,7 @@ import "./dash.css"
 import ExpenseAll from "./DashCards/expenseAll";
 import FoodAll from "./DashCards/foodAll";
 import AnalyticsCard from './DashCards/analyticsCard';
+import VolAll from "./DashCards/volunteerAll"
 
 class Dashboard  extends Component{
     constructor(props){
@@ -19,6 +20,7 @@ class Dashboard  extends Component{
             loggedIn: this.props.location.state,
             token: localStorage.token,
             volunteer: false,
+            volAll:false,
             food: false,
             expense: false,
             expenseAll: false,
@@ -93,28 +95,27 @@ class Dashboard  extends Component{
             volunteer:true
         })
     }
-
+  
     render(){
         
             //it takes awhile for the token to update so it can take two conditions
             if(localStorage.token ==="success"|| this.state.loggedIn){
               
 
-            if(this.state.food===false && this.state.volunteer===false && this.state.expense===false && this.state.expenseAll===false && this.state.foodAll===false){
+            if(this.state.food===false && this.state.volunteer===false && this.state.expense===false && this.state.expenseAll===false && this.state.foodAll===false && this.state.volAll===false){
 
             return(
                 <div>
                     <DashHeader/>
-                    <div id="main" className="container">
-                     <section id="content">
+                    <div id="main" className="container dashcontain">
+                     <section id="content" className="section1">
                 <div className="row">
-                <div className="col-1"></div>
-                <div className="col-5">
+                <div className="col-6">
                 <DashCard className="volcard"name={"Volunteers"} onClick={()=>this.volunteer()} onClick1={()=>{{this.volAll()}}} rendered="volunteer"> <p>Card For Volunteers</p></DashCard>
                 <DashCard className="foodcard"name ={"Expenses"} rendered="food"  onClick={()=>{this.food()}} onClick1={()=>{this.foodAll()}} food={true}> <p>Expenses</p> </DashCard>
                 
                 </div>
-                <div className="col-5">
+                <div className="col-6">
                 <DashCard className="expcard" name = {'Donations'} onClick={()=>{this.expense()}} onClick1={()=>{this.expAll()}} rendered="expense"> <p>Donations</p> </DashCard>
                 <AnalyticsCard/>
                 </div>
@@ -153,11 +154,20 @@ class Dashboard  extends Component{
                 </div>
             )
         }
-        else if(this.foodAll){
+        else if(this.state.foodAll){
             return(
                 <div>
                     <DashHeader/>
                     <FoodAll/>
+                    <button className="button formbutton " onClick={this.onClick}>Exit</button>
+                </div>
+            )
+        }
+        else if(this.state.volAll){
+            return(
+                <div>
+                    <DashHeader/>
+                    <VolAll/>
                     <button className="button formbutton " onClick={this.onClick}>Exit</button>
                 </div>
             )

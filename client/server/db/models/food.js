@@ -19,7 +19,7 @@ const FoodSchema = new Schema({
     },
    
     date: {
-        type : Date, default: Date.now
+        type : String
     }
 })
 const Food = mongoose.model('Food', FoodSchema);

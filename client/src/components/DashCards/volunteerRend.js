@@ -28,7 +28,7 @@ createTable = () => {
     if(this.state.volunteer===''){
         console.log('hello')
     }
-    else{
+    else if(this.state.volunteer.length>1){
     // Outer loop to create parent
     //Only returns the more recent 3 from the DB
     for (let i = 0; i < 1; i++) {
