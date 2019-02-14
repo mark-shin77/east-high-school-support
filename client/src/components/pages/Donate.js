@@ -15,7 +15,7 @@ class Donate extends Component {
                 <section>			
                     <div  style = {{textAlign:"left", fontSize: "24px"}}>
                         <a href="https://give.saltlakeeducationfoundation.org/easthighalumni/give-a-gift">
-                            <span className="image left my-inline money-donation-image"><img src={pic05} alt="" /></span>
+                            <span className="image left my-inline"><img src={pic05} alt="" /></span>
                         </a>
                         <a href="https://give.saltlakeeducationfoundation.org/easthighalumni/give-a-gift">
                             <h2 className="my-inline" style={{textAlign: "left"}}>Click Here to Donate through <br/>Salt Lake Education Foundation ❤️</h2>

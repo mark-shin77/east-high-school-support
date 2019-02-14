@@ -18,7 +18,7 @@ export default function CurrentSignUpInfo(props) {
                         <h4 style= {{letterSpacing : '1px'}}>
                             End Date: {moment(`${props.selectedSignup.enddatestring}`).format("MM / DD / YYYY")}
                         </h4>
-                        <a href={props.selectedSignup.signupurl} className="button">Sign up here!</a>
+                        <a href={props.selectedSignup.signupurl} target="_blank" className="button">Sign up here!</a>
                     </div>
                 </div>
             </div>
