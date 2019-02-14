@@ -14,11 +14,11 @@ class Computers extends Component {
     <div id="main" className="container">
 
         <div className="row gtr-150"> 
-            <div className="col-6 col-12-small">
+            <div className="col-6-xlarge col-12-small">
                 <a href="https://give.saltlakeeducationfoundation.org/easthighalumni/digital-inclusion-initiative-donation"><span className="image fit my-inline"><img src={pic23} alt="" /></span></a>
                 </div>
 
-            <div className="col-6 col-12-small"> 
+            <div className="col-6-xlarge col-12-small"> 
                 <a href="https://give.saltlakeeducationfoundation.org/easthighalumni/digital-inclusion-initiative-donation"><h2 className="my-inline" style={{textAlign:"left"}}>Click Here to support the <span style = {{color: "#cc0033"}}>Digital inclusion Initiative</span> through Salt Lake Education Foundation 💻</h2></a>
 
 

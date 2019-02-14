@@ -28,6 +28,7 @@ class ExpenseRend extends Component{
         console.log(this.state.expenseItem)
         let table= []
         const newTable =[] 
+
      console.log(this.state.foodItem)
      if(this.state.expenseItem.length >2){
      for(let i=this.state.expenseItem.length-1; i> this.state.expenseItem.length-4; i--){
@@ -39,6 +40,7 @@ class ExpenseRend extends Component{
      return(
          <table className="table1">
             <thead>
+
                 <tr>
                     <th>
                         Item
@@ -49,30 +51,25 @@ class ExpenseRend extends Component{
                    
                     <th>
                         Date
+
                     </th>
                 </tr>
             </thead>
             <tbody>
-              {newTable.map(table=>{
-                  return (
+                {newTable.map(table=>{
+                    return (
                     <tr>
                         <td>{table.item}</td>                           
                         <td>{table.ammount}</td>
                         <td>{moment(`${table.date}`).format("MM / DD / YYYY")}</td>
                        
+
                     </tr>
-                   
                 )
-              })}
- 
+            })}
             </tbody>
-         </table>
-     )
-
-      
-   
-
-        
+        </table>
+    )
     }
 }
     render(){
@@ -84,4 +81,5 @@ class ExpenseRend extends Component{
     }
     
 }
-export default ExpenseRend
+
+export default ExpenseRend;
