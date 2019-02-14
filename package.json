@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "concurrently": "*",
     "cors": "^2.8.5",
@@ -30,10 +29,7 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.4.4",
     "morgan": "^1.9.1",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
     "path": "^0.12.7",
-    "react-ga": "^2.5.7",
     "validator": "^10.11.0"
   }
 }
