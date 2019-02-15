@@ -34,7 +34,6 @@ function App() {
                     <Route path="/hours" component={Hours} />
                     <Route path="/inspect" component={Inspect} />
                     <Route path="/volunteer" component={Volunteer} />
-                    <Route path="/signup" component={SignupForm}/>
                     <Route path="/computers" component={Computers} />
                     <Route path="/familysupport" component={FamilySupport} />
                     <Route exact path="/dash" component={Dashboard} loggedIn={false}/>

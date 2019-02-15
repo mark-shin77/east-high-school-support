@@ -48,7 +48,7 @@ export default class VolAll extends Component {
   render() {
       if(this.state.volunteer.length > 0){
       return(
-        <div>
+        <div className="container">
             <div className="allHead">
             <h3>Volunteers</h3>
             </div>

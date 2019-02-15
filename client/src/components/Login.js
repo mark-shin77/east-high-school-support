@@ -42,7 +42,7 @@ class LoginForm extends Component {
 		
 		 else {
 			return (
-				<div className="LoginForm">
+				<div className="LoginForm container">
 					<h1>Login form</h1>
 					<form>
 						<label htmlFor="username">Email: </label>
