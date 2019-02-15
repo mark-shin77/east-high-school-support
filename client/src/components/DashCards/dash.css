@@ -25,6 +25,7 @@
 } */
 .table1{
 	max-width: 100%;
+	overflow:hidden
 	
 	
     
@@ -285,11 +286,13 @@ input[type="submit"],
 		width: 300px;
 
 	}
+	
 	.tableRow{
 		max-width:350px;
 		width: 350px;
 		display: block;
-		font-size: 16px
+		font-size: 16px;
+		overflow: hidden;
 		
 	}
 	
